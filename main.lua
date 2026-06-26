@@ -12,7 +12,7 @@ local Library = {
 	Flags = {},
 	Themes = {
 		Default = {
-			Main = Color3.fromRGB(20, 20, 22),
+			Main = Color3.fromRGB(20, 20, 22),   
 			Second = Color3.fromRGB(30, 30, 32),   
 			Stroke = Color3.fromRGB(60, 60, 65),   
 			Divider = Color3.fromRGB(40, 40, 45),
@@ -549,13 +549,11 @@ function Library:MakeWindow(WindowConfig)
 				Font = Enum.Font.GothamBold,
 				ClipsDescendants = true
 			}), "Text"),
-								
-                SetProps(MakeElement("Label", "Future of Free", 12), {
-                Size = UDim2.new(1, -60, 0, 12),
-                Position = UDim2.new(0, 50, 1, -25),
-                TextColor3 = Color3.fromRGB(70, 150, 255),
-                Visible = not WindowConfig.HidePremium
-            })
+			AddThemeObject(SetProps(MakeElement("Label", "Future of Free", 12), {
+				Size = UDim2.new(1, -60, 0, 12),
+				Position = UDim2.new(0, 50, 1, -25),
+				Visible = not WindowConfig.HidePremium
+			}), "TextDark")
 		}),
 	}), "Second")
 
@@ -711,15 +709,154 @@ function Library:MakeWindow(WindowConfig)
 	end	
 
 	local TabFunction = {}
-	function TabFunction:MakeTab(TabConfig)
+	-- Sidebar-Section-Verwaltung
+	local TabSections = {}  -- speichert alle Sections
+	local currentSection = nil  -- aktuell aktive Section beim Hinzufügen von Tabs
+	local function addTabToSection(tabFrame, section)
+		if section then
+			tabFrame.Parent = section.Container
+		else
+			tabFrame.Parent = TabHolder
+		end
+	end
+
+	-- Funktion zum Erstellen einer Sidebar-Section
+	function TabFunction:AddTabSection(SectionConfig)
+		SectionConfig = SectionConfig or {}
+		local sectionName = SectionConfig.Name or "Section"
+		local sectionCollapsed = SectionConfig.Collapsed or false
+
+		-- Container für die Tabs in dieser Section
+		local sectionContainer = Instance.new("Frame")
+		sectionContainer.BackgroundTransparency = 1
+		sectionContainer.Size = UDim2.new(1, 0, 0, 0)
+		sectionContainer.ClipsDescendants = true
+		sectionContainer.Parent = TabHolder
+
+		local sectionLayout = Instance.new("UIListLayout")
+		sectionLayout.SortOrder = Enum.SortOrder.LayoutOrder
+		sectionLayout.Padding = UDim.new(0, 2)
+		sectionLayout.Parent = sectionContainer
+
+		-- Header der Section (klickbar)
+		local header = Instance.new("TextButton")
+		header.Text = ""
+		header.BackgroundTransparency = 1
+		header.AutoButtonColor = false
+		header.Size = UDim2.new(1, 0, 0, 24)
+		header.Parent = sectionContainer
+		header.LayoutOrder = 0
+
+		local headerLabel = Instance.new("TextLabel")
+		headerLabel.Text = sectionName
+		headerLabel.Font = Enum.Font.GothamBold
+		headerLabel.TextSize = 12
+		headerLabel.TextColor3 = Library.Themes[Library.SelectedTheme].TextDark
+		headerLabel.BackgroundTransparency = 1
+		headerLabel.TextXAlignment = Enum.TextXAlignment.Left
+		headerLabel.Size = UDim2.new(1, -30, 1, 0)
+		headerLabel.Position = UDim2.new(0, 10, 0, 0)
+		headerLabel.Parent = header
+
+		local arrow = Instance.new("ImageLabel")
+		arrow.Image = "rbxassetid://7072706796"
+		arrow.BackgroundTransparency = 1
+		arrow.ImageColor3 = Library.Themes[Library.SelectedTheme].TextDark
+		arrow.AnchorPoint = Vector2.new(1, 0.5)
+		arrow.Size = UDim2.new(0, 12, 0, 12)
+		arrow.Position = UDim2.new(1, -10, 0.5, 0)
+		arrow.Rotation = sectionCollapsed and 0 or 180
+		arrow.Parent = header
+
+		-- Trennlinie unterhalb des Headers
+		local divider = Instance.new("Frame")
+		divider.BackgroundColor3 = Library.Themes[Library.SelectedTheme].Stroke
+		divider.BorderSizePixel = 0
+		divider.Size = UDim2.new(1, -20, 0, 1)
+		divider.Position = UDim2.new(0, 10, 0, 24)
+		divider.Parent = sectionContainer
+
+		-- Container für Tab-Buttons (ohne Header)
+		local tabContainer = Instance.new("Frame")
+		tabContainer.BackgroundTransparency = 1
+		tabContainer.Size = UDim2.new(1, 0, 0, 0)
+		tabContainer.ClipsDescendants = true
+		tabContainer.Parent = sectionContainer
+
+		local tabLayout = Instance.new("UIListLayout")
+		tabLayout.SortOrder = Enum.SortOrder.LayoutOrder
+		tabLayout.Padding = UDim.new(0, 0)
+		tabLayout.Parent = tabContainer
+
+		local sectionObj = {
+			Container = tabContainer,
+			Header = header,
+			Label = headerLabel,
+			Arrow = arrow,
+			Divider = divider,
+			Collapsed = sectionCollapsed,
+			Layout = tabLayout,
+			HeaderFrame = header,
+			ParentContainer = sectionContainer,
+		}
+
+		table.insert(TabSections, sectionObj)
+
+		-- Aktualisiere die Höhe der Section
+		local function updateSectionHeight()
+			local contentHeight = 0
+			local headerHeight = 24
+			local dividerHeight = 1
+			if not sectionObj.Collapsed then
+				contentHeight = tabLayout.AbsoluteContentSize.Y
+			end
+			local totalHeight = headerHeight + dividerHeight + contentHeight
+			sectionContainer.Size = UDim2.new(1, 0, 0, totalHeight)
+			tabContainer.Size = UDim2.new(1, 0, 0, contentHeight)
+		end
+
+		tabLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(updateSectionHeight)
+		updateSectionHeight()
+
+		-- Klick auf Header: einklappen/ausklappen
+		header.MouseButton1Click:Connect(function()
+			sectionObj.Collapsed = not sectionObj.Collapsed
+			arrow.Rotation = sectionObj.Collapsed and 0 or 180
+			tabContainer.Visible = not sectionObj.Collapsed
+			updateSectionHeight()
+		end)
+
+		-- Ermögliche das Hinzufügen von Tabs zu dieser Section
+		local sectionTabFunction = {}
+		function sectionTabFunction:MakeTab(TabConfig)
+			TabConfig.ParentSection = sectionObj
+			return TabFunction:MakeTab(TabConfig)
+		end
+
+		-- Theme-Update für die Section
+		local function refreshSectionTheme()
+			headerLabel.TextColor3 = Library.Themes[Library.SelectedTheme].TextDark
+			arrow.ImageColor3 = Library.Themes[Library.SelectedTheme].TextDark
+			divider.BackgroundColor3 = Library.Themes[Library.SelectedTheme].Stroke
+		end
+		-- Hook für Theme-Wechsel (wird später in der Library verwendet)
+		table.insert(Library.ThemeObjects, {Type = "Section", Object = sectionObj, Refresh = refreshSectionTheme})
+
+		return sectionTabFunction
+	end
+
+	-- Original MakeTab wird angepasst, um Sections zu unterstützen
+	local originalMakeTab = TabFunction.MakeTab or function() end
+	TabFunction.MakeTab = function(TabConfig)
 		TabConfig = TabConfig or {}
 		TabConfig.Name = TabConfig.Name or "Tab"
 		TabConfig.Icon = TabConfig.Icon or ""
 		TabConfig.PremiumOnly = TabConfig.PremiumOnly or false
+		local parentSection = TabConfig.ParentSection
 
 		local TabFrame = SetChildren(SetProps(MakeElement("Button"), {
 			Size = UDim2.new(1, 0, 0, 30),
-			Parent = TabHolder
+			Parent = parentSection and parentSection.Container or TabHolder
 		}), {
 			AddThemeObject(SetProps(MakeElement("Image", TabConfig.Icon), {
 				AnchorPoint = Vector2.new(0, 0.5),
