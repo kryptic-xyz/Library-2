@@ -549,11 +549,13 @@ function Library:MakeWindow(WindowConfig)
 				Font = Enum.Font.GothamBold,
 				ClipsDescendants = true
 			}), "Text"),
-			AddThemeObject(SetProps(MakeElement("Label", "Future of Free", 12), {
-				Size = UDim2.new(1, -60, 0, 12),
-				Position = UDim2.new(0, 50, 1, -25),
-				Visible = not WindowConfig.HidePremium
-			}), "TextDark")
+								
+	            SetProps(MakeElement("Label", "Future of Free", 12), {
+                Size = UDim2.new(1, -60, 0, 12),
+                Position = UDim2.new(0, 50, 1, -25),
+                TextColor3 = Color3.fromRGB(255, 200, 0),
+                Visible = not WindowConfig.HidePremium
+              })
 		}),
 	}), "Second")
 
