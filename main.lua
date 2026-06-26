@@ -12,7 +12,7 @@ local Library = {
 	Flags = {},
 	Themes = {
 		Default = {
-			Main = Color3.fromRGB(20, 20, 22),   
+			Main = Color3.fromRGB(20, 20, 22),
 			Second = Color3.fromRGB(30, 30, 32),   
 			Stroke = Color3.fromRGB(60, 60, 65),   
 			Divider = Color3.fromRGB(40, 40, 45),
@@ -550,12 +550,12 @@ function Library:MakeWindow(WindowConfig)
 				ClipsDescendants = true
 			}), "Text"),
 								
-	            SetProps(MakeElement("Label", "Future of Free", 12), {
+                SetProps(MakeElement("Label", "Future of Free", 12), {
                 Size = UDim2.new(1, -60, 0, 12),
                 Position = UDim2.new(0, 50, 1, -25),
                 TextColor3 = Color3.fromRGB(70, 150, 255),
                 Visible = not WindowConfig.HidePremium
-              })
+            })
 		}),
 	}), "Second")
 
