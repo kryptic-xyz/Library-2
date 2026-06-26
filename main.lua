@@ -2,6 +2,7 @@ local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
 local LocalPlayer = Players.LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 
@@ -12,7 +13,7 @@ local Library = {
 	Flags = {},
 	Themes = {
 		Default = {
-			Main = Color3.fromRGB(20, 20, 22),
+			Main = Color3.fromRGB(20, 20, 22),   
 			Second = Color3.fromRGB(30, 30, 32),   
 			Stroke = Color3.fromRGB(60, 60, 65),   
 			Divider = Color3.fromRGB(40, 40, 45),
@@ -213,6 +214,11 @@ local function SaveCfg(Name)
 			end
 		end	
 	end
+	pcall(function()
+		if writefile then
+			writefile(Library.Folder .. "/" .. Name .. ".txt", HttpService:JSONEncode(Data))
+		end
+	end)
 end
 
 local WhitelistedMouse = {Enum.UserInputType.MouseButton1, Enum.UserInputType.MouseButton2,Enum.UserInputType.MouseButton3,Enum.UserInputType.Touch}
@@ -420,7 +426,7 @@ end
 function Library:Init()
 	if Library.SaveCfg then	
 		pcall(function()
-			if isfile(Library.Folder .. "/" .. game.GameId .. ".txt") then
+			if isfile and isfile(Library.Folder .. "/" .. game.GameId .. ".txt") then
 				LoadCfg(readfile(Library.Folder .. "/" .. game.GameId .. ".txt"))
 				Library:MakeNotification({
 					Name = "Configuration",
@@ -456,9 +462,11 @@ function Library:MakeWindow(WindowConfig)
 	Library.SaveCfg = WindowConfig.SaveConfig
 
 	if WindowConfig.SaveConfig then
-		if not isfolder(WindowConfig.ConfigFolder) then
-			makefolder(WindowConfig.ConfigFolder)
-		end	
+		pcall(function()
+			if makefolder and not isfolder(WindowConfig.ConfigFolder) then
+				makefolder(WindowConfig.ConfigFolder)
+			end
+		end)
 	end
 
 	local TabHolder = AddThemeObject(SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255, 255, 255), 4), {
@@ -549,13 +557,13 @@ function Library:MakeWindow(WindowConfig)
 				Font = Enum.Font.GothamBold,
 				ClipsDescendants = true
 			}), "Text"),
-								
-                SetProps(MakeElement("Label", "Future of Free", 12), {
-                Size = UDim2.new(1, -60, 0, 12),
-                Position = UDim2.new(0, 50, 1, -25),
-                TextColor3 = Color3.fromRGB(70, 150, 255),
-                Visible = not WindowConfig.HidePremium
-            })
+			-- "Future of Free" jetzt in Blau (ohne AddThemeObject)
+			SetProps(MakeElement("Label", "Future of Free", 12), {
+				Size = UDim2.new(1, -60, 0, 12),
+				Position = UDim2.new(0, 50, 1, -25),
+				TextColor3 = Color3.fromRGB(70, 150, 255),  -- Blau
+				Visible = not WindowConfig.HidePremium
+			})
 		}),
 	}), "Second")
 
@@ -1614,56 +1622,54 @@ function Library:MakeWindow(WindowConfig)
 				end
 				return Colorpicker
 			end  
+
+			-- AddSection innerhalb der GetElements-Funktion (für Inhalts-Sections im Tab)
+			function ElementFunction:AddSection(SectionConfig)
+				SectionConfig = SectionConfig or {}
+				local SectionFrame = SetChildren(SetProps(MakeElement("TFrame"), {
+					Size = UDim2.new(1, 0, 0, 26),
+					Parent = ItemParent  -- Wichtig: ItemParent (Tab-Container) statt globalem Container
+				}), {
+					Create("Frame", {
+						Size = UDim2.new(0, 6, 0, 14),
+						Position = UDim2.new(0, 0, 0, 4),
+						BackgroundColor3 = Color3.fromRGB(70, 150, 255),
+						BorderSizePixel = 0,
+						Name = "AccentBar"
+					}, {
+						Create("UICorner", { CornerRadius = UDim.new(1, 0) })
+					}),
+					AddThemeObject(SetProps(MakeElement("Label", SectionConfig.Name or "Section", 14), {
+						Size = UDim2.new(1, -18, 0, 16),
+						Position = UDim2.new(0, 10, 0, 3),
+						Font = Enum.Font.GothamBold
+					}), "TextDark"),
+					SetChildren(SetProps(MakeElement("TFrame"), {
+						AnchorPoint = Vector2.new(0, 0),
+						Size = UDim2.new(1, 0, 1, -24),
+						Position = UDim2.new(0, 0, 0, 23),
+						Name = "Holder"
+					}), {
+						MakeElement("List", 0, 6)
+					}),
+				})
+
+				AddConnection(SectionFrame.Holder.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
+					SectionFrame.Size = UDim2.new(1, 0, 0, SectionFrame.Holder.UIListLayout.AbsoluteContentSize.Y + 31)
+					SectionFrame.Holder.Size = UDim2.new(1, 0, 0, SectionFrame.Holder.UIListLayout.AbsoluteContentSize.Y)
+				end)
+
+				local SectionFunction = {}
+				for i, v in next, GetElements(SectionFrame.Holder) do
+					SectionFunction[i] = v 
+				end
+				return SectionFunction
+			end
+
 			return ElementFunction   
 		end	
 
 		local ElementFunction = {}
-
-		function ElementFunction:AddSection(SectionConfig)
-			SectionConfig.Name = SectionConfig.Name or "Section"
-
-			local SectionFrame = SetChildren(SetProps(MakeElement("TFrame"), {
-				Size = UDim2.new(1, 0, 0, 26),
-				Parent = Container
-			}), {
-							
-				Create("Frame", {
-					Size = UDim2.new(0, 6, 0, 14),
-					Position = UDim2.new(0, 0, 0, 4),
-					BackgroundColor3 = Color3.fromRGB(70, 150, 255),
-					BorderSizePixel = 0,
-					Name = "AccentBar"
-				}, {
-					Create("UICorner", { CornerRadius = UDim.new(1, 0) })
-				}),
-							
-				AddThemeObject(SetProps(MakeElement("Label", SectionConfig.Name, 14), {
-					Size = UDim2.new(1, -18, 0, 16),
-					Position = UDim2.new(0, 10, 0, 3),
-					Font = Enum.Font.GothamBold
-				}), "TextDark"),
-				SetChildren(SetProps(MakeElement("TFrame"), {
-					AnchorPoint = Vector2.new(0, 0),
-					Size = UDim2.new(1, 0, 1, -24),
-					Position = UDim2.new(0, 0, 0, 23),
-					Name = "Holder"
-				}), {
-					MakeElement("List", 0, 6)
-				}),
-			})
-
-			AddConnection(SectionFrame.Holder.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
-				SectionFrame.Size = UDim2.new(1, 0, 0, SectionFrame.Holder.UIListLayout.AbsoluteContentSize.Y + 31)
-				SectionFrame.Holder.Size = UDim2.new(1, 0, 0, SectionFrame.Holder.UIListLayout.AbsoluteContentSize.Y)
-			end)
-
-			local SectionFunction = {}
-			for i, v in next, GetElements(SectionFrame.Holder) do
-				SectionFunction[i] = v 
-			end
-			return SectionFunction
-		end	
-
 		for i, v in next, GetElements(Container) do
 			ElementFunction[i] = v 
 		end
@@ -1676,7 +1682,7 @@ function Library:MakeWindow(WindowConfig)
 			Container:FindFirstChild("UIPadding"):Destroy()
 			SetChildren(SetProps(MakeElement("TFrame"), {
 				Size = UDim2.new(1, 0, 1, 0),
-				Parent = ItemParent
+				Parent = Container
 			}), {
 				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://3610239960"), {
 					Size = UDim2.new(0, 18, 0, 18),
