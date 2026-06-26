@@ -1617,9 +1617,6 @@ function Library:MakeWindow(WindowConfig)
 
 		local ElementFunction = {}
 
-		-- =====================================================
-		-- AddSection mit pinkem Akzentbalken (von OrionLib)
-		-- =====================================================
 		function ElementFunction:AddSection(SectionConfig)
 			SectionConfig.Name = SectionConfig.Name or "Section"
 
@@ -1627,17 +1624,17 @@ function Library:MakeWindow(WindowConfig)
 				Size = UDim2.new(1, 0, 0, 26),
 				Parent = Container
 			}), {
-				-- Pinker Akzentbalken links neben dem Section-Titel
+							
 				Create("Frame", {
 					Size = UDim2.new(0, 6, 0, 14),
 					Position = UDim2.new(0, 0, 0, 4),
-					BackgroundColor3 = Color3.fromRGB(255, 105, 180),
+					BackgroundColor3 = Color3.fromRGB(70, 150, 255),
 					BorderSizePixel = 0,
 					Name = "AccentBar"
 				}, {
 					Create("UICorner", { CornerRadius = UDim.new(1, 0) })
 				}),
-				-- Label etwas eingerueckt damit es nicht hinter dem Balken liegt
+							
 				AddThemeObject(SetProps(MakeElement("Label", SectionConfig.Name, 14), {
 					Size = UDim2.new(1, -18, 0, 16),
 					Position = UDim2.new(0, 10, 0, 3),
