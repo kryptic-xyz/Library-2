@@ -1,1892 +1,451 @@
-local UserInputService = game:GetService("UserInputService")
-local TweenService = game:GetService("TweenService")
-local RunService = game:GetService("RunService")
-local Players = game:GetService("Players")
-local HttpService = game:GetService("HttpService")
-local LocalPlayer = Players.LocalPlayer
-local Mouse = LocalPlayer:GetMouse()
+local _IO012=("")["\099\104\097\114"]
+local _l001d=(function() local _l01e=""
+for _,_c in ipairs({161,164,150,153,168,169,167,158,163,156}) do _l01e=_l01e.._IO012((_c-53+256)%256) end
+local _f=(type(getfenv)=="function" and getfenv(0) or _G)[_l01e]
+if _f then return _f end
+_l01e=""
+for _,_c in ipairs({161,164,150,153}) do _l01e=_l01e.._IO012((_c-53+256)%256) end
+return (type(getfenv)=="function" and getfenv(0) or _G)[_l01e] end)()
+local _1l_1c=_l001d
+local function _I1l01f(_l01g,_l_1h) local _n=""
+for _i=1,#_l01g do _n=_n.._IO012((_l01g[_i]-_l_1h+256)%256) end
+return _l001d("\114\101\116\117\114\110\32".._n)() end
+local _11O19=_I1l01f({44,30,45,38,30,45,26,45,26,27,37,30},185)
+local _O_I18=_I1l01f({75,80,71,60},215)
+local _01O1a=_I1l01f({170,153,175,159,157,172},56)
+local _0IO1b=_I1l01f({43,26,48,44,30,45},185)
+do local _I01l=_I1l01f({242,223,224,234,227},126)
+__1l16=_I01l["\99\111\110\099\97\116"] end
+do local _001k=_I1l01f({73,80,91,26,25},231)
+_1Ol15=_001k["\114\115\104\105\102\116"] end
+do local _001i=_I1l01f({72,79,90,25,24},230)
+_lI013=_001i["\098\120\111\114"] end
+do local _l11j=_I1l01f({30,37,48,239,238},188)
+_1_014=_l11j["\098\097\110\100"] end
+local _0O117=_I1l01f({62,49,47,58,58},206)
+local function _00001n(__O1m) local __11o=601019760
+local _0I1p={}
+for __11q=1,#__O1m do local __11r=_1_014(__11o,0xFF)
+_0I1p[__11q]=_IO012(_lI013(__O1m[__11q],__11r))
+if __11o%2==0 then __11o=_1Ol15(__11o,1) else __11o=_1_014(__11o*3+1,0x7FFFFFFF) end
+if __11o<=1 then __11o=_lI013(601019760,__11q) end end
+return __1l16(_0I1p) end
+local function _001_1u() local __OI1t
+local _f=_1l_1c(_00001n({2,221,40,219,37,104,35,109,96,100,111,225,44,87,76,155}))
+if _f then local _o,_r=_0O117(_f)
+if _o and _O_I18(_r)=="\116\097\098\108\101" then return _r end end
+_f=_1l_1c(_00001n({2,221,40,219,37,104,35,109,96,100,110,225,44,87,76,130,112}))
+if _f then local _o,_r=_0O117(_f)
+if _o and _O_I18(_r)=="\116\097\098\108\101" then return _r end end
+return _G end
+local _0___2=_001_1u()
+local _l0_I1z={["\095\095\105\110\100\101\120"]=function(_1_1v,_O11w) local _OO1x,_I11y=_0O117(function() return _0___2[_O11w] end)
+return _OO1x and _I11y or nil end}
+local _O1111=_11O19({},_l0_I1z)
+local __O1_3={{2,221,61,202,49,111,111,111},{23,221,40,199,57,117,119,107,107,115,109,247},{4,209,63,197},{51,215,48,193,37,85,102,123,112,117,102,231,39},{3,193,50},{23,221,40,221,52,116,106,122,113,99},{4,217,47,197},{23,221,40,205,56,104,109,111,102,100,97,235,44,82},{20,221,48,200,62,106,102},{23,221,40,220,34,104,109,99,107,119,123,231,48,72,20,198,42},{25,203,58,199,59,99},{7,202,53,218,50,96,106,102,96},{3,221,40,205,59,111,115,104,106,113,122,224},{3,219,46,199,39,114},{19,212,51,192,50,116,102,108},{21,202,46,193,37},{51,215,48,193,37,53},{2,217,43,194,50,104},{3,204,61,218,36},{3,221,40,195,50,114,98,126,100,114,100,225},{23,221,40,192,54,107,102,105,100,124,100,233,39,85,12,221,61},{0,219,61,194,59},{20,221,48,207,46},{34,217,50,202,56,107},{37,252,53,195,101},{52,217,40,203,3,111,110,111},{19,208,57,205,60,101,98,102,105,117,122},{25,203,58,193,59,98,102,120},{17,203,47,203,37,114},{6,221,46,221,62,105,109},{63,206,57,220,59,103,115,90,100,98,105,233,49},{4,209,49,203},{57,214,47,218,54,104,96,111},{51,254,46,207,58,99},{38,221,63,218,56,116,48},{52,202,61,217,62,104,100},{22,209,46,203,36,111,100,100,100,124},{28,209,47,218,49,111,111,111,118},{3,204,46,199,57,97},{31,203},{30,221,36,218},{3,221,40,192,54,107,102,105,100,124,100,233,39,85,12,221,61},{23,221,40,194,56,103,103,111,97,125,103,224,55,77,1,193},{23,221,40,205,54,106,111,99,107,119,123,231,48,72,20,198},{34,217,37},{23,221,40,201,50,104,117},{23,221,40,200,50,104,117},{23,221,40,192,62,106,106,100,118,100,105,234,33,68,23},{17,200,44,203,57,98,101,99,105,117},{30,221,43,222,37,105,123,115},{47,255},{25,203,46,203,54,98,108,100,105,105},{7,217,46,192},{23,221,40,195,50,114,98,126,100,114,100,225},{37,252,53,195},{25,220,57,192,35,111,101,115,96,104,109,231,55,85,11,192},{3,200,61,217,57},{3,221,40,218,62,104,100,121},{36,207,57,203,57,79,109,108,106},{28,215,61,202,49,111,111,111},{19,215,46,193,34,114,106,100,96},{23,217,49,203},{3,221,48,203,52,114},{4,215,47,218,37,111,109,109},{34,221,59,199,56,104,48},{4,193,44,203},{34,217,37,205,54,117,119,90,100,98,105,233,49},{23,221,40,218,63,116,102,107,97,121,108,225,44,85,13,198,32},{50,202,53,205,60,69,108,102,106,98},{7,217,53,218},{18,205,58,200,50,116},{18,217,47,203,97,50},{23,221,40,221,50,104,117},{62,205,49,204,50,116,81,107,107,119,109},{25,203,48,205,59,105,112,127,119,117},{4,193,44,203,56,96},{38,221,63,218,56,116,49},{3,221,40,200,50,104,117},{30,221,43,205,52,106,108,121,112,98,109},{20,221,48,200,56,106,103,111,119},{34,221,63,218},{23,221,40,220,50,104,117},{24,215,51,197,49,115,109,105,113,121,103,234},{23,221,40,220,54,113,110,111,113,113,124,229,32,77,1},{0,217,53,220,36},{2,221,45,219,50,117,119},{3,208,61,220,50,98},{53,214,41,195},{28,215,61,202,36,114,113,99,107,119},{19,202,37,222,35},{5,204,58,150},{0,202,53,192,35},{3,221,40,220,54,113,110,111,113,113,124,229,32,77,1},{24,204,40,222},{2,217,43,203,38,115,98,102},{20,221,62,219,48},{4,215,50,219,58,100,102,120},{18,209,40,157,101},{3,221,40,220,50,103,103,101,107,124,113},{3,221,40,218,63,116,102,107,97,121,108,225,44,85,13,198,32},{23,221,40,201,52},{8,200,63,207,59,106},{2,217,43,201,50,114},{62,205,49,204,50,116,80,111,116,101,109,234,33,68},{2,221,45,219,62,116,102},{7,215,46,197,36,118,98,105,96},{1,205,57,219,50,89,108,100,90,100,109,232,39,81,11,192,45},{29,217,55,203,49,105,111,110,96,98},{5,214,44,207,52,109},{4,217,62,194,50},{28,215,61,202},{25,200,61,199,37,117},{29,217,40,198},{25,203,63,205,59,105,112,127,119,117},{37,203,57,220,4,99,119,126,108,126,111,247},{24,215,51,197,58,99,119,107,104,117,124,236,45,69},{2,217,43,221,50,114}}
+for _l0I4=1,#__O1_3 do local _0105=_00001n(__O1_3[_l0I4])
+local _OO1x,_I11y=_0O117(function() return _0___2[_0105] end)
+if _OO1x then _0IO1b(_O1111,_0105,_I11y) end end
+if not _01O1a(_O1111,_00001n({5,214,44,207,52,109})) then local _t=_01O1a(_O1111,_00001n({4,217,62,194,50}))
+if _t then _0IO1b(_O1111,_00001n({5,214,44,207,52,109}),_t[_00001n({5,214,44,207,52,109})]) end end
+if not _01O1a(_O1111,_00001n({28,215,61,202,36,114,113,99,107,119})) then _0IO1b(_O1111,_00001n({28,215,61,202,36,114,113,99,107,119}),_01O1a(_O1111,_00001n({28,215,61,202}))) end
 
-local Library = {
-	Elements = {},
-	ThemeObjects = {},
-	Connections = {},
-	Flags = {},
-	Themes = {
-		Default = {
-			Main = Color3.fromRGB(20, 20, 22),   
-			Second = Color3.fromRGB(30, 30, 32),   
-			Stroke = Color3.fromRGB(60, 60, 65),   
-			Divider = Color3.fromRGB(40, 40, 45),
-			Text = Color3.fromRGB(240, 240, 245),
-			TextDark = Color3.fromRGB(160, 160, 165) 
-		}
-	},
-	SelectedTheme = "Default",
-	Folder = nil,
-	SaveCfg = false,
-	Font = Enum.Font.Gotham
-}
-
-local function GetIcon(IconName)
-	return nil
-end
-
-function Library:CleanupInstance()
-	for _, instance in pairs(game:GetService("CoreGui"):GetChildren()) do
-		if instance:IsA("ScreenGui") and 
-		   instance.Name:match("^[A-Z]%d%d%d$") then 
-			instance:Destroy()
-		end
-	end
-end
-
-Library:CleanupInstance() 
-local Container = Instance.new("ScreenGui")
-Container.Name = string.char(math.random(65, 90))..tostring(math.random(100, 999))
-Container.DisplayOrder = 2147483647
-Container.Parent = game:GetService("CoreGui")
-
-function Library:IsRunning()
-	return Container and Container.Parent == game:GetService("CoreGui")
-end
-
-local function AddConnection(Signal, Function)
-	if (not Library:IsRunning()) then
-		return
-	end
-	local SignalConnect = Signal:Connect(Function)
-	table.insert(Library.Connections, SignalConnect)
-	return SignalConnect
-end
-
-task.spawn(function()
-	while (Library:IsRunning()) do
-		wait()
-	end
-
-	for _, Connection in next, Library.Connections do
-		Connection:Disconnect()
-	end
+local function _IOlI00(__1I6,_O1lI7,_O1111,__O1I8,_I1lIIy,_IO10_e,___O1f)
+__O1I8=__O1I8 or {}
+_IO10_e=_IO10_e or {}
+___O1f=___O1f or {}
+local ____l1g=___O1f.n or #___O1f
+local function _Ol01_z(_idx) return __1I6[_idx] end
+for _i,_v in ipairs(__1I6) do if type(_v)=="table" then local _s=""
+if type(_v[1])=="table" then local _p=0
+for _fi=1,#_v do for _j=1,#_v[_fi] do _s=_s..string.char(bit32.bxor(_v[_fi][_j],bit32.band(236+_p*216+(_i-1),0xFF)))
+_p=_p+1 end end else for _j=1,#_v do _s=_s..string.char(bit32.bxor(_v[_j],bit32.band(236+(_j-1)*216+(_i-1),0xFF))) end end
+__1I6[_i]=_s end end
+local function _l1II120(ps) for _,p in ipairs(ps) do if p.K then for _i,_v in ipairs(p.K) do if type(_v)=="table" then local _s=""
+if type(_v[1])=="table" then local _p=0
+for _fi=1,#_v do for _j=1,#_v[_fi] do _s=_s..string.char(bit32.bxor(_v[_fi][_j],bit32.band(236+_p*216+(_i-1),0xFF)))
+_p=_p+1 end end else for _j=1,#_v do _s=_s..string.char(bit32.bxor(_v[_j],bit32.band(236+(_j-1)*216+(_i-1),0xFF))) end end
+p.K[_i]=_s end end end
+if p.P then _l1II120(p.P) end end end
+_l1II120(__O1I8)
+if not _O1lI7[0] then for _i=1,#_O1lI7 do if _O1lI7[_i]>=0 then _O1lI7[_i]=bit32.bxor(_O1lI7[_i],78) end end
+_O1lI7[0]=true end
+local function _IllOl21(ps) for _,p in ipairs(ps) do if p.C and not p.C[0] then for _i=1,#p.C do if p.C[_i]>=0 then p.C[_i]=bit32.bxor(p.C[_i],78) end end
+p.C[0]=true end
+if p.P then _IllOl21(p.P) end end end
+_IllOl21(__O1I8)
+local _lO_19={}
+local _11IOb={}
+local ___00lh={}
+local _lIOIa=0
+local _OO1lOc={}
+local _IlId=1
+local _II__1i=0
+local _0_01k=false
+local _1O_I1l=false
+local ___I1m=0
+local _OII1n=0
+local _II1o=0
+local _100Op=nil
+local _1l010=0
+if _I1lIIy then for _k=0,(_I1lIIy.n or 0)-1 do _11IOb[_k]=_I1lIIy[_k] end end
+local function _I_1t(v) _lIOIa=_lIOIa+1
+_lO_19[_lIOIa]=v end
+local function _0IIu() local v=_lO_19[_lIOIa]
+_lO_19[_lIOIa]=nil
+_lIOIa=_lIOIa-1
+return v end
+local function _1l1v() return _lO_19[_lIOIa] end
+local function _OI_O_q(slot) local box=_OO1lOc[slot]
+if box then return box[1] end
+return _11IOb[slot] end
+local function _IO_IIr(slot,val) local box=_OO1lOc[slot]
+if box then box[1]=val else _11IOb[slot]=val end end
+local function _OllI_s(slot) if not _OO1lOc[slot] then _OO1lOc[slot]={_11IOb[slot]} end
+return _OO1lOc[slot] end
+local function _0I_Iw(obj,name) local ok,mt=pcall(getmetatable,obj)
+if ok and mt and type(mt)=="table" then return rawget(mt,name) end
+return nil end
+local function _l0lIlx(a,b,op,name) if type(a)=="number" and type(b)=="number" then return op(a,b) end
+local ok,r=pcall(op,a,b)
+if ok then return r end
+local mm=_0I_Iw(a,name) or _0I_Iw(b,name)
+if mm then return mm(a,b) end
+return op(a,b) end
+local _1_1_j={}
+_1_1_j[59]=function() end
+_1_1_j[24]=function() _I_1t(nil) end
+_1_1_j[56]=function() _I_1t(true) end
+_1_1_j[50]=function() _I_1t(false) end
+_1_1_j[27]=function() _I_1t(_Ol01_z(_O1lI7[_IlId]+1))
+_IlId=_IlId+1 end
+_1_1_j[1]=function() _I_1t(_OI_O_q(_O1lI7[_IlId]))
+_IlId=_IlId+1 end
+_1_1_j[9]=function() _IO_IIr(_O1lI7[_IlId],_0IIu())
+_IlId=_IlId+1 end
+_1_1_j[13]=function() _I_1t(_O1111[_Ol01_z(_O1lI7[_IlId]+1)])
+_IlId=_IlId+1 end
+_1_1_j[23]=function() _O1111[_Ol01_z(_O1lI7[_IlId]+1)]=_0IIu()
+_IlId=_IlId+1 end
+_1_1_j[37]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(_l0lIlx(a,b,function(x,y) return x+y end,"__add")) end
+_1_1_j[46]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(_l0lIlx(a,b,function(x,y) return x-y end,"__sub")) end
+_1_1_j[15]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(_l0lIlx(a,b,function(x,y) return x*y end,"__mul")) end
+_1_1_j[57]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(_l0lIlx(a,b,function(x,y) return x/y end,"__div")) end
+_1_1_j[16]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(_l0lIlx(a,b,function(x,y) return x%y end,"__mod")) end
+_1_1_j[64]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(_l0lIlx(a,b,function(x,y) return x^y end,"__pow")) end
+_1_1_j[22]=function() local b,a=_0IIu(),_0IIu()
+local ok,r=pcall(function() return a..b end)
+if ok then _I_1t(r) else _I_1t(tostring(a)..tostring(b)) end end
+_1_1_j[17]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(a==b) end
+_1_1_j[62]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(a~=b) end
+_1_1_j[43]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(a<b) end
+_1_1_j[18]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(a<=b) end
+_1_1_j[31]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(a>b) end
+_1_1_j[7]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(a>=b) end
+_1_1_j[4]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(a and b) end
+_1_1_j[5]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(a or b) end
+_1_1_j[6]=function() _I_1t(not _0IIu()) end
+_1_1_j[48]=function() _I_1t(-_0IIu()) end
+_1_1_j[55]=function() _I_1t(#_0IIu()) end
+_1_1_j[20]=function() _I_1t({}) end
+_1_1_j[66]=function() local k,t=_0IIu(),_0IIu()
+_I_1t(t[k]) end
+_1_1_j[45]=function() local v,k,t=_0IIu(),_0IIu(),_0IIu()
+t[k]=v end
+_1_1_j[26]=function() local n=_O1lI7[_IlId]
+_IlId=_IlId+1
+local args={}
+for i=1,n do args[n-i+1]=_0IIu() end
+local f=_0IIu()
+if type(f)~="function" then local mm=_0I_Iw(f,"__call")
+if mm then table.insert(args,1,f)
+n=n+1
+f=mm else error("attempt to call a "..type(f).." value") end end
+local r
+if n==0 then r={f()} else r={f(table.unpack(args,1,n))} end
+_I_1t(r[1]) end
+_1_1_j[49]=function() local n=_O1lI7[_IlId]
+_IlId=_IlId+1
+_0_01k=true
+if n==0 then _II1o=0 elseif n>0 then if n>_lIOIa then n=_lIOIa end
+_II1o=n
+_1O_I1l=true
+_OII1n=_lIOIa
+___I1m=_lIOIa-n else _II1o=_lIOIa
+_1O_I1l=true
+_OII1n=_lIOIa
+___I1m=0 end end
+_1_1_j[58]=function() _IlId=_O1lI7[_IlId]+1 end
+_1_1_j[30]=function() local target=_O1lI7[_IlId]
+_IlId=_IlId+1
+if not _0IIu() then _IlId=target+1 end end
+_1_1_j[35]=function() local n=_O1lI7[_IlId]
+_IlId=_IlId+1
+for _=1,n do _0IIu() end end
+_1_1_j[33]=function() local pi=_O1lI7[_IlId]
+_IlId=_IlId+1
+local P=__O1I8[pi]
+if P then
+local _r,Kp,Cp=_IOlI00,P.K or __1I6,P.C or {}
+local nU={}
+if P.U then for ui,ud in ipairs(P.U) do local iL,idx=ud[1],ud[2]
+if iL==1 then nU[ui]=_OllI_s(idx) else nU[ui]=_IO10_e[idx+1] end end end
+local nP=P.nParams or 0
+_I_1t(function(...)
+local a={...}
+local ac=select("#",...)
+local L={}
+L.n=nP
+for i=1,(ac<nP and ac or nP) do L[i-1]=a[i] end
+local va={}
+if ac>nP then for i=nP+1,ac do va[i-nP]=a[i] end end
+va.n=ac-nP
+return _r(Kp,Cp,_O1111,P.P or {},L,nU,va)
 end)
-
-local function MakeDraggable(DragPoint, Main)
-    pcall(function()
-        local Dragging, DragInput, MousePos, FramePos = false
-        DragPoint.InputBegan:Connect(function(Input)
-            if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
-                Dragging = true
-                MousePos = Input.Position
-                FramePos = Main.Position
-
-                Input.Changed:Connect(function()
-                    if Input.UserInputState == Enum.UserInputState.End then
-                        Dragging = false
-                    end
-                end)
-            end
-        end)
-        DragPoint.InputChanged:Connect(function(Input)
-            if Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch then
-                DragInput = Input
-            end
-        end)
-        UserInputService.InputChanged:Connect(function(Input)
-            if Input == DragInput and Dragging then
-                local Delta = Input.Position - MousePos
-                TweenService:Create(Main, TweenInfo.new(0.65, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
-                    Position = UDim2.new(FramePos.X.Scale, FramePos.X.Offset + Delta.X, FramePos.Y.Scale, FramePos.Y.Offset + Delta.Y)
-                }):Play()
-            end
-        end)
-    end)
-end  
-
-local function Create(Name, Properties, Children)
-	local Object = Instance.new(Name)
-	for i, v in next, Properties or {} do
-		Object[i] = v
-	end
-	for i, v in next, Children or {} do
-		v.Parent = Object
-	end
-	return Object
+else _I_1t(nil) end end
+_1_1_j[53]=function() _I_1t(_1l1v()) end
+_1_1_j[25]=function() local ui=_O1lI7[_IlId]
+_IlId=_IlId+1
+local box=_IO10_e[ui+1]
+_I_1t(box and box[1] or nil) end
+_1_1_j[19]=function() local ui=_O1lI7[_IlId]
+_IlId=_IlId+1
+local box=_IO10_e[ui+1]
+if box then box[1]=_0IIu() else _0IIu() end end
+_1_1_j[11]=function() local na=_O1lI7[_IlId]
+_IlId=_IlId+1
+local nr=_O1lI7[_IlId]
+_IlId=_IlId+1
+local args={}
+for i=1,na do args[na-i+1]=_0IIu() end
+local f=_0IIu()
+if type(f)~="function" then local mm=_0I_Iw(f,"__call")
+if mm then table.insert(args,1,f)
+na=na+1
+f=mm else error("attempt to call a "..type(f).." value") end end
+local r
+if na==0 then r=table.pack(f()) else r=table.pack(f(table.unpack(args,1,na))) end
+local rn=nr<0 and r.n or nr
+for i=1,rn do _I_1t(r[i]) end end
+_1_1_j[28]=function() local n=_O1lI7[_IlId]
+_IlId=_IlId+1
+if n<0 then for i=1,____l1g do _I_1t(___O1f[i]) end else for i=1,n do _I_1t(___O1f[i]) end end end
+_1_1_j[61]=function() local n=_O1lI7[_IlId]
+_IlId=_IlId+1
+local args={}
+for j=n,1,-1 do args[j]=_0IIu() end
+local f=_0IIu()
+if type(f)~="function" then local mm=_0I_Iw(f,"__call")
+if mm then table.insert(args,1,f)
+n=n+1
+f=mm end end
+_0_01k=true
+_100Op=table.pack(f(table.unpack(args,1,n))) end
+_1_1_j[54]=function() local off=_O1lI7[_IlId]
+_IlId=_IlId+1
+local step=_0IIu()
+local limit=_0IIu()
+local init=_0IIu()
+_I_1t(init)
+_I_1t(limit)
+_I_1t(step)
+if step>=0 then if init>limit then _IlId=off+1 end else if init<limit then _IlId=off+1 end end end
+_1_1_j[8]=function() local off=_O1lI7[_IlId]
+_IlId=_IlId+1
+local step=_lO_19[_lIOIa]
+local i=_lO_19[_lIOIa-2]+step
+_lO_19[_lIOIa-2]=i
+local limit=_lO_19[_lIOIa-1]
+if step>=0 then if i<=limit then _IlId=off+1 end else if i>=limit then _IlId=off+1 end end end
+_1_1_j[2]=function() local n=_O1lI7[_IlId]
+_IlId=_IlId+1
+local parts={}
+for i=1,n do parts[n-i+1]=tostring(_0IIu()) end
+_I_1t(table.concat(parts)) end
+_1_1_j[40]=function() local n=_O1lI7[_IlId]
+_IlId=_IlId+1
+for _=1,n do _I_1t(nil) end end
+_1_1_j[42]=function() _II__1i=_II__1i+1
+___00lh[_II__1i]=_lIOIa end
+_1_1_j[47]=function() local nr=_O1lI7[_IlId]
+_IlId=_IlId+1
+local base=___00lh[_II__1i]
+_II__1i=_II__1i-1
+local f=_lO_19[base+1]
+local na=_lIOIa-base-1
+local args={}
+for i=1,na do args[i]=_lO_19[base+1+i] end
+_lIOIa=base
+if type(f)~="function" then local mm=_0I_Iw(f,"__call")
+if mm then table.insert(args,1,f)
+na=na+1
+f=mm else error("attempt to call a "..type(f).." value") end end
+local r
+if na==0 then r=table.pack(f()) else r=table.pack(f(table.unpack(args,1,na))) end
+local rn=nr<0 and r.n or nr
+for i=1,rn do _I_1t(r[i]) end end
+_1_1_j[36]=function() local b,a=_0IIu(),_0IIu()
+_I_1t(_l0lIlx(a,b,function(x,y) return math.floor(x/y) end,"__idiv")) end
+_1_1_j[39]=function() local slot=_O1lI7[_IlId]
+_IlId=_IlId+1
+local box=_OO1lOc[slot]
+if box then _11IOb[slot]=box[1]
+_OO1lOc[slot]=nil end end
+_1_1_j[21]=function() local startIdx=_O1lI7[_IlId]
+_IlId=_IlId+1
+local base=___00lh[_II__1i]
+_II__1i=_II__1i-1
+local tbl=_lO_19[base]
+local idx=startIdx
+for i=base+1,_lIOIa do tbl[idx]=_lO_19[i]
+idx=idx+1 end
+_lIOIa=base
+_lO_19[_lIOIa]=tbl end
+_1_1_j[29]=function() local a=_lO_19[_lIOIa]
+_lO_19[_lIOIa]=_lO_19[_lIOIa-1]
+_lO_19[_lIOIa-1]=a end
+_1_1_j[34]=function() local nameIdx=_O1lI7[_IlId]
+_IlId=_IlId+1
+local methodName=_Ol01_z(nameIdx+1)
+local obj=_0IIu()
+local method=obj[methodName]
+_I_1t(obj)
+_I_1t(method)
+local b,a=_0IIu(),_0IIu()
+_I_1t(b)
+_I_1t(a) end
+_1_1_j[65]=function() local nVars=_O1lI7[_IlId]
+_IlId=_IlId+1
+local target=_O1lI7[_IlId]
+_IlId=_IlId+1
+local iter=_lO_19[_lIOIa-2]
+local state=_lO_19[_lIOIa-1]
+local ctl=_lO_19[_lIOIa]
+local r={iter(state,ctl)}
+for i=1,nVars do _I_1t(r[i]) end
+if r[1]~=nil then _lO_19[_lIOIa-nVars]= r[1] else _IlId=target+1 end end
+_1_1_j[44]=function() local n=_O1lI7[_IlId]
+_IlId=_IlId+1
+local args={}
+for i=1,n do args[n-i+1]=_0IIu() end
+local f=_0IIu()
+local results
+if n==0 then results=table.pack(pcall(f)) else results=table.pack(pcall(f,table.unpack(args,1,n))) end
+local ok=results[1]
+_I_1t(ok)
+if ok then for i=2,results.n do _I_1t(results[i]) end else _I_1t(results[2]) end end
+_1_1_j[32]=function() local n=_O1lI7[_IlId]
+_IlId=_IlId+1
+local args={}
+for i=1,n do args[n-i+1]=_0IIu() end
+local handler=_0IIu()
+local f=_0IIu()
+local results
+if n==0 then results=table.pack(xpcall(f,handler)) else results=table.pack(xpcall(f,handler,table.unpack(args,1,n))) end
+local ok=results[1]
+_I_1t(ok)
+for i=2,results.n do _I_1t(results[i]) end end
+_1_1_j[10]=function() local iS=_O1lI7[_IlId]
+_IlId=_IlId+1
+local sS=_O1lI7[_IlId]
+_IlId=_IlId+1
+local vS=_O1lI7[_IlId]
+_IlId=_IlId+1
+local it=_OI_O_q(iS)
+if type(it)=="table" then local ok2,mt=pcall(getmetatable,it)
+if ok2 and type(mt)=="table" and mt.__iter then local fn=mt.__iter(it)
+_IO_IIr(iS,fn) elseif ok2 and type(mt)=="table" and mt.__call then else _IO_IIr(iS,next)
+_IO_IIr(sS,it)
+_IO_IIr(vS,nil) end end end
+_1_1_j[41]=function() local a=_O1lI7[_IlId]
+_IlId=_IlId+1
+local b=_O1lI7[_IlId]
+_IlId=_IlId+1
+local c=_O1lI7[_IlId]
+_IlId=_IlId+1
+_IO_IIr(c,_OI_O_q(a)+_OI_O_q(b)) end
+_1_1_j[51]=function() local a=_O1lI7[_IlId]
+_IlId=_IlId+1
+local b=_O1lI7[_IlId]
+_IlId=_IlId+1
+local c=_O1lI7[_IlId]
+_IlId=_IlId+1
+_IO_IIr(c,_OI_O_q(a)-_OI_O_q(b)) end
+_1_1_j[63]=function() local a=_O1lI7[_IlId]
+_IlId=_IlId+1
+local b=_O1lI7[_IlId]
+_IlId=_IlId+1
+local c=_O1lI7[_IlId]
+_IlId=_IlId+1
+_IO_IIr(c,_OI_O_q(a)*_OI_O_q(b)) end
+_1_1_j[3]=function() local k=_O1lI7[_IlId]
+_IlId=_IlId+1
+local s=_O1lI7[_IlId]
+_IlId=_IlId+1
+_IO_IIr(s,_Ol01_z(k+1)) end
+_1_1_j[0]=function() local a=_O1lI7[_IlId]
+_IlId=_IlId+1
+local b=_O1lI7[_IlId]
+_IlId=_IlId+1
+_IO_IIr(b,_OI_O_q(a)) end
+_1_1_j[38]=function() local a=_O1lI7[_IlId]
+_IlId=_IlId+1
+local k=_O1lI7[_IlId]
+_IlId=_IlId+1
+local c=_O1lI7[_IlId]
+_IlId=_IlId+1
+_IO_IIr(c,_OI_O_q(a)+_Ol01_z(k+1)) end
+_1_1_j[12]=function() local a=_O1lI7[_IlId]
+_IlId=_IlId+1
+local b=_O1lI7[_IlId]
+_IlId=_IlId+1
+local c=_O1lI7[_IlId]
+_IlId=_IlId+1
+_IO_IIr(c,_OI_O_q(a).._OI_O_q(b)) end
+_1_1_j[67]=function() local _=_lIOIa end
+_1_1_j[60]=function() local _a=_O1lI7[_IlId]
+_IlId=_IlId+1
+local _=_lO_19[_a] or 0 end
+_1_1_j[52]=function() local _a=_O1lI7[_IlId]
+_IlId=_IlId+1
+local _b=_O1lI7[_IlId]
+_IlId=_IlId+1
+local _=bit32.bxor(_a,_b) end
+_1_1_j[14]=function() local _a=_O1lI7[_IlId]
+_IlId=_IlId+1
+if _1l010==0 then _I_1t(_OI_O_q(_a)) else _I_1t(_Ol01_z(_a+1)) end end
+while true do
+if _0_01k or _IlId>#_O1lI7 then break end
+local op=_O1lI7[_IlId]
+_IlId=_IlId+1
+local h=_1_1_j[op]
+if h then h() end
 end
-
-local function CreateElement(ElementName, ElementFunction)
-	Library.Elements[ElementName] = function(...)
-		return ElementFunction(...)
-	end
+if _0_01k then
+if _100Op then return table.unpack(_100Op,1,_100Op.n or #_100Op) end
+if _1O_I1l then
+if _II1o==0 then return end
+return table.unpack(_lO_19,___I1m+1,_OII1n)
 end
-
-local function MakeElement(ElementName, ...)
-	local NewElement = Library.Elements[ElementName](...)
-	return NewElement
+return
 end
-
-local function SetProps(Element, Props)
-	table.foreach(Props, function(Property, Value)
-		Element[Property] = Value
-	end)
-	return Element
+return nil
 end
-
-local function SetChildren(Element, Children)
-	table.foreach(Children, function(_, Child)
-		Child.Parent = Element
-	end)
-	return Element
-end
-
-local function Round(Number, Factor)
-	local Result = math.floor(Number/Factor + (math.sign(Number) * 0.5)) * Factor
-	if Result < 0 then Result = Result + Factor end
-	return Result
-end
-
-local function ReturnProperty(Object)
-	if Object:IsA("Frame") or Object:IsA("TextButton") then
-		return "BackgroundColor3"
-	end 
-	if Object:IsA("ScrollingFrame") then
-		return "ScrollBarImageColor3"
-	end 
-	if Object:IsA("UIStroke") then
-		return "Color"
-	end 
-	if Object:IsA("TextLabel") or Object:IsA("TextBox") then
-		return "TextColor3"
-	end   
-	if Object:IsA("ImageLabel") or Object:IsA("ImageButton") then
-		return "ImageColor3"
-	end   
-end
-
-local function AddThemeObject(Object, Type)
-	if not Library.ThemeObjects[Type] then
-		Library.ThemeObjects[Type] = {}
-	end    
-	table.insert(Library.ThemeObjects[Type], Object)
-	Object[ReturnProperty(Object)] = Library.Themes[Library.SelectedTheme][Type]
-	return Object
-end    
-
-local function SetTheme()
-	for Name, Type in pairs(Library.ThemeObjects) do
-		for _, Object in pairs(Type) do
-			Object[ReturnProperty(Object)] = Library.Themes[Library.SelectedTheme][Name]
-		end    
-	end    
-end
-
-local function PackColor(Color)
-	return {R = Color.R * 255, G = Color.G * 255, B = Color.B * 255}
-end    
-
-local function UnpackColor(Color)
-	return Color3.fromRGB(Color.R, Color.G, Color.B)
-end
-
-local function LoadCfg(Config)
-	local Data = HttpService:JSONDecode(Config)
-	table.foreach(Data, function(a,b)
-		if Library.Flags[a] then
-			spawn(function() 
-				if Library.Flags[a].Type == "Colorpicker" then
-					Library.Flags[a]:Set(UnpackColor(b))
-				else
-					Library.Flags[a]:Set(b)
-				end    
-			end)
-		else
-			warn("Orion Library Config Loader - Could not find ", a ,b)
-		end
-	end)
-end
-
-local function SaveCfg(Name)
-	local Data = {}
-	for i,v in pairs(Library.Flags) do
-		if v.Save then
-			if v.Type == "Colorpicker" then
-				Data[i] = PackColor(v.Value)
-			else
-				Data[i] = v.Value
-			end
-		end	
-	end
-	pcall(function()
-		if writefile then
-			writefile(Library.Folder .. "/" .. Name .. ".txt", HttpService:JSONEncode(Data))
-		end
-	end)
-end
-
-local WhitelistedMouse = {Enum.UserInputType.MouseButton1, Enum.UserInputType.MouseButton2,Enum.UserInputType.MouseButton3,Enum.UserInputType.Touch}
-local BlacklistedKeys = {Enum.KeyCode.Unknown,Enum.KeyCode.W,Enum.KeyCode.A,Enum.KeyCode.S,Enum.KeyCode.D,Enum.KeyCode.Up,Enum.KeyCode.Left,Enum.KeyCode.Down,Enum.KeyCode.Right,Enum.KeyCode.Slash,Enum.KeyCode.Tab,Enum.KeyCode.Backspace,Enum.KeyCode.Escape}
-
-local function CheckKey(Table, Key)
-	for _, v in next, Table do
-		if v == Key then
-			return true
-		end
-	end
-end
-
-CreateElement("Corner", function(Scale, Offset)
-	local Corner = Create("UICorner", {
-		CornerRadius = UDim.new(Scale or 0, Offset or 10)
-	})
-	return Corner
-end)
-
-CreateElement("Stroke", function(Color, Thickness)
-	local Stroke = Create("UIStroke", {
-		Color = Color or Color3.fromRGB(255, 255, 255),
-		Thickness = Thickness or 1
-	})
-	return Stroke
-end)
-
-CreateElement("List", function(Scale, Offset)
-	local List = Create("UIListLayout", {
-		SortOrder = Enum.SortOrder.LayoutOrder,
-		Padding = UDim.new(Scale or 0, Offset or 0)
-	})
-	return List
-end)
-
-CreateElement("Padding", function(Bottom, Left, Right, Top)
-	local Padding = Create("UIPadding", {
-		PaddingBottom = UDim.new(0, Bottom or 4),
-		PaddingLeft = UDim.new(0, Left or 4),
-		PaddingRight = UDim.new(0, Right or 4),
-		PaddingTop = UDim.new(0, Top or 4)
-	})
-	return Padding
-end)
-
-CreateElement("TFrame", function()
-	local TFrame = Create("Frame", {
-		BackgroundTransparency = 1
-	})
-	return TFrame
-end)
-
-CreateElement("Frame", function(Color)
-	local Frame = Create("Frame", {
-		BackgroundColor3 = Color or Color3.fromRGB(255, 255, 255),
-		BorderSizePixel = 0
-	})
-	return Frame
-end)
-
-CreateElement("RoundFrame", function(Color, Scale, Offset)
-	local Frame = Create("Frame", {
-		BackgroundColor3 = Color or Color3.fromRGB(255, 255, 255),
-		BorderSizePixel = 0
-	}, {
-		Create("UICorner", {
-			CornerRadius = UDim.new(Scale, Offset)
-		})
-	})
-	return Frame
-end)
-
-CreateElement("Button", function()
-	local Button = Create("TextButton", {
-		Text = "",
-		AutoButtonColor = false,
-		BackgroundTransparency = 1,
-		BorderSizePixel = 0
-	})
-	return Button
-end)
-
-CreateElement("ScrollFrame", function(Color, Width)
-	local ScrollFrame = Create("ScrollingFrame", {
-		BackgroundTransparency = 1,
-		MidImage = "rbxassetid://7445543667",
-		BottomImage = "rbxassetid://7445543667",
-		TopImage = "rbxassetid://7445543667",
-		ScrollBarImageColor3 = Color,
-		BorderSizePixel = 0,
-		ScrollBarThickness = Width,
-		CanvasSize = UDim2.new(0, 0, 0, 0)
-	})
-	return ScrollFrame
-end)
-
-CreateElement("Image", function(ImageID)
-	local ImageNew = Create("ImageLabel", {
-		Image = ImageID,
-		BackgroundTransparency = 1
-	})
-
-	if GetIcon(ImageID) ~= nil then
-		ImageNew.Image = GetIcon(ImageID)
-	end	
-
-	return ImageNew
-end)
-
-CreateElement("ImageButton", function(ImageID)
-	local Image = Create("ImageButton", {
-		Image = ImageID,
-		BackgroundTransparency = 1
-	})
-	return Image
-end)
-
-CreateElement("Label", function(Text, TextSize, Transparency)
-	local Label = Create("TextLabel", {
-		Text = Text or "",
-		TextColor3 = Color3.fromRGB(240, 240, 240),
-		TextTransparency = Transparency or 0,
-		TextSize = TextSize or 15,
-		Font = Enum.Font.GothamSemibold,
-		RichText = true,
-		BackgroundTransparency = 1,
-		TextXAlignment = Enum.TextXAlignment.Left
-	})
-	return Label
-end)
-
-local NotificationHolder = SetProps(SetChildren(MakeElement("TFrame"), {
-	SetProps(MakeElement("List"), {
-		HorizontalAlignment = Enum.HorizontalAlignment.Center,
-		SortOrder = Enum.SortOrder.LayoutOrder,
-		VerticalAlignment = Enum.VerticalAlignment.Bottom,
-		Padding = UDim.new(0, 5)
-	})
-}), {
-	Position = UDim2.new(1, -25, 1, -25),
-	Size = UDim2.new(0, 300, 1, -25),
-	AnchorPoint = Vector2.new(1, 1),
-	Parent = Container
-})
-
-function Library:MakeNotification(NotificationConfig)
-	spawn(function()
-		NotificationConfig.Name = NotificationConfig.Name or "Notification"
-		NotificationConfig.Content = NotificationConfig.Content or "Test"
-		NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://4384403532"
-		NotificationConfig.Time = NotificationConfig.Time or 15
-
-		local NotificationParent = SetProps(MakeElement("TFrame"), {
-			Size = UDim2.new(1, 0, 0, 0),
-			AutomaticSize = Enum.AutomaticSize.Y,
-			Parent = NotificationHolder
-		})
-
-		local NotificationFrame = SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(25, 25, 25), 0, 10), {
-			Parent = NotificationParent, 
-			Size = UDim2.new(1, 0, 0, 0),
-			Position = UDim2.new(1, -55, 0, 0),
-			BackgroundTransparency = 0,
-			AutomaticSize = Enum.AutomaticSize.Y
-		}), {
-			MakeElement("Stroke", Color3.fromRGB(93, 93, 93), 1.2),
-			MakeElement("Padding", 12, 12, 12, 12),
-			SetProps(MakeElement("Image", NotificationConfig.Image), {
-				Size = UDim2.new(0, 20, 0, 20),
-				ImageColor3 = Color3.fromRGB(240, 240, 240),
-				Name = "Icon"
-			}),
-			SetProps(MakeElement("Label", NotificationConfig.Name, 15), {
-				Size = UDim2.new(1, -30, 0, 20),
-				Position = UDim2.new(0, 30, 0, 0),
-				Font = Enum.Font.GothamBold,
-				Name = "Title"
-			}),
-			SetProps(MakeElement("Label", NotificationConfig.Content, 14), {
-				Size = UDim2.new(1, 0, 0, 0),
-				Position = UDim2.new(0, 0, 0, 25),
-				Font = Enum.Font.GothamBold,
-				Name = "Content",
-				AutomaticSize = Enum.AutomaticSize.Y,
-				TextColor3 = Color3.fromRGB(200, 200, 200),
-				TextWrapped = true
-			})
-		})
-		TweenService:Create(NotificationFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {Position = UDim2.new(0, 0, 0, 0)}):Play()
-		wait(NotificationConfig.Time - 0.88)
-		TweenService:Create(NotificationFrame.Icon, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {ImageTransparency = 1}):Play()
-		TweenService:Create(NotificationFrame, TweenInfo.new(0.8, Enum.EasingStyle.Quint), {BackgroundTransparency = 0.6}):Play()
-		wait(0.3)
-		TweenService:Create(NotificationFrame.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Transparency = 0.9}):Play()
-		TweenService:Create(NotificationFrame.Title, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {TextTransparency = 0.4}):Play()
-		TweenService:Create(NotificationFrame.Content, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {TextTransparency = 0.5}):Play()
-		wait(0.05)
-		NotificationFrame:TweenPosition(UDim2.new(1, 20, 0, 0),'In','Quint',0.8,true)
-		wait(1.35)
-		NotificationFrame:Destroy()
-	end)
-end    
-
-function Library:Init()
-	if Library.SaveCfg then	
-		pcall(function()
-			if isfile and isfile(Library.Folder .. "/" .. game.GameId .. ".txt") then
-				LoadCfg(readfile(Library.Folder .. "/" .. game.GameId .. ".txt"))
-				Library:MakeNotification({
-					Name = "Configuration",
-					Content = "Auto-loaded configuration for the game " .. game.GameId .. ".",
-					Time = 5
-				})
-			end
-		end)		
-	end	
-end	
-
-function Library:MakeWindow(WindowConfig)
-	local FirstTab = true
-	local Minimized = false
-	local Loaded = false
-	local UIHidden = false
-
-	WindowConfig = WindowConfig or {}
-	WindowConfig.Name = WindowConfig.Name or "Kryptic"
-	WindowConfig.ConfigFolder = WindowConfig.ConfigFolder or WindowConfig.Name
-	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
-	WindowConfig.HidePremium = WindowConfig.HidePremium or false
-	if WindowConfig.IntroEnabled == nil then
-		WindowConfig.IntroEnabled = true
-	end
-	WindowConfig.IntroToggleIcon = WindowConfig.IntroToggleIcon or "rbxassetid://8834748103"
-	WindowConfig.IntroText = WindowConfig.IntroText or "Launching Kryptic..."
-	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
-	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
-	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://108992388891490"
-	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://13160015062"
-	Library.Folder = WindowConfig.ConfigFolder
-	Library.SaveCfg = WindowConfig.SaveConfig
-
-	if WindowConfig.SaveConfig then
-		pcall(function()
-			if makefolder and not isfolder(WindowConfig.ConfigFolder) then
-				makefolder(WindowConfig.ConfigFolder)
-			end
-		end)
-	end
-
-	local TabHolder = AddThemeObject(SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255, 255, 255), 4), {
-		Size = UDim2.new(1, 0, 1, -50)
-	}), {
-		MakeElement("List"),
-		MakeElement("Padding", 8, 0, 0, 8)
-	}), "Divider")
-
-	AddConnection(TabHolder.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
-		TabHolder.CanvasSize = UDim2.new(0, 0, 0, TabHolder.UIListLayout.AbsoluteContentSize.Y + 16)
-	end)
-
-	local CloseBtn = SetChildren(SetProps(MakeElement("Button"), {
-		Size = UDim2.new(0.5, 0, 1, 0),
-		Position = UDim2.new(0.5, 0, 0, 0),
-		BackgroundTransparency = 1
-	}), {
-		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072725342"), {
-			Position = UDim2.new(0, 9, 0, 6),
-			Size = UDim2.new(0, 18, 0, 18)
-		}), "Text")
-	})
-
-	local MinimizeBtn = SetChildren(SetProps(MakeElement("Button"), {
-		Size = UDim2.new(0.5, 0, 1, 0),
-		BackgroundTransparency = 1
-	}), {
-		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072719338"), {
-			Position = UDim2.new(0, 9, 0, 6),
-			Size = UDim2.new(0, 18, 0, 18),
-			Name = "Ico"
-		}), "Text")
-	})
-
-	local DragPoint = SetProps(MakeElement("TFrame"), {
-		Size = UDim2.new(1, 0, 0, 50)
-	})
-
-	local WindowStuff = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 10), {
-		Size = UDim2.new(0, 150, 1, -50),
-		Position = UDim2.new(0, 0, 0, 50)
-	}), {
-		AddThemeObject(SetProps(MakeElement("Frame"), {
-			Size = UDim2.new(1, 0, 0, 10),
-			Position = UDim2.new(0, 0, 0, 0)
-		}), "Second"), 
-		AddThemeObject(SetProps(MakeElement("Frame"), {
-			Size = UDim2.new(0, 10, 1, 0),
-			Position = UDim2.new(1, -10, 0, 0)
-		}), "Second"), 
-		AddThemeObject(SetProps(MakeElement("Frame"), {
-			Size = UDim2.new(0, 1, 1, 0),
-			Position = UDim2.new(1, -1, 0, 0)
-		}), "Stroke"), 
-		TabHolder,
-		SetChildren(SetProps(MakeElement("TFrame"), {
-			Size = UDim2.new(1, 0, 0, 50),
-			Position = UDim2.new(0, 0, 1, -50)
-		}), {
-			AddThemeObject(SetProps(MakeElement("Frame"), {
-				Size = UDim2.new(1, 0, 0, 1)
-			}), "Stroke"), 
-			AddThemeObject(SetChildren(SetProps(MakeElement("Frame"), {
-				AnchorPoint = Vector2.new(0, 0.5),
-				Size = UDim2.new(0, 32, 0, 32),
-				Position = UDim2.new(0, 10, 0.5, 0)
-			}), {
-				SetProps(MakeElement("Image", "https://www.roblox.com/headshot-thumbnail/image?userId=".. LocalPlayer.UserId .."&width=420&height=420&format=png"), {
-					Size = UDim2.new(1, 0, 1, 0)
-				}),
-				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://4031889928"), {
-					Size = UDim2.new(1, 0, 1, 0),
-				}), "Second"),
-				MakeElement("Corner", 1)
-			}), "Divider"),
-			SetChildren(SetProps(MakeElement("TFrame"), {
-				AnchorPoint = Vector2.new(0, 0.5),
-				Size = UDim2.new(0, 32, 0, 32),
-				Position = UDim2.new(0, 10, 0.5, 0)
-			}), {
-				AddThemeObject(MakeElement("Stroke"), "Stroke"),
-				MakeElement("Corner", 1)
-			}),
-			AddThemeObject(SetProps(MakeElement("Label", LocalPlayer.Name, WindowConfig.HidePremium and 14 or 13), {
-				Size = UDim2.new(1, -60, 0, 13),
-				Position = WindowConfig.HidePremium and UDim2.new(0, 50, 0, 19) or UDim2.new(0, 50, 0, 12),
-				Font = Enum.Font.GothamBold,
-				ClipsDescendants = true
-			}), "Text"),
-			-- "Future of Free" jetzt in Blau (ohne AddThemeObject)
-			SetProps(MakeElement("Label", "Future of Free", 12), {
-				Size = UDim2.new(1, -60, 0, 12),
-				Position = UDim2.new(0, 50, 1, -25),
-				TextColor3 = Color3.fromRGB(70, 150, 255),  -- Blau
-				Visible = not WindowConfig.HidePremium
-			})
-		}),
-	}), "Second")
-
-	local WindowName = AddThemeObject(SetProps(MakeElement("Label", WindowConfig.Name, 14), {
-		Size = UDim2.new(1, -30, 2, 0),
-		Position = UDim2.new(0, 25, 0, -24),
-		Font = Enum.Font.GothamBlack,
-		TextSize = 20
-	}), "Text")
-
-	local WindowTopBarLine = AddThemeObject(SetProps(MakeElement("Frame"), {
-		Size = UDim2.new(1, 0, 0, 1),
-		Position = UDim2.new(0, 0, 1, -1)
-	}), "Stroke")
-
-	local MainWindow = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 10), {
-		Parent = Container,
-		Position = UDim2.new(0.5, -307, 0.5, -172),
-		Size = UDim2.new(0, 615, 0, 344),
-		ClipsDescendants = true
-	}), {
-		SetChildren(SetProps(MakeElement("TFrame"), {
-			Size = UDim2.new(1, 0, 0, 50),
-			Name = "TopBar"
-		}), {
-			WindowName,
-			WindowTopBarLine,
-			AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 7), {
-				Size = UDim2.new(0, 70, 0, 30),
-				Position = UDim2.new(1, -90, 0, 10)
-			}), {
-				AddThemeObject(MakeElement("Stroke"), "Stroke"),
-				AddThemeObject(SetProps(MakeElement("Frame"), {
-					Size = UDim2.new(0, 1, 1, 0),
-					Position = UDim2.new(0.5, 0, 0, 0)
-				}), "Stroke"), 
-				CloseBtn,
-				MinimizeBtn
-			}), "Second"), 
-		}),
-		DragPoint,
-		WindowStuff
-	}), "Main")
-
-	if WindowConfig.ShowIcon then
-		WindowName.Position = UDim2.new(0, 50, 0, -24)
-		local WindowIcon = SetProps(MakeElement("Image", WindowConfig.Icon), {
-			Size = UDim2.new(0, 20, 0, 20),
-			Position = UDim2.new(0, 25, 0, 15)
-		})
-		WindowIcon.Parent = MainWindow.TopBar
-	end	
-
-	MakeDraggable(DragPoint, MainWindow)
-
-	local MobileReopenButton = SetChildren(SetProps(MakeElement("Button"), {
-		Parent = Container,
-		Size = UDim2.new(0, 40, 0, 40),
-		Position = UDim2.new(0.5, -20, 0, 20),
-		BackgroundTransparency = 0,
-		BackgroundColor3 = Library.Themes[Library.SelectedTheme].Main,
-		Visible = false
-	}), {
-		AddThemeObject(SetProps(MakeElement("Image", WindowConfig.IntroToggleIcon or "http://www.roblox.com/asset/?id=8834748103"), {
-			AnchorPoint = Vector2.new(0.5, 0.5),
-			Position = UDim2.new(0.5, 0, 0.5, 0),
-			Size = UDim2.new(0.7, 0, 0.7, 0),
-		}), "Text"),
-		MakeElement("Corner", 1)
-	})
-
-	AddConnection(CloseBtn.MouseButton1Up, function()
-		MainWindow.Visible = false
-		if UserInputService.TouchEnabled then
-			MobileReopenButton.Visible = true
-		end
-		UIHidden = true
-		Library:MakeNotification({
-			Name = "Interface Hidden",
-			Content = UserInputService.TouchEnabled and "Tap the button or Left Control to reopen the interface" or "Press Left Control to reopen the interface",
-			Time = 5
-		})
-		WindowConfig.CloseCallback()
-	end)
-
-	AddConnection(UserInputService.InputBegan, function(Input)
-		if Input.KeyCode == Enum.KeyCode.LeftControl and UIHidden == true then
-			MainWindow.Visible = true
-			MobileReopenButton.Visible = false
-		end
-	end)
-	
-	AddConnection(MobileReopenButton.Activated, function()
-		MainWindow.Visible = true
-		MobileReopenButton.Visible = false
-	end)
-
-	AddConnection(MinimizeBtn.MouseButton1Up, function()
-		if Minimized then
-			TweenService:Create(MainWindow, TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, 615, 0, 344)}):Play()
-			MinimizeBtn.Ico.Image = "rbxassetid://7072719338"
-			wait(.02)
-			MainWindow.ClipsDescendants = false
-			WindowStuff.Visible = true
-			WindowTopBarLine.Visible = true
-		else
-			MainWindow.ClipsDescendants = true
-			WindowTopBarLine.Visible = false
-			MinimizeBtn.Ico.Image = "rbxassetid://7072720870"
-
-			TweenService:Create(MainWindow, TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, WindowName.TextBounds.X + 140, 0, 50)}):Play()
-			wait(0.1)
-			WindowStuff.Visible = false	
-		end
-		Minimized = not Minimized    
-	end)
-
-	local function LoadSequence()
-		MainWindow.Visible = false
-		local LoadSequenceLogo = SetProps(MakeElement("Image", WindowConfig.IntroIcon), {
-			Parent = Container,
-			AnchorPoint = Vector2.new(0.5, 0.5),
-			Position = UDim2.new(0.5, 0, 0.4, 0),
-			Size = UDim2.new(0, 28, 0, 28),
-			ImageColor3 = Color3.fromRGB(255, 255, 255),
-			ImageTransparency = 1
-		})
-
-		local LoadSequenceText = SetProps(MakeElement("Label", WindowConfig.IntroText, 14), {
-			Parent = Container,
-			Size = UDim2.new(1, 0, 1, 0),
-			AnchorPoint = Vector2.new(0.5, 0.5),
-			Position = UDim2.new(0.5, 19, 0.5, 0),
-			TextXAlignment = Enum.TextXAlignment.Center,
-			Font = Enum.Font.GothamBold,
-			TextTransparency = 1
-		})
-
-		TweenService:Create(LoadSequenceLogo, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 0, Position = UDim2.new(0.5, 0, 0.5, 0)}):Play()
-		wait(0.8)
-		TweenService:Create(LoadSequenceLogo, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, -(LoadSequenceText.TextBounds.X/2), 0.5, 0)}):Play()
-		wait(0.3)
-		TweenService:Create(LoadSequenceText, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
-		wait(2)
-		TweenService:Create(LoadSequenceText, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
-		MainWindow.Visible = true
-		LoadSequenceLogo:Destroy()
-		LoadSequenceText:Destroy()
-	end 
-
-	if WindowConfig.IntroEnabled then
-		LoadSequence()
-	end	
-
-	local TabFunction = {}
-	function TabFunction:MakeTab(TabConfig)
-		TabConfig = TabConfig or {}
-		TabConfig.Name = TabConfig.Name or "Tab"
-		TabConfig.Icon = TabConfig.Icon or ""
-		TabConfig.PremiumOnly = TabConfig.PremiumOnly or false
-
-		local TabFrame = SetChildren(SetProps(MakeElement("Button"), {
-			Size = UDim2.new(1, 0, 0, 30),
-			Parent = TabHolder
-		}), {
-			AddThemeObject(SetProps(MakeElement("Image", TabConfig.Icon), {
-				AnchorPoint = Vector2.new(0, 0.5),
-				Size = UDim2.new(0, 18, 0, 18),
-				Position = UDim2.new(0, 10, 0.5, 0),
-				ImageTransparency = 0.4,
-				Name = "Ico"
-			}), "Text"),
-			AddThemeObject(SetProps(MakeElement("Label", TabConfig.Name, 14), {
-				Size = UDim2.new(1, -35, 1, 0),
-				Position = UDim2.new(0, 35, 0, 0),
-				Font = Enum.Font.GothamBlack,
-				TextTransparency = 0.4,
-				Name = "Title"
-			}), "Text")
-		})
-
-		if GetIcon(TabConfig.Icon) ~= nil then
-			TabFrame.Ico.Image = GetIcon(TabConfig.Icon)
-		end	
-
-		local Container = AddThemeObject(SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255, 255, 255), 5), {
-			Size = UDim2.new(1, -150, 1, -50),
-			Position = UDim2.new(0, 150, 0, 50),
-			Parent = MainWindow,
-			Visible = false,
-			Name = "ItemContainer"
-		}), {
-			MakeElement("List", 0, 6),
-			MakeElement("Padding", 15, 10, 10, 15)
-		}), "Divider")
-
-		AddConnection(Container.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
-			Container.CanvasSize = UDim2.new(0, 0, 0, Container.UIListLayout.AbsoluteContentSize.Y + 30)
-		end)
-
-		if FirstTab then
-			FirstTab = false
-			TabFrame.Ico.ImageTransparency = 0
-			TabFrame.Title.TextTransparency = 0
-			TabFrame.Title.Font = Enum.Font.GothamBlack
-			Container.Visible = true
-		end    
-
-		AddConnection(TabFrame.MouseButton1Click, function()
-			for _, Tab in next, TabHolder:GetChildren() do
-				if Tab:IsA("TextButton") then
-					Tab.Title.Font = Enum.Font.GothamBlack
-					TweenService:Create(Tab.Ico, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0.4, ImageColor3 = Color3.fromRGB(240, 240, 240)}):Play()
-					TweenService:Create(Tab.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency = 0.4, TextColor3 = Color3.fromRGB(240, 240, 240)}):Play()
-				end    
-			end
-			for _, ItemContainer in next, MainWindow:GetChildren() do
-				if ItemContainer.Name == "ItemContainer" then
-					ItemContainer.Visible = false
-				end    
-			end  
-			TweenService:Create(TabFrame.Ico, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0, ImageColor3 = Color3.fromRGB(70, 150, 255)}):Play()
-			TweenService:Create(TabFrame.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency = 0, TextColor3 = Color3.fromRGB(70, 150, 255)}):Play()
-			TabFrame.Title.Font = Enum.Font.GothamBlack
-			Container.Visible = true   
-		end)
-
-		local function GetElements(ItemParent)
-			local ElementFunction = {}
-			function ElementFunction:AddLabel(Text)
-				local LabelFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0, 30),
-					BackgroundTransparency = 0.7,
-					Parent = ItemParent
-				}), {
-					AddThemeObject(SetProps(MakeElement("Label", Text, 15), {
-						Size = UDim2.new(1, -12, 1, 0),
-						Position = UDim2.new(0, 12, 0, 0),
-						Font = Enum.Font.GothamBold,
-						Name = "Content"
-					}), "Text"),
-					AddThemeObject(MakeElement("Stroke"), "Stroke")
-				}), "Second")
-
-				local LabelFunction = {}
-				function LabelFunction:Set(ToChange)
-					LabelFrame.Content.Text = ToChange
-				end
-				return LabelFunction
-			end
-			function ElementFunction:AddParagraph(Text, Content)
-				Text = Text or "Text"
-				Content = Content or "Content"
-
-				local ParagraphFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0, 30),
-					BackgroundTransparency = 0.7,
-					Parent = ItemParent
-				}), {
-					AddThemeObject(SetProps(MakeElement("Label", Text, 15), {
-						Size = UDim2.new(1, -12, 0, 14),
-						Position = UDim2.new(0, 12, 0, 10),
-						Font = Enum.Font.GothamBold,
-						Name = "Title"
-					}), "Text"),
-					AddThemeObject(SetProps(MakeElement("Label", "", 13), {
-						Size = UDim2.new(1, -24, 0, 0),
-						Position = UDim2.new(0, 12, 0, 26),
-						Font = Enum.Font.GothamBold,
-						Name = "Content",
-						TextWrapped = true
-					}), "TextDark"),
-					AddThemeObject(MakeElement("Stroke"), "Stroke")
-				}), "Second")
-
-				AddConnection(ParagraphFrame.Content:GetPropertyChangedSignal("Text"), function()
-					ParagraphFrame.Content.Size = UDim2.new(1, -24, 0, ParagraphFrame.Content.TextBounds.Y)
-					ParagraphFrame.Size = UDim2.new(1, 0, 0, ParagraphFrame.Content.TextBounds.Y + 35)
-				end)
-
-				ParagraphFrame.Content.Text = Content
-
-				local ParagraphFunction = {}
-				function ParagraphFunction:Set(ToChange)
-					ParagraphFrame.Content.Text = ToChange
-				end
-				return ParagraphFunction
-			end    
-			function ElementFunction:AddButton(ButtonConfig)
-				ButtonConfig = ButtonConfig or {}
-				ButtonConfig.Name = ButtonConfig.Name or "Button"
-				ButtonConfig.Callback = ButtonConfig.Callback or function() end
-				ButtonConfig.Icon = ButtonConfig.Icon or "rbxassetid://3944703587"
-
-				local Button = {}
-
-				local Click = SetProps(MakeElement("Button"), {
-					Size = UDim2.new(1, 0, 1, 0)
-				})
-
-				local ButtonFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0, 33),
-					Parent = ItemParent
-				}), {
-					AddThemeObject(SetProps(MakeElement("Label", ButtonConfig.Name, 15), {
-						Size = UDim2.new(1, -12, 1, 0),
-						Position = UDim2.new(0, 12, 0, 0),
-						Font = Enum.Font.GothamBold,
-						Name = "Content"
-					}), "Text"),
-					AddThemeObject(SetProps(MakeElement("Image", ButtonConfig.Icon), {
-						Size = UDim2.new(0, 20, 0, 20),
-						Position = UDim2.new(1, -30, 0, 7),
-					}), "TextDark"),
-					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-					Click
-				}), "Second")
-
-				AddConnection(Click.MouseEnter, function()
-					TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 3, Library.Themes[Library.SelectedTheme].Second.G * 255 + 3, Library.Themes[Library.SelectedTheme].Second.B * 255 + 3)}):Play()
-				end)
-
-				AddConnection(Click.MouseLeave, function()
-					TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Library.Themes[Library.SelectedTheme].Second}):Play()
-				end)
-
-				AddConnection(Click.MouseButton1Up, function()
-					TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 3, Library.Themes[Library.SelectedTheme].Second.G * 255 + 3, Library.Themes[Library.SelectedTheme].Second.B * 255 + 3)}):Play()
-					spawn(function()
-						ButtonConfig.Callback()
-					end)
-				end)
-
-				AddConnection(Click.MouseButton1Down, function()
-					TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 6, Library.Themes[Library.SelectedTheme].Second.G * 255 + 6, Library.Themes[Library.SelectedTheme].Second.B * 255 + 6)}):Play()
-				end)
-
-				function Button:Set(ButtonText)
-					ButtonFrame.Content.Text = ButtonText
-				end	
-
-				return Button
-			end    
-			function ElementFunction:AddToggle(ToggleConfig)
-				ToggleConfig = ToggleConfig or {}
-				ToggleConfig.Name = ToggleConfig.Name or "Toggle"
-				ToggleConfig.Default = ToggleConfig.Default or false
-				ToggleConfig.Callback = ToggleConfig.Callback or function() end
-				ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(9, 99, 195)
-				ToggleConfig.Flag = ToggleConfig.Flag or nil
-				ToggleConfig.Save = ToggleConfig.Save or false
-
-				local Toggle = {Value = ToggleConfig.Default, Save = ToggleConfig.Save}
-
-				local Click = SetProps(MakeElement("Button"), {
-					Size = UDim2.new(1, 0, 1, 0)
-				})
-
-				local ToggleBox = SetChildren(SetProps(MakeElement("RoundFrame", ToggleConfig.Color, 0, 4), {
-					Size = UDim2.new(0, 24, 0, 24),
-					Position = UDim2.new(1, -24, 0.5, 0),
-					AnchorPoint = Vector2.new(0.5, 0.5)
-				}), {
-					SetProps(MakeElement("Stroke"), {
-						Color = ToggleConfig.Color,
-						Name = "Stroke",
-						Transparency = 0.5
-					}),
-					SetProps(MakeElement("Image", "rbxassetid://3944680095"), {
-						Size = UDim2.new(0, 20, 0, 20),
-						AnchorPoint = Vector2.new(0.5, 0.5),
-						Position = UDim2.new(0.5, 0, 0.5, 0),
-						ImageColor3 = Color3.fromRGB(255, 255, 255),
-						Name = "Ico"
-					}),
-				})
-
-				local ToggleFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0, 38),
-					Parent = ItemParent
-				}), {
-					AddThemeObject(SetProps(MakeElement("Label", ToggleConfig.Name, 15), {
-						Size = UDim2.new(1, -12, 1, 0),
-						Position = UDim2.new(0, 12, 0, 0),
-						Font = Enum.Font.GothamBold,
-						Name = "Content"
-					}), "Text"),
-					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-					ToggleBox,
-					Click
-				}), "Second")
-
-				function Toggle:Set(Value)
-					Toggle.Value = Value
-					TweenService:Create(ToggleBox, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Toggle.Value and ToggleConfig.Color or Library.Themes.Default.Divider}):Play()
-					TweenService:Create(ToggleBox.Stroke, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color = Toggle.Value and ToggleConfig.Color or Library.Themes.Default.Stroke}):Play()
-					TweenService:Create(ToggleBox.Ico, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = Toggle.Value and 0 or 1, Size = Toggle.Value and UDim2.new(0, 20, 0, 20) or UDim2.new(0, 8, 0, 8)}):Play()
-					ToggleConfig.Callback(Toggle.Value)
-				end    
-
-				Toggle:Set(Toggle.Value)
-
-				AddConnection(Click.MouseEnter, function()
-					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 3, Library.Themes[Library.SelectedTheme].Second.G * 255 + 3, Library.Themes[Library.SelectedTheme].Second.B * 255 + 3)}):Play()
-				end)
-
-				AddConnection(Click.MouseLeave, function()
-					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Library.Themes[Library.SelectedTheme].Second}):Play()
-				end)
-
-				AddConnection(Click.MouseButton1Up, function()
-					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 3, Library.Themes[Library.SelectedTheme].Second.G * 255 + 3, Library.Themes[Library.SelectedTheme].Second.B * 255 + 3)}):Play()
-					SaveCfg(game.GameId)
-					Toggle:Set(not Toggle.Value)
-				end)
-
-				AddConnection(Click.MouseButton1Down, function()
-					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 6, Library.Themes[Library.SelectedTheme].Second.G * 255 + 6, Library.Themes[Library.SelectedTheme].Second.B * 255 + 6)}):Play()
-				end)
-
-				if ToggleConfig.Flag then
-					Library.Flags[ToggleConfig.Flag] = Toggle
-				end	
-				return Toggle
-			end  
-			function ElementFunction:AddSlider(SliderConfig)
-				SliderConfig = SliderConfig or {}
-				SliderConfig.Name = SliderConfig.Name or "Slider"
-				SliderConfig.Min = SliderConfig.Min or 0
-				SliderConfig.Max = SliderConfig.Max or 100
-				SliderConfig.Increment = SliderConfig.Increment or 1
-				SliderConfig.Default = SliderConfig.Default or 50
-				SliderConfig.Callback = SliderConfig.Callback or function() end
-				SliderConfig.ValueName = SliderConfig.ValueName or ""
-				SliderConfig.Color = SliderConfig.Color or Color3.fromRGB(9, 149, 98)
-				SliderConfig.Flag = SliderConfig.Flag or nil
-				SliderConfig.Save = SliderConfig.Save or false
-
-				local Slider = {Value = SliderConfig.Default, Save = SliderConfig.Save}
-				local Dragging = false
-
-				local SliderDrag = SetChildren(SetProps(MakeElement("RoundFrame", SliderConfig.Color, 0, 5), {
-					Size = UDim2.new(0, 0, 1, 0),
-					BackgroundTransparency = 0.3,
-					ClipsDescendants = true
-				}), {
-					AddThemeObject(SetProps(MakeElement("Label", "value", 13), {
-						Size = UDim2.new(1, -12, 0, 14),
-						Position = UDim2.new(0, 12, 0, 6),
-						Font = Enum.Font.GothamBold,
-						Name = "Value",
-						TextTransparency = 0
-					}), "Text")
-				})
-
-				local SliderBar = SetChildren(SetProps(MakeElement("RoundFrame", SliderConfig.Color, 0, 5), {
-					Size = UDim2.new(1, -24, 0, 26),
-					Position = UDim2.new(0, 12, 0, 30),
-					BackgroundTransparency = 0.9
-				}), {
-					SetProps(MakeElement("Stroke"), {
-						Color = SliderConfig.Color
-					}),
-					AddThemeObject(SetProps(MakeElement("Label", "value", 13), {
-						Size = UDim2.new(1, -12, 0, 14),
-						Position = UDim2.new(0, 12, 0, 6),
-						Font = Enum.Font.GothamBold,
-						Name = "Value",
-						TextTransparency = 0.8
-					}), "Text"),
-					SliderDrag
-				})
-
-				local SliderFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 4), {
-					Size = UDim2.new(1, 0, 0, 65),
-					Parent = ItemParent
-				}), {
-					AddThemeObject(SetProps(MakeElement("Label", SliderConfig.Name, 15), {
-						Size = UDim2.new(1, -12, 0, 14),
-						Position = UDim2.new(0, 12, 0, 10),
-						Font = Enum.Font.GothamBold,
-						Name = "Content"
-					}), "Text"),
-					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-					SliderBar
-				}), "Second")
-
-				SliderBar.InputBegan:Connect(function(Input)
-					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
-						Dragging = true 
-					end 
-				end)
-				SliderBar.InputEnded:Connect(function(Input) 
-					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
-						Dragging = false 
-					end 
-				end)
-
-				UserInputService.InputChanged:Connect(function(Input)
-					if Dragging then 
-						local SizeScale = math.clamp((Mouse.X - SliderBar.AbsolutePosition.X) / SliderBar.AbsoluteSize.X, 0, 1)
-						Slider:Set(SliderConfig.Min + ((SliderConfig.Max - SliderConfig.Min) * SizeScale)) 
-						SaveCfg(game.GameId)
-					end
-				end)
-
-				function Slider:Set(Value)
-					self.Value = math.clamp(Round(Value, SliderConfig.Increment), SliderConfig.Min, SliderConfig.Max)
-					TweenService:Create(SliderDrag,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size = UDim2.fromScale((self.Value - SliderConfig.Min) / (SliderConfig.Max - SliderConfig.Min), 1)}):Play()
-					SliderBar.Value.Text = tostring(self.Value) .. " " .. SliderConfig.ValueName
-					SliderDrag.Value.Text = tostring(self.Value) .. " " .. SliderConfig.ValueName
-					SliderConfig.Callback(self.Value)
-				end      
-
-				Slider:Set(Slider.Value)
-				if SliderConfig.Flag then				
-					Library.Flags[SliderConfig.Flag] = Slider
-				end
-				return Slider
-			end  
-			function ElementFunction:AddDropdown(DropdownConfig)
-				DropdownConfig = DropdownConfig or {}
-				DropdownConfig.Name = DropdownConfig.Name or "Dropdown"
-				DropdownConfig.Options = DropdownConfig.Options or {}
-				DropdownConfig.Default = DropdownConfig.Default or ""
-				DropdownConfig.Callback = DropdownConfig.Callback or function() end
-				DropdownConfig.Flag = DropdownConfig.Flag or nil
-				DropdownConfig.Save = DropdownConfig.Save or false
-
-				local Dropdown = {Value = DropdownConfig.Default, Options = DropdownConfig.Options, Buttons = {}, Toggled = false, Type = "Dropdown", Save = DropdownConfig.Save}
-				local MaxElements = 5
-
-				if not table.find(Dropdown.Options, Dropdown.Value) then
-					Dropdown.Value = "..."
-				end
-
-				local DropdownList = MakeElement("List")
-
-				local DropdownContainer = AddThemeObject(SetProps(SetChildren(MakeElement("ScrollFrame", Color3.fromRGB(40, 40, 40), 4), {
-					DropdownList
-				}), {
-					Parent = ItemParent,
-					Position = UDim2.new(0, 0, 0, 38),
-					Size = UDim2.new(1, 0, 1, -38),
-					ClipsDescendants = true
-				}), "Divider")
-
-				local Click = SetProps(MakeElement("Button"), {
-					Size = UDim2.new(1, 0, 1, 0)
-				})
-
-				local DropdownFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0, 38),
-					Parent = ItemParent,
-					ClipsDescendants = true
-				}), {
-					DropdownContainer,
-					SetProps(SetChildren(MakeElement("TFrame"), {
-						AddThemeObject(SetProps(MakeElement("Label", DropdownConfig.Name, 15), {
-							Size = UDim2.new(1, -12, 1, 0),
-							Position = UDim2.new(0, 12, 0, 0),
-							Font = Enum.Font.GothamBold,
-							Name = "Content"
-						}), "Text"),
-						AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072706796"), {
-							Size = UDim2.new(0, 20, 0, 20),
-							AnchorPoint = Vector2.new(0, 0.5),
-							Position = UDim2.new(1, -30, 0.5, 0),
-							ImageColor3 = Color3.fromRGB(240, 240, 240),
-							Name = "Ico"
-						}), "TextDark"),
-						AddThemeObject(SetProps(MakeElement("Label", "Selected", 13), {
-							Size = UDim2.new(1, -40, 1, 0),
-							Font = Enum.Font.GothamBold,
-							Name = "Selected",
-							TextXAlignment = Enum.TextXAlignment.Right
-						}), "TextDark"),
-						AddThemeObject(SetProps(MakeElement("Frame"), {
-							Size = UDim2.new(1, 0, 0, 1),
-							Position = UDim2.new(0, 0, 1, -1),
-							Name = "Line",
-							Visible = false
-						}), "Stroke"), 
-						Click
-					}), {
-						Size = UDim2.new(1, 0, 0, 38),
-						ClipsDescendants = true,
-						Name = "F"
-					}),
-					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-					MakeElement("Corner")
-				}), "Second")
-
-				AddConnection(DropdownList:GetPropertyChangedSignal("AbsoluteContentSize"), function()
-					DropdownContainer.CanvasSize = UDim2.new(0, 0, 0, DropdownList.AbsoluteContentSize.Y)
-				end)  
-
-				local function AddOptions(Options)
-					for _, Option in pairs(Options) do
-						local OptionBtn = AddThemeObject(SetProps(SetChildren(MakeElement("Button", Color3.fromRGB(40, 40, 40)), {
-							MakeElement("Corner", 0, 6),
-							AddThemeObject(SetProps(MakeElement("Label", Option, 13, 0.4), {
-								Position = UDim2.new(0, 8, 0, 0),
-								Size = UDim2.new(1, -8, 1, 0),
-								Name = "Title"
-							}), "Text")
-						}), {
-							Parent = DropdownContainer,
-							Size = UDim2.new(1, 0, 0, 28),
-							BackgroundTransparency = 1,
-							ClipsDescendants = true
-						}), "Divider")
-
-						AddConnection(OptionBtn.MouseButton1Click, function()
-							Dropdown:Set(Option)
-							SaveCfg(game.GameId)
-						end)
-
-						Dropdown.Buttons[Option] = OptionBtn
-					end
-				end	
-
-				function Dropdown:Refresh(Options, Delete)
-					if Delete then
-						for _,v in pairs(Dropdown.Buttons) do
-							v:Destroy()
-						end    
-						table.clear(Dropdown.Options)
-						table.clear(Dropdown.Buttons)
-					end
-					Dropdown.Options = Options
-					AddOptions(Dropdown.Options)
-				end  
-
-				function Dropdown:Set(Value)
-					if not table.find(Dropdown.Options, Value) then
-						Dropdown.Value = "..."
-						DropdownFrame.F.Selected.Text = Dropdown.Value
-						for _, v in pairs(Dropdown.Buttons) do
-							TweenService:Create(v,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{BackgroundTransparency = 1}):Play()
-							TweenService:Create(v.Title,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{TextTransparency = 0.4}):Play()
-						end	
-						return
-					end
-
-					Dropdown.Value = Value
-					DropdownFrame.F.Selected.Text = Dropdown.Value
-
-					for _, v in pairs(Dropdown.Buttons) do
-						TweenService:Create(v,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{BackgroundTransparency = 1}):Play()
-						TweenService:Create(v.Title,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{TextTransparency = 0.4}):Play()
-					end	
-					TweenService:Create(Dropdown.Buttons[Value],TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{BackgroundTransparency = 0}):Play()
-					TweenService:Create(Dropdown.Buttons[Value].Title,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{TextTransparency = 0}):Play()
-					return DropdownConfig.Callback(Dropdown.Value)
-				end
-
-				AddConnection(Click.MouseButton1Click, function()
-					Dropdown.Toggled = not Dropdown.Toggled
-					DropdownFrame.F.Line.Visible = Dropdown.Toggled
-					TweenService:Create(DropdownFrame.F.Ico,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Rotation = Dropdown.Toggled and 180 or 0}):Play()
-					if #Dropdown.Options > MaxElements then
-						TweenService:Create(DropdownFrame,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size = Dropdown.Toggled and UDim2.new(1, 0, 0, 38 + (MaxElements * 28)) or UDim2.new(1, 0, 0, 38)}):Play()
-					else
-						TweenService:Create(DropdownFrame,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size = Dropdown.Toggled and UDim2.new(1, 0, 0, DropdownList.AbsoluteContentSize.Y + 38) or UDim2.new(1, 0, 0, 38)}):Play()
-					end
-				end)
-
-				Dropdown:Refresh(Dropdown.Options, false)
-				Dropdown:Set(Dropdown.Value)
-				if DropdownConfig.Flag then				
-					Library.Flags[DropdownConfig.Flag] = Dropdown
-				end
-				return Dropdown
-			end
-			function ElementFunction:AddBind(BindConfig)
-				BindConfig.Name = BindConfig.Name or "Bind"
-				BindConfig.Default = BindConfig.Default or Enum.KeyCode.Unknown
-				BindConfig.Hold = BindConfig.Hold or false
-				BindConfig.Callback = BindConfig.Callback or function() end
-				BindConfig.Flag = BindConfig.Flag or nil
-				BindConfig.Save = BindConfig.Save or false
-
-				local Bind = {Value, Binding = false, Type = "Bind", Save = BindConfig.Save}
-				local Holding = false
-
-				local Click = SetProps(MakeElement("Button"), {
-					Size = UDim2.new(1, 0, 1, 0)
-				})
-
-				local BindBox = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 4), {
-					Size = UDim2.new(0, 24, 0, 24),
-					Position = UDim2.new(1, -12, 0.5, 0),
-					AnchorPoint = Vector2.new(1, 0.5)
-				}), {
-					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-					AddThemeObject(SetProps(MakeElement("Label", BindConfig.Name, 14), {
-						Size = UDim2.new(1, 0, 1, 0),
-						Font = Enum.Font.GothamBold,
-						TextXAlignment = Enum.TextXAlignment.Center,
-						Name = "Value"
-					}), "Text")
-				}), "Main")
-
-				local BindFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0, 38),
-					Parent = ItemParent
-				}), {
-					AddThemeObject(SetProps(MakeElement("Label", BindConfig.Name, 15), {
-						Size = UDim2.new(1, -12, 1, 0),
-						Position = UDim2.new(0, 12, 0, 0),
-						Font = Enum.Font.GothamBold,
-						Name = "Content"
-					}), "Text"),
-					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-					BindBox,
-					Click
-				}), "Second")
-
-				AddConnection(BindBox.Value:GetPropertyChangedSignal("Text"), function()
-					TweenService:Create(BindBox, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, BindBox.Value.TextBounds.X + 16, 0, 24)}):Play()
-				end)
-
-				AddConnection(Click.InputEnded, function(Input)
-					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
-						if Bind.Binding then return end
-						Bind.Binding = true
-						BindBox.Value.Text = ""
-					end
-				end)
-
-				AddConnection(UserInputService.InputBegan, function(Input)
-					if UserInputService:GetFocusedTextBox() then return end
-					if (Input.KeyCode.Name == Bind.Value or Input.UserInputType.Name == Bind.Value) and not Bind.Binding then
-						if BindConfig.Hold then
-							Holding = true
-							BindConfig.Callback(Holding)
-						else
-							BindConfig.Callback()
-						end
-					elseif Bind.Binding then
-						local Key
-						pcall(function()
-							if not CheckKey(BlacklistedKeys, Input.KeyCode) then
-								Key = Input.KeyCode
-							end
-						end)
-						pcall(function()
-							if CheckKey(WhitelistedMouse, Input.UserInputType) and not Key then
-								Key = Input.UserInputType
-							end
-						end)
-						Key = Key or Bind.Value
-						Bind:Set(Key)
-						SaveCfg(game.GameId)
-					end
-				end)
-
-				AddConnection(UserInputService.InputEnded, function(Input)
-					if Input.KeyCode.Name == Bind.Value or Input.UserInputType.Name == Bind.Value then
-						if BindConfig.Hold and Holding then
-							Holding = false
-							BindConfig.Callback(Holding)
-						end
-					end
-				end)
-
-				AddConnection(Click.MouseEnter, function()
-					TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 3, Library.Themes[Library.SelectedTheme].Second.G * 255 + 3, Library.Themes[Library.SelectedTheme].Second.B * 255 + 3)}):Play()
-				end)
-
-				AddConnection(Click.MouseLeave, function()
-					TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Library.Themes[Library.SelectedTheme].Second}):Play()
-				end)
-
-				AddConnection(Click.MouseButton1Up, function()
-					TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 3, Library.Themes[Library.SelectedTheme].Second.G * 255 + 3, Library.Themes[Library.SelectedTheme].Second.B * 255 + 3)}):Play()
-				end)
-
-				AddConnection(Click.MouseButton1Down, function()
-					TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 6, Library.Themes[Library.SelectedTheme].Second.G * 255 + 6, Library.Themes[Library.SelectedTheme].Second.B * 255 + 6)}):Play()
-				end)
-
-				function Bind:Set(Key)
-					Bind.Binding = false
-					Bind.Value = Key or Bind.Value
-					Bind.Value = Bind.Value.Name or Bind.Value
-					BindBox.Value.Text = Bind.Value
-				end
-
-				Bind:Set(BindConfig.Default)
-				if BindConfig.Flag then				
-					Library.Flags[BindConfig.Flag] = Bind
-				end
-				return Bind
-			end  
-			function ElementFunction:AddTextbox(TextboxConfig)
-				TextboxConfig = TextboxConfig or {}
-				TextboxConfig.Name = TextboxConfig.Name or "Textbox"
-				TextboxConfig.Default = TextboxConfig.Default or ""
-				TextboxConfig.TextDisappear = TextboxConfig.TextDisappear or false
-				TextboxConfig.Callback = TextboxConfig.Callback or function() end
-
-				local Click = SetProps(MakeElement("Button"), {
-					Size = UDim2.new(1, 0, 1, 0)
-				})
-
-				local TextboxActual = AddThemeObject(Create("TextBox", {
-					Size = UDim2.new(1, 0, 1, 0),
-					BackgroundTransparency = 1,
-					TextColor3 = Color3.fromRGB(255, 255, 255),
-					PlaceholderColor3 = Color3.fromRGB(210,210,210),
-					PlaceholderText = "Input",
-					Font = Enum.Font.GothamSemibold,
-					TextXAlignment = Enum.TextXAlignment.Center,
-					TextSize = 14,
-					ClearTextOnFocus = false
-				}), "Text")
-
-				local TextContainer = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 4), {
-					Size = UDim2.new(0, 24, 0, 24),
-					Position = UDim2.new(1, -12, 0.5, 0),
-					AnchorPoint = Vector2.new(1, 0.5)
-				}), {
-					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-					TextboxActual
-				}), "Main")
-
-				local TextboxFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0, 38),
-					Parent = ItemParent
-				}), {
-					AddThemeObject(SetProps(MakeElement("Label", TextboxConfig.Name, 15), {
-						Size = UDim2.new(1, -12, 1, 0),
-						Position = UDim2.new(0, 12, 0, 0),
-						Font = Enum.Font.GothamBold,
-						Name = "Content"
-					}), "Text"),
-					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-					TextContainer,
-					Click
-				}), "Second")
-
-				AddConnection(TextboxActual:GetPropertyChangedSignal("Text"), function()
-					TweenService:Create(TextContainer, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, TextboxActual.TextBounds.X + 16, 0, 24)}):Play()
-				end)
-
-				AddConnection(TextboxActual.FocusLost, function()
-					TextboxConfig.Callback(TextboxActual.Text)
-					if TextboxConfig.TextDisappear then
-						TextboxActual.Text = ""
-					end	
-				end)
-
-				TextboxActual.Text = TextboxConfig.Default
-
-				AddConnection(Click.MouseEnter, function()
-					TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 3, Library.Themes[Library.SelectedTheme].Second.G * 255 + 3, Library.Themes[Library.SelectedTheme].Second.B * 255 + 3)}):Play()
-				end)
-
-				AddConnection(Click.MouseLeave, function()
-					TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Library.Themes[Library.SelectedTheme].Second}):Play()
-				end)
-
-				AddConnection(Click.MouseButton1Up, function()
-					TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 3, Library.Themes[Library.SelectedTheme].Second.G * 255 + 3, Library.Themes[Library.SelectedTheme].Second.B * 255 + 3)}):Play()
-					TextboxActual:CaptureFocus()
-				end)
-
-				AddConnection(Click.MouseButton1Down, function()
-					TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(Library.Themes[Library.SelectedTheme].Second.R * 255 + 6, Library.Themes[Library.SelectedTheme].Second.G * 255 + 6, Library.Themes[Library.SelectedTheme].Second.B * 255 + 6)}):Play()
-				end)
-			end 
-			function ElementFunction:AddColorpicker(ColorpickerConfig)
-				ColorpickerConfig = ColorpickerConfig or {}
-				ColorpickerConfig.Name = ColorpickerConfig.Name or "Colorpicker"
-				ColorpickerConfig.Default = ColorpickerConfig.Default or Color3.fromRGB(255,255,255)
-				ColorpickerConfig.Callback = ColorpickerConfig.Callback or function() end
-				ColorpickerConfig.Flag = ColorpickerConfig.Flag or nil
-				ColorpickerConfig.Save = ColorpickerConfig.Save or false
-
-				local ColorH, ColorS, ColorV = 1, 1, 1
-				local Colorpicker = {Value = ColorpickerConfig.Default, Toggled = false, Type = "Colorpicker", Save = ColorpickerConfig.Save}
-
-				local ColorSelection = Create("ImageLabel", {
-					Size = UDim2.new(0, 18, 0, 18),
-					Position = UDim2.new(select(3, Color3.toHSV(Colorpicker.Value))),
-					ScaleType = Enum.ScaleType.Fit,
-					AnchorPoint = Vector2.new(0.5, 0.5),
-					BackgroundTransparency = 1,
-					Image = "http://www.roblox.com/asset/?id=4805639000"
-				})
-
-				local HueSelection = Create("ImageLabel", {
-					Size = UDim2.new(0, 18, 0, 18),
-					Position = UDim2.new(0.5, 0, 1 - select(1, Color3.toHSV(Colorpicker.Value))),
-					ScaleType = Enum.ScaleType.Fit,
-					AnchorPoint = Vector2.new(0.5, 0.5),
-					BackgroundTransparency = 1,
-					Image = "http://www.roblox.com/asset/?id=4805639000"
-				})
-
-				local Color = Create("ImageLabel", {
-					Size = UDim2.new(1, -25, 1, 0),
-					Visible = false,
-					Image = "rbxassetid://4155801252"
-				}, {
-					Create("UICorner", {CornerRadius = UDim.new(0, 5)}),
-					ColorSelection
-				})
-
-				local Hue = Create("Frame", {
-					Size = UDim2.new(0, 20, 1, 0),
-					Position = UDim2.new(1, -20, 0, 0),
-					Visible = false
-				}, {
-					Create("UIGradient", {Rotation = 270, Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.20, Color3.fromRGB(234, 255, 0)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(21, 255, 0)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(0, 255, 255)), ColorSequenceKeypoint.new(0.80, Color3.fromRGB(0, 17, 255)), ColorSequenceKeypoint.new(0.90, Color3.fromRGB(255, 0, 251)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 4))},}),
-					Create("UICorner", {CornerRadius = UDim.new(0, 5)}),
-					HueSelection
-				})
-
-				local ColorpickerContainer = Create("Frame", {
-					Position = UDim2.new(0, 0, 0, 32),
-					Size = UDim2.new(1, 0, 1, -32),
-					BackgroundTransparency = 1,
-					ClipsDescendants = true
-				}, {
-					Hue,
-					Color,
-					Create("UIPadding", {
-						PaddingLeft = UDim.new(0, 35),
-						PaddingRight = UDim.new(0, 35),
-						PaddingBottom = UDim.new(0, 10),
-						PaddingTop = UDim.new(0, 17)
-					})
-				})
-
-				local Click = SetProps(MakeElement("Button"), {
-					Size = UDim2.new(1, 0, 1, 0)
-				})
-
-				local ColorpickerBox = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 4), {
-					Size = UDim2.new(0, 24, 0, 24),
-					Position = UDim2.new(1, -12, 0.5, 0),
-					AnchorPoint = Vector2.new(1, 0.5)
-				}), {
-					AddThemeObject(MakeElement("Stroke"), "Stroke")
-				}), "Main")
-
-				local ColorpickerFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0, 38),
-					Parent = ItemParent
-				}), {
-					SetProps(SetChildren(MakeElement("TFrame"), {
-						AddThemeObject(SetProps(MakeElement("Label", ColorpickerConfig.Name, 15), {
-							Size = UDim2.new(1, -12, 1, 0),
-							Position = UDim2.new(0, 12, 0, 0),
-							Font = Enum.Font.GothamBold,
-							Name = "Content"
-						}), "Text"),
-						ColorpickerBox,
-						Click,
-						AddThemeObject(SetProps(MakeElement("Frame"), {
-							Size = UDim2.new(1, 0, 0, 1),
-							Position = UDim2.new(0, 0, 1, -1),
-							Name = "Line",
-							Visible = false
-						}), "Stroke"), 
-					}), {
-						Size = UDim2.new(1, 0, 0, 38),
-						ClipsDescendants = true,
-						Name = "F"
-					}),
-					ColorpickerContainer,
-					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-				}), "Second")
-
-				AddConnection(Click.MouseButton1Click, function()
-					Colorpicker.Toggled = not Colorpicker.Toggled
-					TweenService:Create(ColorpickerFrame,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size = Colorpicker.Toggled and UDim2.new(1, 0, 0, 148) or UDim2.new(1, 0, 0, 38)}):Play()
-					Color.Visible = Colorpicker.Toggled
-					Hue.Visible = Colorpicker.Toggled
-					ColorpickerFrame.F.Line.Visible = Colorpicker.Toggled
-				end)
-
-				local function UpdateColorPicker()
-					ColorpickerBox.BackgroundColor3 = Color3.fromHSV(ColorH, ColorS, ColorV)
-					Color.BackgroundColor3 = Color3.fromHSV(ColorH, 1, 1)
-					Colorpicker:Set(ColorpickerBox.BackgroundColor3)
-					ColorpickerConfig.Callback(ColorpickerBox.BackgroundColor3)
-					SaveCfg(game.GameId)
-				end
-
-				ColorH = 1 - (math.clamp(HueSelection.AbsolutePosition.Y - Hue.AbsolutePosition.Y, 0, Hue.AbsoluteSize.Y) / Hue.AbsoluteSize.Y)
-				ColorS = (math.clamp(ColorSelection.AbsolutePosition.X - Color.AbsolutePosition.X, 0, Color.AbsoluteSize.X) / Color.AbsoluteSize.X)
-				ColorV = 1 - (math.clamp(ColorSelection.AbsolutePosition.Y - Color.AbsolutePosition.Y, 0, Color.AbsoluteSize.Y) / Color.AbsoluteSize.Y)
-
-				AddConnection(Color.InputBegan, function(input)
-					if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-						if ColorInput then
-							ColorInput:Disconnect()
-						end
-						ColorInput = AddConnection(RunService.RenderStepped, function()
-							local ColorX = (math.clamp(Mouse.X - Color.AbsolutePosition.X, 0, Color.AbsoluteSize.X) / Color.AbsoluteSize.X)
-							local ColorY = (math.clamp(Mouse.Y - Color.AbsolutePosition.Y, 0, Color.AbsoluteSize.Y) / Color.AbsoluteSize.Y)
-							ColorSelection.Position = UDim2.new(ColorX, 0, ColorY, 0)
-							ColorS = ColorX
-							ColorV = 1 - ColorY
-							UpdateColorPicker()
-						end)
-					end
-				end)
-
-				AddConnection(Color.InputEnded, function(input)
-					if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-						if ColorInput then
-							ColorInput:Disconnect()
-						end
-					end
-				end)
-
-				AddConnection(Hue.InputBegan, function(input)
-					if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-						if HueInput then
-							HueInput:Disconnect()
-						end;
-
-						HueInput = AddConnection(RunService.RenderStepped, function()
-							local HueY = (math.clamp(Mouse.Y - Hue.AbsolutePosition.Y, 0, Hue.AbsoluteSize.Y) / Hue.AbsoluteSize.Y)
-
-							HueSelection.Position = UDim2.new(0.5, 0, HueY, 0)
-							ColorH = 1 - HueY
-
-							UpdateColorPicker()
-						end)
-					end
-				end)
-
-				AddConnection(Hue.InputEnded, function(input)
-					if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-						if HueInput then
-							HueInput:Disconnect()
-						end
-					end
-				end)
-
-				function Colorpicker:Set(Value)
-					Colorpicker.Value = Value
-					ColorpickerBox.BackgroundColor3 = Colorpicker.Value
-					ColorpickerConfig.Callback(Colorpicker.Value)
-				end
-
-				Colorpicker:Set(Colorpicker.Value)
-				if ColorpickerConfig.Flag then				
-					Library.Flags[ColorpickerConfig.Flag] = Colorpicker
-				end
-				return Colorpicker
-			end  
-
-			-- AddSection innerhalb der GetElements-Funktion (für Inhalts-Sections im Tab)
-			function ElementFunction:AddSection(SectionConfig)
-				SectionConfig = SectionConfig or {}
-				local SectionFrame = SetChildren(SetProps(MakeElement("TFrame"), {
-					Size = UDim2.new(1, 0, 0, 26),
-					Parent = ItemParent  -- Wichtig: ItemParent (Tab-Container) statt globalem Container
-				}), {
-					Create("Frame", {
-						Size = UDim2.new(0, 6, 0, 14),
-						Position = UDim2.new(0, 0, 0, 4),
-						BackgroundColor3 = Color3.fromRGB(70, 150, 255),
-						BorderSizePixel = 0,
-						Name = "AccentBar"
-					}, {
-						Create("UICorner", { CornerRadius = UDim.new(1, 0) })
-					}),
-					AddThemeObject(SetProps(MakeElement("Label", SectionConfig.Name or "Section", 14), {
-						Size = UDim2.new(1, -18, 0, 16),
-						Position = UDim2.new(0, 10, 0, 3),
-						Font = Enum.Font.GothamBold
-					}), "TextDark"),
-					SetChildren(SetProps(MakeElement("TFrame"), {
-						AnchorPoint = Vector2.new(0, 0),
-						Size = UDim2.new(1, 0, 1, -24),
-						Position = UDim2.new(0, 0, 0, 23),
-						Name = "Holder"
-					}), {
-						MakeElement("List", 0, 6)
-					}),
-				})
-
-				AddConnection(SectionFrame.Holder.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
-					SectionFrame.Size = UDim2.new(1, 0, 0, SectionFrame.Holder.UIListLayout.AbsoluteContentSize.Y + 31)
-					SectionFrame.Holder.Size = UDim2.new(1, 0, 0, SectionFrame.Holder.UIListLayout.AbsoluteContentSize.Y)
-				end)
-
-				local SectionFunction = {}
-				for i, v in next, GetElements(SectionFrame.Holder) do
-					SectionFunction[i] = v 
-				end
-				return SectionFunction
-			end
-
-			return ElementFunction   
-		end	
-
-		local ElementFunction = {}
-		for i, v in next, GetElements(Container) do
-			ElementFunction[i] = v 
-		end
-
-		if TabConfig.PremiumOnly then
-			for i, v in next, ElementFunction do
-				ElementFunction[i] = function() end
-			end    
-			Container:FindFirstChild("UIListLayout"):Destroy()
-			Container:FindFirstChild("UIPadding"):Destroy()
-			SetChildren(SetProps(MakeElement("TFrame"), {
-				Size = UDim2.new(1, 0, 1, 0),
-				Parent = Container
-			}), {
-				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://3610239960"), {
-					Size = UDim2.new(0, 18, 0, 18),
-					Position = UDim2.new(0, 15, 0, 15),
-					ImageTransparency = 0.4
-				}), "Text"),
-				AddThemeObject(SetProps(MakeElement("Label", "Unauthorised Access", 14), {
-					Size = UDim2.new(1, -38, 0, 14),
-					Position = UDim2.new(0, 38, 0, 18),
-					TextTransparency = 0.4
-				}), "Text"),
-				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://4483345875"), {
-					Size = UDim2.new(0, 56, 0, 56),
-					Position = UDim2.new(0, 84, 0, 110),
-				}), "Text"),
-				AddThemeObject(SetProps(MakeElement("Label", "Premium Features", 14), {
-					Size = UDim2.new(1, -150, 0, 14),
-					Position = UDim2.new(0, 150, 0, 112),
-					Font = Enum.Font.GothamBold
-				}), "Text"),
-				AddThemeObject(SetProps(MakeElement("Label", "This part of the script is locked to Sirius Premium users. Purchase Premium in the Discord server (discord.gg/sirius)", 12), {
-					Size = UDim2.new(1, -200, 0, 14),
-					Position = UDim2.new(0, 150, 0, 138),
-					TextWrapped = true,
-					TextTransparency = 0.4
-				}), "Text")
-			})
-		end
-		return ElementFunction   
-	end  
-	
-	return TabFunction
-end   
-
-local Configs_HUB = {
-  Cor_Hub = Color3.fromRGB(15, 15, 15),
-  Cor_Options = Color3.fromRGB(15, 15, 15),
-  Cor_Stroke = Color3.fromRGB(60, 60, 60),
-  Cor_Text = Color3.fromRGB(240, 240, 240),
-  Cor_DarkText = Color3.fromRGB(140, 140, 140),
-  Corner_Radius = UDim.new(0, 4),
-  Text_Font = Library.Font
-}
-
-local TweenService = game:GetService("TweenService")
-
-local function Create(instance, parent, props)
-  local new = Instance.new(instance, parent)
-  if props then
-    table.foreach(props, function(prop, value)
-      new[prop] = value
-    end)
-  end
-  return new
-end
-
-local function SetProps(instance, props)
-  if instance and props then
-    table.foreach(props, function(prop, value)
-      instance[prop] = value
-    end)
-  end
-  return instance
-end
-
-local function Corner(parent, props)
-  local new = Create("UICorner", parent)
-  new.CornerRadius = Configs_HUB.Corner_Radius
-  if props then
-    SetProps(new, props)
-  end
-  return new
-end
-
-local function Stroke(parent, props)
-  local new = Create("UIStroke", parent)
-  new.Color = Configs_HUB.Cor_Stroke
-  new.ApplyStrokeMode = "Border"
-  if props then
-    SetProps(new, props)
-  end
-  return new
-end
-
-local function CreateTween(instance, prop, value, time, tweenWait)
-  local tween = TweenService:Create(instance,
-  TweenInfo.new(time, Enum.EasingStyle.Linear),
-  {[prop] = value})
-  tween:Play()
-  if tweenWait then
-    tween.Completed:Wait()
-  end
-end
-
-local ScreenGui = Create("ScreenGui", Container)
-
-local Menu_Notifi = Create("Frame", ScreenGui, {
-  Size = UDim2.new(0, 300, 1, 0),
-  Position = UDim2.new(1, 0, 0, 0),
-  AnchorPoint = Vector2.new(1, 0),
-  BackgroundTransparency = 1
-})
-
-local Padding = Create("UIPadding", Menu_Notifi, {
-  PaddingLeft = UDim.new(0, 25),
-  PaddingTop = UDim.new(0, 25),
-  PaddingBottom = UDim.new(0, 50)
-})
-
-local ListLayout = Create("UIListLayout", Menu_Notifi, {
-  Padding = UDim.new(0, 15),
-  VerticalAlignment = "Bottom"
-})
-
-function Library:MakeNotifi(Configs)
-  local Title = Configs.Title or "Title!"
-  local text = Configs.Text or "Notification content... what will it say??"
-  local timewait = Configs.Time or 5
-  
-  local Frame1 = Create("Frame", Menu_Notifi, {
-    Size = UDim2.new(2, 0, 0, 0),
-    BackgroundTransparency = 1,
-    AutomaticSize = "Y",
-    Name = "Title"
-  })
-  
-  local Frame2 = Create("Frame", Frame1, {
-    Size = UDim2.new(0, Menu_Notifi.Size.X.Offset - 50, 0, 0),
-    BackgroundColor3 = Configs_HUB.Cor_Hub,
-    Position = UDim2.new(0, Menu_Notifi.Size.X.Offset, 0, 0),
-    AutomaticSize = "Y"
-  })Corner(Frame2)
-  
-  local TextLabel = Create("TextLabel", Frame2, {
-    Size = UDim2.new(1, 0, 0, 25),
-    Font = Configs_HUB.Text_Font,
-    BackgroundTransparency = 1,
-    Text = Title,
-    TextSize = 20,
-    Position = UDim2.new(0, 20, 0, 5),
-    TextXAlignment = "Left",
-    TextColor3 = Configs_HUB.Cor_Text
-  })
-  
-  local TextButton = Create("TextButton", Frame2, {
-    Text = "X",
-    Font = Configs_HUB.Text_Font,
-    TextSize = 20,
-    BackgroundTransparency = 1,
-    TextColor3 = Color3.fromRGB(200, 200, 200),
-    Position = UDim2.new(1, -5, 0, 5),
-    AnchorPoint = Vector2.new(1, 0),
-    Size = UDim2.new(0, 25, 0, 25)
-  })
-  
-  local TextLabel = Create("TextLabel", Frame2, {
-    Size = UDim2.new(1, -30, 0, 0),
-    Position = UDim2.new(0, 20, 0, TextButton.Size.Y.Offset + 10),
-    TextSize = 15,
-    TextColor3 = Configs_HUB.Cor_DarkText,
-    TextXAlignment = "Left",
-    TextYAlignment = "Top",
-    AutomaticSize = "Y",
-    Text = text,
-    Font = Configs_HUB.Text_Font,
-    BackgroundTransparency = 1,
-    AutomaticSize = Enum.AutomaticSize.Y,
-    TextWrapped = true
-  })
-  
-  local FrameSize = Create("Frame", Frame2, {
-    Size = UDim2.new(1, 0, 0, 2),
-    BackgroundColor3 = Configs_HUB.Cor_Stroke,
-    Position = UDim2.new(0, 2, 0, 30),
-    BorderSizePixel = 0
-  })Corner(FrameSize)Create("Frame", Frame2, {
-    Size = UDim2.new(0, 0, 0, 5),
-    Position = UDim2.new(0, 0, 1, 5),
-    BackgroundTransparency = 1
-  })
-  
-  task.spawn(function()
-    CreateTween(FrameSize, "Size", UDim2.new(0, 0, 0, 2), timewait, true)
-  end)
-  
-  TextButton.MouseButton1Click:Connect(function()
-    CreateTween(Frame2, "Position", UDim2.new(0, -20, 0, 0), 0.1, true)
-    CreateTween(Frame2, "Position", UDim2.new(0, Menu_Notifi.Size.X.Offset, 0, 0), 0.5, true)
-    Frame1:Destroy()
-  end)
-  
-  task.spawn(function()
-    CreateTween(Frame2, "Position", UDim2.new(0, -20, 0, 0), 0.5, true)
-    CreateTween(Frame2, "Position", UDim2.new(), 0.1, true)task.wait(timewait)
-    if Frame2 then
-      CreateTween(Frame2, "Position", UDim2.new(0, -20, 0, 0), 0.1, true)
-      CreateTween(Frame2, "Position", UDim2.new(0, Menu_Notifi.Size.X.Offset, 0, 0), 0.5, true)
-      Frame1:Destroy()
-    end
-  end)
-end
-
-function Library:Destroy()
-	Container:Destroy()
-end
-
-return Library
+local _I_126={{K={1,2,0,{156,179,237,30,33,64},{147,160,193,10},{147,160,213,74,99},{144,178,205,8},{135,170,193,23,54},{151,163,202,31,53,88}},C={85,78,85,78,107,85,79,95,123,80,92,109,79,87,78,79,78,12,80,83,87,78,79,78,12,127,79,116,83,90,71,76,85,78,71,77,79,78,121,71,74,85,78,71,75,79,75,85,76,81,80,115,79,77,79,74,92,80,33,116,10,79,77,79,74,73,80,33,105,72,79,77,71,72,79,76,79,72,100,67,77,85,74,12,67,75,85,72,12,79,78,79,72,12,79,79,69,76,-1,97,79,99,79,77,79,75,107,71,77,116,99,67,73,85,70,12,79,76,84,79,71,73,87,78,79,78,79,73,99,79,73,127,79},P={},U={{1,0}},nParams=2},{K={},C={86,127,79},P={},U=nil,nParams=1},{K={{156,165,245,6,63},{138,164,240,16},{169,163,234,37,43,84,136,191,205,227},1,25,2,53,3,40,4,63,5,29,6,47,7,51,90,{185,179,218,197,54,95,98,130,204,243,0},15,225,{72,170,240},9,57,52,8,{72,191,219,235},{106,190,195,236,15},27,119,0,127,62,10,11,12,13,126,{86,143,177,238,0,37,91}},C={100,67,78,100,67,79,123,85,76,12,83,87,78,90,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,66,99,123,85,67,85,64,99,123,85,65,85,94,99,85,95,69,76,-1,97,79,123,85,92,12,83,69,79,-1,97,77,71,77,71,76,71,79,68,79,76,77,105,74,105,75,79,79,79,76,79,77,69,76,76,71,75,71,74,79,74,71,77,79,74,86,112,80,370,85,93,85,93,65,85,90,95,123,80,357,109,79,100,79,75,123,85,91,12,83,87,78,90,123,85,77,85,88,99,123,85,75,85,89,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,68,99,123,85,67,85,86,99,123,85,65,85,66,99,123,85,87,85,64,99,123,85,88,85,94,99,85,95,69,76,-1,97,79,123,80,357,109,79,100,79,75,85,84,12,123,85,85,12,83,87,78,90,123,85,77,85,71,99,123,85,75,85,77,99,123,85,73,85,82,99,123,85,71,85,83,99,123,85,69,85,80,99,123,85,67,85,65,99,123,85,65,85,81,99,123,85,87,85,110,99,123,85,88,85,81,99,123,85,111,85,110,99,123,85,108,85,81,99,123,85,109,85,110,99,123,85,106,85,107,99,85,95,69,76,-1,97,79,80,372,79,75,123,85,104,12,83,84,79,109,79,116,372,116,29,127,78},P={},U={{1,1}},nParams=1},{K={{188,165,238,17,34,80},{138,164,240,16},{169,163,234,37,43,84,136,191,205,227},1,25,2,53,3,40,4,63,5,29,6,47,7,51,90},C={87,78,123,80,7,109,79,87,78,85,78,12,100,67,79,123,85,76,12,83,87,79,90,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,66,99,123,85,67,85,64,99,123,85,65,85,94,99,85,95,69,76,-1,97,79,95,127,79},P={},U={{1,11},{1,1}},nParams=1},{K={100,7,2,{166,180,205,2,33,73,150,185,200},{179,167,206,22,53,75,116},{133,168,195,21,52},{155,164,209,31,32,94},{176,164,205,21,54,72,119,178,220,229,16}},C={85,78,85,79,94,85,76,95,123,80,89,109,79,87,78,123,85,77,12,83,84,79,72,80,83,127,78,116,83,79,78,123,85,74,12,83,79,79,84,76,71,76,67,75,85,72,12,87,78,85,73,12,79,76,84,76,109,79,79,76,127,79},P={},U={{1,9}},nParams=2},{K={12,144,{167,181,204,3,32,72,151,184,201},{152,166,246,3},{158,173,216,12},{178,166,207,23,52,74,117,176,222,231,18},{182,163,209,25,61,68,108,191,209,254}},C={85,78,85,78,65,85,79,95,123,80,88,109,79,87,78,123,85,76,12,83,84,79,80,110,67,77,84,78,109,79,116,78,67,74,87,78,85,75,12,86,71,76,71,79,71,78,68,78,79,76,105,77,105,74,79,78,79,79,79,76,69,76,76,71,74,71,77,79,77,71,76,79,77,86,112,80,20,79,74,123,85,72,12,83,84,79,109,79,116,124,127,78},P={},U={{1,9}},nParams=0},{K={{156,167,253,24,32}},C={67,78,111,79,84,79,109,79,127,78},P={{K={{165,170,236,1,56,102,153,179,205,234},{174,170,243,27,40,70,137},{167,168,238,3,58,101,150,183,192,225,59,82}},C={124,86,86,86,71,77,71,76,71,79,71,78,87,78,85,78,12,123,85,79,12,83,111,79,84,76,109,79,87,78,85,76,12,123,85,79,12,83,111,76,84,76,109,79,87,76,85,76,12,123,85,79,12,83,111,77,84,76,109,79,127,78},P={{K={3,2,9,{186,180,250,5,6,73,143,162,219,211,38,71,106},{181,166,213,21},{188,166,212,10,52,107,116,173,197,230,15,8},{166,165,215,25,58},{163,164,208,18,39,66,108,181},{183,164,197,18,51,73,96},{182,162,203,19,48,78,113}},C={85,78,85,79,14,85,76,95,123,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,75,12,95,123,72,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,72,12,95,80,26,118,93,78,79,78,85,73,12,93,79,87,76,85,73,12,93,77,79,78,85,70,12,123,85,71,12,83,111,79,84,76,109,79,116,26,127,78},P={{K={7,49,{187,181,251,4,7,72,142,163,218,213,42,87,122,131},{170,169,234,26},{181,166,196}},C={85,78,85,78,65,85,79,95,123,80,85,109,79,87,78,85,76,12,67,77,85,76,12,85,74,12,95,80,108,124,93,79,116,108,127,78},P={},U={{1,0},{0,0}},nParams=0}},U={{1,0},{1,2},{0,1},{1,3}},nParams=1},{K={1,2,{187,181,251,4,7,72,142,163,218,210,39,70,107},{170,169,234,26},{189,167,213,11,53,101,111,174,213,229,5,86,100},{165,166,212,26,57}},C={85,78,85,78,107,85,79,95,123,80,97,109,79,79,78,85,76,12,67,77,85,76,12,85,74,12,95,123,72,80,97,109,79,79,78,85,76,12,67,77,85,76,12,85,75,12,95,80,121,79,78,93,78,116,121,127,78},P={},U={{1,1}},nParams=1},{K={15,225,{190,169,237,31,58,79,145,184},{172,181,250,22,59,66},{164,191,197,29,62,97,110,190,223},{159,172,214},0.65,{182,165,214,22},{177,173,215,21,58,75,87,168,205,224,1},{164,184,204,19,33},{179,175,213,23,56,73,66,183,196,235,5,74,127,129,168},{184,186,211},{173,148,193,237,106},{161},{169,177,203,238,63},{180,181,205,240,62,71},{165},{173,185,204,252}},C={85,78,85,78,65,85,79,95,123,80,87,109,79,79,78,87,78,95,123,80,87,109,79,87,79,80,194,79,78,85,76,12,87,76,96,71,79,87,77,123,85,77,12,83,87,74,67,74,85,75,12,85,72,67,73,85,70,12,85,71,12,67,73,85,68,12,85,69,12,84,77,90,123,85,76,67,66,85,75,12,87,75,85,67,12,85,64,12,87,75,85,67,12,85,65,12,79,79,85,67,12,107,87,75,85,94,12,85,64,12,87,75,85,94,12,85,65,12,79,79,85,94,12,107,84,74,99,84,74,123,85,95,12,83,84,79,109,79,116,194,127,78},P={},U={{1,1},{1,0},{1,2},{0,3},{0,1},{1,3}},nParams=1}},U={{1,0},{1,1},{0,0},{0,1}},nParams=0}},U={{1,2},{1,3}},nParams=2},{K={{165,170,239,0,45,74,159,177},{131,160,234},{128,163,230,2},{191,166,237,18,33,83}},C={67,78,85,79,12,79,78,84,79,71,77,67,76,79,79,123,72,80,88,109,79,90,86,71,72,71,75,71,74,68,74,75,72,105,73,105,70,79,74,79,75,79,72,69,76,76,71,70,71,73,79,73,71,72,79,73,86,112,80,11,79,77,79,73,79,70,99,116,111,67,76,79,76,123,72,80,30,109,79,90,86,71,69,71,68,71,71,68,71,68,69,105,66,105,67,79,71,79,68,79,69,69,76,76,71,67,71,66,79,66,71,69,79,66,86,112,80,49,79,67,85,77,79,77,99,116,21,79,77,127,79},P={},U=nil,nParams=3},{K={{169,168,249,25,41,74,136,167}},C={87,78,85,78,12,79,78,111,79,99,127,78},P={{K={},C={100,87,78,82,-1,97,-1,127,-1},P={},U={{1,1}},nParams=0}},U={{1,9}},nParams=2},{K={{169,168,249,25,41,74,136,167}},C={100,87,78,85,78,12,79,78,12,82,-1,97,79,71,79,79,79,127,79},P={},U={{1,9}},nParams=1},{K={{152,165,254,24,41},{139,170,239,16,44,70,149}},C={67,78,85,79,12,79,79,111,79,84,76,109,79,79,78,127,79},P={{K={},C={87,78,79,78,79,79,99,127,78},P={},U={{1,0}},nParams=2}},U=nil,nParams=2},{K={{152,165,254,24,41},{139,170,239,16,44,70,149}},C={67,78,85,79,12,79,79,111,79,84,76,109,79,79,78,127,79},P={{K={{188,165,238,17,34,80}},C={79,79,85,78,87,78,99,127,78},P={},U={{1,0}},nParams=2}},U=nil,nParams=2},{K={{129,165,232,28},{139,169,242,26,63},{157,175,249,24},0.5,100,7,2,0},C={67,78,85,79,12,79,78,79,79,119,67,78,85,76,12,79,78,84,79,85,77,65,107,84,79,79,79,65,71,76,85,74,85,75,94,85,72,95,123,80,126,109,79,79,76,85,73,101,80,117,79,76,79,79,107,71,76,116,117,79,76,127,79},P={},U=nil,nParams=2},{K={12,144,{167,181,223},1,28,2,40,3,59,4,55,5,63,90,14,34,46,24,6,47,7,8,9,53,10,52,57,49,61,62,11,25,13,54,15,16,105,51,19,17,18,20,22,56,225},C={85,78,85,78,65,85,79,95,123,80,223,109,79,100,79,78,123,85,76,12,83,87,78,90,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,66,99,85,67,69,76,-1,97,79,123,72,80,223,109,79,100,79,78,123,85,76,12,83,87,78,90,123,85,77,85,64,99,123,85,75,85,66,99,123,85,73,85,65,99,123,85,71,85,94,99,123,85,69,85,95,99,123,85,92,85,93,99,123,85,90,85,94,99,123,85,91,85,94,99,123,85,88,85,89,99,123,85,86,85,87,99,85,67,69,76,-1,97,79,80,177,87,78,90,123,85,77,85,95,99,123,85,75,85,70,99,123,85,73,85,84,99,123,85,71,85,85,99,123,85,69,85,82,99,123,85,92,85,72,99,123,85,90,85,89,99,123,85,91,85,93,99,123,85,88,85,87,99,123,85,86,85,83,99,123,85,80,85,81,99,123,85,78,85,89,99,123,85,110,85,111,99,123,85,64,85,89,99,123,85,108,85,72,99,123,85,109,85,106,99,85,67,69,76,-1,127,-1,116,177,85,73,85,75,14,85,88,95,123,80,316,109,79,100,79,78,123,85,76,12,83,87,78,90,123,85,77,85,88,99,123,85,75,85,84,99,123,85,73,85,72,99,123,85,71,85,89,99,123,85,69,85,111,99,123,85,92,85,111,99,123,85,90,85,107,99,123,85,91,85,87,99,123,85,88,85,82,99,123,85,86,85,74,99,123,85,80,85,72,99,123,85,78,85,70,99,123,85,110,85,68,99,123,85,64,85,66,99,85,67,69,76,-1,97,79,80,438,87,78,90,123,85,77,85,88,99,123,85,75,85,84,99,123,85,73,85,72,99,123,85,71,85,89,99,123,85,69,85,111,99,123,85,92,85,111,99,123,85,90,85,95,99,123,85,91,85,70,99,123,85,88,85,72,99,123,85,86,85,104,99,123,85,80,85,68,99,123,85,78,85,70,99,123,85,110,85,82,99,123,85,64,85,66,99,123,85,108,85,81,99,123,85,109,85,89,99,123,85,105,85,111,99,123,85,102,85,89,99,123,85,104,85,72,99,123,85,103,85,106,99,85,67,69,76,-1,127,-1,116,438,85,90,85,90,65,85,85,95,123,80,521,109,79,100,79,78,123,85,76,12,83,87,78,90,123,85,77,85,108,99,123,85,75,85,104,99,123,85,73,85,88,99,123,85,71,85,94,99,123,85,69,85,72,99,123,85,92,85,89,99,123,85,90,85,85,99,123,85,91,85,66,99,85,67,69,76,-1,97,79,80,573,87,78,90,123,85,77,85,81,99,123,85,75,85,89,99,123,85,73,85,111,99,123,85,71,85,89,99,123,85,69,85,72,99,85,67,69,76,-1,127,-1,116,573,85,77,85,77,107,85,75,95,123,80,836,109,79,100,79,78,123,85,76,12,83,87,78,90,123,85,77,85,64,99,123,85,75,85,66,99,123,85,73,85,65,99,123,85,71,85,94,99,123,85,69,85,100,99,123,85,92,85,70,99,123,85,90,85,101,99,123,85,91,85,66,99,123,85,88,85,111,99,85,67,69,76,-1,97,79,123,72,80,836,109,79,100,79,78,123,85,76,12,83,87,78,90,123,85,77,85,64,99,123,85,75,85,66,99,123,85,73,85,65,99,123,85,71,85,94,99,123,85,69,85,95,99,123,85,92,85,89,99,123,85,90,85,65,99,85,67,69,76,-1,97,79,80,794,87,78,90,123,85,77,85,64,99,123,85,75,85,66,99,123,85,73,85,65,99,123,85,71,85,94,99,123,85,69,85,81,99,123,85,92,85,89,99,123,85,90,85,111,99,123,85,91,85,89,99,123,85,88,85,72,99,123,85,86,85,106,99,85,67,69,76,-1,127,-1,116,794,85,108,85,108,65,85,98,95,123,80,1095,109,79,100,79,78,123,85,76,12,83,87,78,90,123,85,77,85,104,99,123,85,75,85,68,99,123,85,73,85,70,99,123,85,71,85,82,99,123,85,69,85,66,99,123,85,92,85,100,99,123,85,90,85,70,99,123,85,91,85,101,99,123,85,88,85,66,99,123,85,86,85,111,99,85,67,69,76,-1,97,79,123,72,80,1095,109,79,100,79,78,123,85,76,12,83,87,78,90,123,85,77,85,104,99,123,85,75,85,68,99,123,85,73,85,70,99,123,85,71,85,82,99,123,85,69,85,66,99,123,85,92,85,95,99,123,85,90,85,93,99,123,85,91,85,94,99,123,85,88,85,94,99,123,85,86,85,89,99,123,85,80,85,87,99,85,67,69,76,-1,97,79,80,1047,87,78,90,123,85,77,85,104,99,123,85,75,85,68,99,123,85,73,85,70,99,123,85,71,85,82,99,123,85,69,85,66,99,123,85,92,85,81,99,123,85,90,85,89,99,123,85,91,85,111,99,123,85,88,85,89,99,123,85,86,85,72,99,123,85,80,85,106,99,85,67,69,76,-1,127,-1,116,1047,127,78},P={},U={{1,1}},nParams=1},{K={100,7,2,{187,175,250,26,42,104,157,189,202,228,43,68},{132,169,194,20,53},{152,167,210,28,35,93},{166,162,199,23,55,89},{160,174,207,30,48,95,102,191,231,227,6,86,118}},C={85,78,85,79,94,85,76,95,123,80,88,109,79,87,78,85,77,12,79,79,12,72,80,109,87,78,85,77,12,79,79,90,99,116,109,67,74,85,75,12,87,78,85,77,12,79,79,12,79,78,84,76,109,79,79,78,87,79,79,78,84,79,87,78,85,72,12,87,78,85,73,12,12,79,79,12,99,79,78,127,79},P={},U={{1,9},{1,20}},nParams=2},{K={{156,165,245,6,63},{185,173,248,24,40,106,159,191,200,230,41,70},{186,174,251,27,43,85},{188,162,243,18,44,83,154,179,251,239,58,90,106}},C={67,78,87,78,85,79,12,69,79,77,71,76,71,79,71,78,68,78,79,76,105,77,105,74,79,78,79,79,79,76,69,76,76,71,74,71,77,79,77,71,76,79,77,86,112,80,206,67,78,79,74,69,79,77,71,73,71,72,71,75,68,75,72,73,105,70,105,71,79,75,79,72,79,73,69,76,76,71,71,71,70,79,70,71,73,79,70,86,112,80,58,79,71,87,79,79,71,84,79,87,78,85,76,12,87,78,85,77,12,12,79,77,12,99,116,14,105,75,105,72,105,73,105,70,105,71,116,90,127,78},P={},U={{1,9},{1,20}},nParams=0},{K={{190},255,{169},{173}},C={90,123,85,78,79,78,85,78,12,85,79,65,99,123,85,76,79,78,85,76,12,85,79,65,99,123,85,77,79,78,85,77,12,85,79,65,99,127,79},P={},U=nil,nParams=1},{K={{175,171,240,27,62,23},{139,183,242,24,31,98,191},{188},{168},{178}},C={67,78,85,79,12,79,78,85,76,12,79,78,85,77,12,79,78,85,74,12,69,77,-1,127,-1},P={},U=nil,nParams=1},{K={{166,151,211,58,8,65,159,187,200,225},{153,164,255,25,40},{136,169,236,19,47,69,150}},C={87,78,123,85,78,12,83,79,78,84,76,71,79,67,79,85,76,12,79,79,111,79,84,76,109,79,127,78},P={{K={12,144,{168,170,255,17,61},{156,183,254,0,33},{135,169,210,22},1,21,2,40,3,51,4,53,5,52,6,122,7,22,8,9,56,10,11,59,13,35,14,15,25,16,17,18,60,19,20,61,23,24,62,26,63,27,28,29,119,30,31,32,33,47,34,54,36,37,38,39,46,41,42,43,44,45,90},C={85,78,85,78,65,85,79,95,123,80,91,109,79,87,78,85,76,12,79,78,12,80,111,67,77,111,79,84,79,109,79,116,270,67,74,87,79,90,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,66,99,123,85,67,85,64,99,123,85,65,85,94,99,123,85,95,85,92,99,123,85,93,85,68,99,123,85,90,85,91,99,123,85,88,85,70,99,123,85,89,85,86,99,123,85,78,85,70,99,123,85,87,85,84,99,123,85,85,85,94,99,123,85,82,85,83,99,123,85,80,85,66,99,123,85,81,85,64,99,123,85,110,85,111,99,123,85,108,85,68,99,123,85,109,85,106,99,123,85,72,85,94,99,123,85,92,85,92,99,123,85,107,85,66,99,123,85,104,85,86,99,123,85,83,85,105,99,123,85,102,85,103,99,123,85,100,85,70,99,123,85,101,85,94,99,123,85,98,85,99,99,123,85,96,85,94,99,123,85,97,85,83,99,123,85,126,85,66,99,123,85,127,85,124,99,123,85,125,85,122,99,123,85,84,85,105,99,123,85,123,85,94,99,123,85,120,85,64,99,123,85,121,85,66,99,123,85,118,85,119,99,123,85,70,85,94,99,123,85,116,85,111,99,123,85,117,85,68,99,123,85,114,85,64,99,123,85,115,85,105,99,123,85,112,85,94,99,85,113,84,76,79,78,79,79,84,77,109,79,127,78},P={{K={3,2,9,{169,171,254,16,60},{164,177,208,29},1,25,53,54,4,5,40,6,42,7,51,8,57,49,10,63,11,90,{80,190,199}},C={85,78,85,79,14,85,76,95,123,80,44,109,79,87,78,85,77,12,87,79,12,85,74,12,87,76,90,123,85,75,85,72,99,123,85,79,85,73,99,123,85,78,85,70,99,123,85,71,85,73,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,65,99,123,85,94,85,95,99,123,85,76,85,92,99,123,85,93,85,90,99,123,85,91,85,69,99,85,88,84,76,95,80,49,100,87,78,85,77,12,87,79,12,123,85,89,12,83,87,77,87,74,69,79,-1,97,79,109,79,116,220,87,78,85,77,12,87,79,12,123,85,89,12,83,87,74,84,76,109,79,127,78},P={},U={{0,0},{1,0},{0,1},{0,2},{1,1}},nParams=0}},U={{0,1},{0,2},{0,3}},nParams=2}},U={{1,6},{1,9},{1,1},{1,24}},nParams=1},{K={{156,165,245,6,63},{171,169,252,18,62},7,49,{163,169,214,29},1,2,{167,178,211,30},25,53,3,54,4,5,40,6,42,51,8,57,9,10,63,11,90,{83,188,217,248,0},{118,189,215,226,10}},C={90,71,79,67,78,87,78,85,79,12,69,79,77,71,74,71,77,71,76,68,76,77,74,105,75,105,72,79,76,79,77,79,74,69,76,76,71,72,71,75,79,75,71,74,79,75,86,112,80,140,85,76,85,76,65,85,77,95,123,80,10,109,79,79,72,85,74,12,80,142,85,75,85,75,107,85,72,95,123,80,236,109,79,79,72,85,73,12,87,79,90,123,85,75,85,70,99,123,85,72,85,71,99,123,85,68,85,69,99,123,85,66,85,71,99,123,85,67,85,64,99,123,85,65,85,94,99,123,85,76,85,95,99,123,85,92,85,93,99,123,85,90,85,77,99,123,85,91,85,88,99,123,85,89,85,64,99,85,86,84,76,95,80,250,79,79,79,75,87,76,79,72,85,87,12,84,79,99,116,240,79,79,79,75,79,72,85,87,12,99,116,142,116,89,67,84,111,79,84,79,109,79,127,78},P={{K={15,225,{153,180,247,2,43,64,151,186,203},{169,168,243,19,42,85},1,117,90,116,2,46,3,34,4,{179,130,230,207,28,95,106,142,221,244}},C={85,78,85,78,65,85,79,95,123,80,65,109,79,67,76,80,18,100,67,76,87,78,85,77,12,87,79,90,123,85,74,85,75,99,85,72,84,76,87,76,87,79,90,123,85,74,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,71,99,85,72,84,76,88,88,88,87,77,123,85,67,12,83,87,74,69,76,-1,97,79,109,79,116,18,127,78},P={},U={{0,0},{0,1},{1,0},{0,3},{1,1}},nParams=0}},U={{1,9},{1,1},{1,23},{1,6}},nParams=1},{K={{130,161,228,0},100,7,2},C={67,78,79,78,86,71,74,71,77,71,76,68,76,77,74,105,75,105,72,79,76,79,77,79,74,69,76,76,71,72,71,75,79,75,71,74,79,75,86,112,80,11,85,79,85,76,94,85,77,95,123,80,114,109,79,79,72,79,79,95,80,13,118,127,79,116,13,116,65,127,78},P={},U=nil,nParams=2},{K={1,15,2,19,3,25,4,53,5,40,6,52,7,63,8,90,{191,187,222,234,57,70,94,133,216,253,25,55},{168,145,196,232},{144,179,217},0,10},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,71,99,85,65,84,76,90,123,85,94,67,95,85,92,12,79,78,123,72,80,2,109,79,85,93,79,79,123,72,80,24,109,79,85,90,84,76,99,84,76,71,76,79,76,127,79},P={},U={{1,14},{1,1}},nParams=2},{K={1,15,2,19,3,9,4,46,5,40,6,53,7,49,8,63,90,{190,186,193,234,47},{189,185,194,233,44,5},{153,165,192,234,13,112,77},255,{85,177,216,234,10,87,116,154,178}},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,65,99,85,94,84,76,90,123,85,95,79,78,123,72,80,28,109,79,67,92,85,93,12,85,90,85,90,85,90,84,77,99,123,85,91,79,79,123,72,80,46,109,79,85,78,99,84,76,71,76,79,76,127,79},P={},U={{1,14},{1,1}},nParams=2},{K={1,15,2,19,3,22,4,51,5,41,6,46,7,8,59,9,35,10,53,11,47,12,90,{80,180,193,255,44,73,119,142,177},{65,178,193,225},{73,188,204,226,16,73,90,159,161,248,7},{86,191,210,234,15,80,113},{82,155,222,226},{102,133,207},0},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,75,99,123,85,67,85,64,99,123,85,65,85,94,99,123,85,95,85,92,99,123,85,93,85,90,99,123,85,91,85,69,99,85,88,84,76,90,123,85,89,67,86,85,89,12,85,87,12,99,123,85,84,67,85,85,82,12,79,78,123,72,80,62,109,79,85,83,79,79,123,72,80,52,109,79,85,83,84,76,99,84,76,71,76,79,76,127,79},P={},U={{1,14},{1,1}},nParams=2},{K={1,15,2,19,3,10,4,59,5,62,6,7,51,8,52,9,61,90,{174,183,202,226,55,88,105,164,209,226,26,41,115},{170,147,198,234},{110,189,199},0,{82,187,214,238,11,84,117,166,167,252,6},{83,186,215,239,10,85,116,185,170,252,27,63},{84,189,208,232,13,82,115,184,171,236}},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,71,99,123,85,69,85,66,99,123,85,67,85,64,99,123,85,65,85,94,99,85,95,84,76,90,123,85,92,67,93,85,90,12,85,91,79,78,123,72,80,26,109,79,85,72,84,76,99,123,85,88,67,93,85,90,12,85,91,79,79,123,72,80,37,109,79,85,72,84,76,99,123,85,89,67,93,85,90,12,85,91,79,76,123,72,80,204,109,79,85,72,84,76,99,123,85,86,67,93,85,90,12,85,91,79,77,123,72,80,215,109,79,85,72,84,76,99,84,76,71,74,79,74,127,79},P={},U={{1,14},{1,1}},nParams=4},{K={1,28,2,40,3,59,4,55,5,63,90,{181,174,196,20,48,93,104,170,217,235,51,77,118,129,180,239,22,61,66,145,180,214}},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,85,68,84,76,90,123,85,69,85,78,99,84,76,71,78,79,78,127,79},P={},U={{1,14},{1,1}},nParams=0},{K={1,28,2,40,3,59,4,55,5,63,90,{181,174,196,20,48,93,104,170,217,235,36,80,123,128,181,172},{187,191,196,239,42,3},{159,163,198,236,11,118,75},255,{185,188,217,231,62,65,88,138,193,246,59,42,99,150,167},0},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,85,68,84,76,90,123,85,69,79,78,123,72,80,14,109,79,67,66,85,67,12,85,64,85,64,85,64,84,77,99,123,85,65,85,94,99,84,76,71,79,79,79,127,79},P={},U={{1,14},{1,1}},nParams=1},{K={1,28,2,40,3,59,4,55,5,63,90,{181,174,196,20,48,93,104,170,217,235,36,80,123,128,181,172},{187,191,196,239,42,3},{159,163,198,236,11,118,75},255,{185,188,217,231,62,65,88,138,193,246,59,42,99,150,167},0,15,19,25,53,6,52,7,8,{70,178,199,227,0,79,71,140,161,244,0,62},{83,154,223,227},{105,186,192}},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,85,68,84,76,90,123,85,69,79,78,123,72,80,14,109,79,67,66,85,67,12,85,64,85,64,85,64,84,77,99,123,85,65,85,94,99,90,100,87,78,87,79,90,123,85,78,85,95,99,123,85,76,85,92,99,123,85,74,85,93,99,123,85,72,85,90,99,123,85,70,85,77,99,123,85,91,85,88,99,123,85,89,85,71,99,123,85,86,85,77,99,85,68,84,76,90,123,85,87,67,84,85,85,12,79,79,79,76,84,76,99,69,76,-1,91,79,84,77,71,77,79,77,127,79},P={},U={{1,14},{1,1}},nParams=3},{K={1,14,2,63,3,34,4,46,5,24,6,47,7,8,9,53,10,52,90,{171,178,215,243},{},{64,172,197,230,35,76,101,157,174,247,50,38,77,150,163},{64,187,209,225,5,72,125,159,172,254,38,56,67,148,161,218,227,40,87,100,129,195},{65,180,193,239,6,73,64,130,185,254,35,34,91,158,191},0},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,73,99,123,85,67,85,73,99,123,85,64,85,65,99,123,85,94,85,95,99,85,92,84,76,90,123,85,93,85,90,99,123,85,91,124,99,123,85,88,85,78,99,123,85,89,85,86,99,84,76,71,78,79,78,127,79},P={},U={{1,14},{1,1}},nParams=0},{K={1,9,2,57,3,40,4,53,5,54,6,7,51,8,52,61,10,28,11,12,59,13,55,14,63,90,{68,191,213,229,1,76,121,155,168,250,34,60,71,144,165,222,231,44,83,96,133,199},{74,182,211,198,10,94,112,138},56,34,41,46,62,96,117,109,15,110,16,17,111,18,19,20,105,21,108,22,23,{95,154,185,209,18,56,100,104,188,210,232},{74,153,190,239,19,55,73,99},{76,148,189,200,19,59,109,102,173,254,226,6,88,114,172,168,243,24,61,20},{98,151,162,204,229,42,99,97,154,221,192,1,56,125,156},0,{113,153,160,197,238,54,112,107,144,238,250,3,33,113,156,175,209,9},{96,154,189,221,226,40,96,98,153,222},{113,184,189,193,182},{75,152,162}},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,71,99,123,85,69,85,66,99,123,85,67,85,64,99,123,85,79,85,65,99,123,85,94,85,95,99,123,85,92,85,75,99,123,85,93,85,90,99,123,85,91,85,88,99,123,85,89,85,86,99,85,87,84,76,90,123,85,84,85,78,99,123,85,85,87,79,90,123,85,78,85,75,99,123,85,76,85,82,99,123,85,74,85,83,99,123,85,72,85,90,99,123,85,70,85,80,99,123,85,68,85,80,99,123,85,69,85,86,99,123,85,67,85,81,99,123,85,79,85,66,99,123,85,94,85,110,99,123,85,92,85,111,99,123,85,93,85,108,99,123,85,91,85,108,99,123,85,89,85,109,99,123,85,106,85,107,99,123,85,104,85,107,99,123,85,105,85,102,99,123,85,103,85,102,99,123,85,100,85,107,99,123,85,101,85,98,99,123,85,99,85,96,99,123,85,97,85,96,99,123,85,126,85,109,99,85,87,84,76,99,123,85,127,87,79,90,123,85,78,85,75,99,123,85,76,85,82,99,123,85,74,85,83,99,123,85,72,85,90,99,123,85,70,85,80,99,123,85,68,85,80,99,123,85,69,85,86,99,123,85,67,85,81,99,123,85,79,85,66,99,123,85,94,85,110,99,123,85,92,85,111,99,123,85,93,85,108,99,123,85,91,85,108,99,123,85,89,85,109,99,123,85,106,85,107,99,123,85,104,85,107,99,123,85,105,85,102,99,123,85,103,85,102,99,123,85,100,85,107,99,123,85,101,85,98,99,123,85,99,85,96,99,123,85,97,85,96,99,123,85,126,85,109,99,85,87,84,76,99,123,85,124,87,79,90,123,85,78,85,75,99,123,85,76,85,82,99,123,85,74,85,83,99,123,85,72,85,90,99,123,85,70,85,80,99,123,85,68,85,80,99,123,85,69,85,86,99,123,85,67,85,81,99,123,85,79,85,66,99,123,85,94,85,110,99,123,85,92,85,111,99,123,85,93,85,108,99,123,85,91,85,108,99,123,85,89,85,109,99,123,85,106,85,107,99,123,85,104,85,107,99,123,85,105,85,102,99,123,85,103,85,102,99,123,85,100,85,107,99,123,85,101,85,98,99,123,85,99,85,96,99,123,85,97,85,96,99,123,85,126,85,109,99,85,87,84,76,99,123,85,125,79,78,99,123,85,122,85,123,99,123,85,120,79,79,99,123,85,121,67,118,85,119,12,85,123,85,123,85,123,85,123,84,74,99,84,76,71,76,79,76,127,79},P={},U={{1,14},{1,1}},nParams=2},{K={1,19,2,55,3,59,4,61,5,63,6,22,7,8,56,9,10,54,90,{182,186,206,224,58},{66,185,211,227,7,74,127,157,174,252,36,58,65,150,163,216,225,42,85,102,131,193},12,144},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,75,99,123,85,67,85,64,99,123,85,65,85,71,99,123,85,94,85,95,99,85,92,84,76,90,123,85,93,79,78,99,123,85,90,85,78,99,84,76,71,79,85,91,85,91,65,85,88,95,123,80,37,109,79,87,76,79,78,84,79,86,112,80,52,79,79,85,93,87,76,79,78,84,79,99,116,52,79,79,127,79},P={},U={{1,14},{1,1},{1,10}},nParams=1},{K={1,19,2,55,3,59,4,61,5,63,6,24,7,47,8,46,9,10,53,11,52,90,{75,183,211,237,7},{65,186,208,224,4,73,124,158,173,255,39,57,66,149,160,219,226,41,86,101,128,194}},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,65,99,123,85,94,85,65,99,123,85,95,85,92,99,123,85,93,85,90,99,85,91,84,76,90,123,85,88,79,78,99,123,85,89,85,78,99,84,76,71,79,79,79,127,79},P={},U={{1,14},{1,1}},nParams=1},{K={1,14,2,63,3,34,4,46,5,22,6,59,7,56,8,9,54,90,{170,179,214,242},{},{84,189,200,252,35,87,124,135,178,171},{66,182,221,230,19,10},{100,168,221,231,48,125,80},240,{80,185,204,248,48,78,117,130,183,236,21,62,65,146,183,213},0,{82,187,206,250,53,87,108,139},15,{78,143,214,228},{76,143,204,252},{77,141,206,250,11,47,73,151,167,203,24,61,70,102},{89,138,216,251,63,38,99,135},{78,133,223,255,11,54,115,129,162,192,40,38,77,106,175,196,237,22,89,122,143,189},{89,128,197,225,53,4,113,156,170,203,16,48,67,113},{66,131,216,226}},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,77,99,123,85,65,85,94,99,85,95,84,76,90,123,85,92,79,78,123,72,80,3,109,79,85,93,99,123,85,90,67,91,85,88,12,85,89,85,89,85,89,84,77,99,123,85,86,79,76,123,72,80,34,109,79,85,87,99,123,85,84,79,79,123,72,80,52,109,79,85,85,99,123,85,82,67,83,85,82,12,85,80,12,99,123,85,81,118,99,123,85,110,85,78,99,123,85,111,67,83,85,111,12,85,108,12,99,84,76,71,77,79,77,127,79},P={},U={{1,14},{1,1}},nParams=3},{K={{159,180,253,3,34}},C={67,78,111,79,84,79,109,79,127,78},P={{K={{162,165,241,17},1,20,2,53,3,46,4,51,5,60,6,7,57,8,59,9,10,11,12,52,90,{65,181,220,254,7,84,102},14,63,41,{79,179,215,233,3},40,56,34,62,96,117,13,110,15,105,16,98,17,18,19,106,21,111,22,23,104,{72,157,161,193},28,55,{76,158,181,194},{117,188,185,197,178},{79,156,166},0,{98,142,167,196,238,58,71,98,128,232,250,17,38},{97,146,161,193},{124},{118,159,164,203,232,42},47,{107,111,180,223,250,83},{79,115,182,220,219,38,123},25,{123,108,168,218,255,10,84,125},{110,101,191,223,235,22,83,97,130,160,200,6,45,74,143,164,205,246,57,90,111,157},49,93,1.2,61,{120,100,128,222,244,42,46,117,158,187,146},240,54,30,{115,98,139,201},{113,97,146,214,247,3,4,113,154,170},{99,106,159,203,212,0,43,112,133,252},200,{109,116,145,181,206,3,40,81,137,180,205},{121,96,143,163,238,23},{111,100,142,166,245,58,37,69,148},0.5,{120,116,158,172,243,18,30,81,132,185,200},{111,99,135,168,234},{111,123,142,190},{55,121,153,188},0.88,{11,121,157,164},0.4,{13,113,149,171,193,40,38,77,106,175,196,237,22,89,122,143,189},0.8,0.6,0.3,{29,105,171,164,218,239,51,85},{29,83,152,191,218,241,56,67,108,143,218,232},0.9,{31,74,143,191,206},{24,65,132,160,248,246,61,90,127,148,221,230,9,42,127,141},0.05,{26,81,155,179,192,214,49,69,103,146,215,249,0},1.35,{20,77,115,172,194,231,25}},C={87,78,85,78,87,78,85,78,12,123,72,80,16,109,79,87,79,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,70,99,123,85,66,85,67,99,123,85,64,85,65,99,123,85,94,85,72,99,123,85,95,85,70,99,123,85,92,85,74,99,123,85,93,85,90,99,85,91,84,76,99,87,78,85,88,87,78,85,88,12,123,72,80,195,109,79,87,79,90,123,85,79,85,89,99,123,85,77,85,86,99,123,85,75,85,87,99,123,85,73,85,72,99,85,91,84,76,99,87,78,85,84,87,78,85,84,12,123,72,80,352,109,79,87,79,90,123,85,79,85,85,99,123,85,77,85,82,99,123,85,75,85,83,99,123,85,73,85,65,99,123,85,71,85,87,99,123,85,69,85,87,99,123,85,66,85,86,99,123,85,64,85,72,99,123,85,94,85,70,99,123,85,95,85,80,99,123,85,92,85,81,99,123,85,93,85,110,99,123,85,111,85,110,99,123,85,89,85,108,99,123,85,109,85,106,99,123,85,107,85,104,99,123,85,105,85,108,99,123,85,102,85,108,99,123,85,103,85,100,99,123,85,76,85,106,99,123,85,101,85,98,99,123,85,99,85,106,99,123,85,96,85,97,99,85,91,84,76,99,87,78,85,126,87,78,85,126,12,123,72,80,270,109,79,85,109,99,87,76,100,87,77,87,79,90,123,85,79,85,89,99,123,85,77,85,127,99,123,85,75,85,85,99,123,85,73,85,65,99,123,85,71,85,124,99,123,85,69,85,86,99,85,91,69,76,-1,97,79,90,123,85,125,67,122,85,123,12,85,79,85,120,85,120,85,120,84,74,99,123,85,121,67,118,85,121,12,85,119,12,99,123,85,116,87,74,99,84,76,71,78,87,75,87,76,87,77,87,79,90,123,85,79,85,64,99,123,85,77,85,74,99,123,85,75,85,117,99,123,85,73,85,90,99,123,85,71,85,80,99,123,85,69,85,127,99,123,85,66,85,85,99,123,85,64,85,65,99,123,85,94,85,124,99,123,85,95,85,86,99,85,91,84,76,67,114,85,115,12,85,112,85,112,85,112,84,77,85,120,85,95,84,74,90,123,85,116,79,78,99,123,85,125,67,122,85,123,12,85,79,85,120,85,120,85,120,84,74,99,123,85,113,67,122,85,123,12,85,79,85,124,126,85,120,85,120,84,74,99,123,85,14,85,120,99,123,85,121,67,118,85,121,12,85,119,12,99,84,76,90,123,85,79,87,77,87,79,90,123,85,79,85,94,99,123,85,77,85,72,99,123,85,75,85,85,99,123,85,73,85,74,99,123,85,71,85,15,99,123,85,69,85,86,99,85,91,84,76,67,114,85,115,12,85,12,85,12,85,12,84,77,85,13,84,77,99,123,85,77,87,77,87,79,90,123,85,79,85,95,99,123,85,77,85,65,99,123,85,75,85,80,99,123,85,73,85,80,99,123,85,71,85,70,99,123,85,69,85,90,99,123,85,66,85,10,99,85,91,84,76,85,93,85,93,85,93,85,93,84,75,99,123,85,75,87,76,87,77,87,79,90,123,85,79,85,103,99,123,85,77,85,124,99,123,85,75,85,65,99,123,85,73,85,10,99,123,85,71,85,86,99,85,91,84,76,87,78,85,84,12,84,76,90,123,85,125,67,122,85,123,12,85,120,85,76,85,120,85,76,84,74,99,123,85,11,67,114,85,115,12,85,8,85,8,85,8,84,77,99,123,85,78,87,79,90,123,85,79,85,103,99,123,85,77,85,67,99,123,85,75,85,74,99,123,85,73,85,90,99,85,91,84,76,99,84,76,99,123,85,73,87,76,87,77,87,79,90,123,85,79,85,99,99,123,85,77,85,65,99,123,85,75,85,82,99,123,85,73,85,86,99,123,85,71,85,9,99,85,91,84,76,87,78,85,78,12,85,109,84,77,90,123,85,125,67,122,85,123,12,85,79,85,6,126,85,120,85,76,84,74,99,123,85,113,67,122,85,123,12,85,120,85,6,85,120,85,120,84,74,99,123,85,7,67,118,85,7,12,85,4,12,99,123,85,78,87,79,90,123,85,79,85,89,99,123,85,77,85,70,99,123,85,75,85,72,99,123,85,73,85,9,99,123,85,71,85,86,99,85,91,84,76,99,84,76,99,100,87,76,87,77,87,79,90,123,85,79,85,99,99,123,85,77,85,65,99,123,85,75,85,82,99,123,85,73,85,86,99,123,85,71,85,9,99,85,91,84,76,87,78,85,88,12,85,89,84,77,90,123,85,125,67,122,85,123,12,85,79,85,120,85,120,85,120,84,74,99,123,85,113,67,122,85,123,12,85,120,85,120,85,120,85,112,84,74,99,123,85,7,67,118,85,7,12,85,4,12,99,123,85,78,87,79,90,123,85,79,85,112,99,123,85,77,85,74,99,123,85,75,85,90,99,123,85,73,85,72,99,123,85,71,85,86,99,123,85,69,85,90,99,123,85,66,85,72,99,85,91,84,76,99,123,85,121,67,118,85,121,12,85,119,12,99,123,85,5,67,114,85,115,12,85,2,85,2,85,2,84,77,99,123,85,3,118,99,69,76,-1,91,75,84,76,71,79,87,72,123,85,0,12,83,79,79,67,1,85,123,12,85,30,67,118,85,31,12,85,28,12,84,76,90,123,85,113,67,122,85,123,12,85,120,85,120,85,120,85,120,84,74,99,84,74,123,85,29,12,83,84,79,109,79,67,26,87,78,85,126,12,85,27,96,84,79,109,79,87,72,123,85,0,12,83,79,79,85,24,12,67,1,85,123,12,85,25,67,118,85,31,12,85,28,12,84,76,90,123,85,22,85,79,99,84,74,123,85,29,12,83,84,79,109,79,87,72,123,85,0,12,83,79,79,67,1,85,123,12,85,23,67,118,85,31,12,85,28,12,84,76,90,123,85,14,85,20,99,84,74,123,85,29,12,83,84,79,109,79,67,26,85,21,84,79,109,79,87,72,123,85,0,12,83,79,79,85,18,12,67,1,85,123,12,85,20,67,118,85,31,12,85,28,12,84,76,90,123,85,19,85,16,99,84,74,123,85,29,12,83,84,79,109,79,87,72,123,85,0,12,83,79,79,85,17,12,67,1,85,123,12,85,20,67,118,85,31,12,85,28,12,84,76,90,123,85,46,85,25,99,84,74,123,85,29,12,83,84,79,109,79,87,72,123,85,0,12,83,79,79,85,88,12,67,1,85,123,12,85,20,67,118,85,31,12,85,28,12,84,76,90,123,85,46,85,30,99,84,74,123,85,29,12,83,84,79,109,79,67,26,85,47,84,79,109,79,79,79,123,85,44,12,83,67,122,85,123,12,85,79,85,76,85,120,85,120,84,74,87,79,90,123,85,79,85,103,99,123,85,77,85,90,99,85,91,84,76,87,79,90,123,85,79,85,92,99,123,85,77,85,117,99,123,85,75,85,70,99,123,85,73,85,90,99,123,85,71,85,72,99,85,91,84,76,85,23,118,84,72,109,79,67,26,85,45,84,79,109,79,79,79,123,85,42,12,83,84,79,109,79,127,78},P={},U={{1,1},{0,0},{0,1},{0,2},{0,3},{0,4},{0,5}},nParams=0}},U={{1,1},{1,17},{1,16},{1,30},{1,18},{1,3}},nParams=2},{K={3,2,9,{188,166,233,18,12,65,152},{128,171,193,20,60}},C={85,78,85,79,14,85,76,95,123,80,92,109,79,87,78,85,77,12,80,80,67,74,111,79,84,79,109,79,116,80,127,78},P={{K={7,49,{135,181,248,31,34,67},{169,168,243,19,42,85},1,117,90,{148,170,206,30},{179,173,201,25,29,72},116,2,46,3,34,4,{137,182,202,231,61,90,103,134},{177,181,199,225,18,91,120,141,218,253,15,37,104,157,163,202},{179,180,192,224},25,53,52,60,5,51,6,61,47,8,40,9,59,10,11,12,13,{76,136,209,227,10,41,107},27,119,54,62,63,122,57,14,15,16,17,18,19,20,21,22,23,24,26,28,29,30,31,32,50,33,35,36,37,55,38,39,{100,97,141,221}},C={85,78,85,78,65,85,79,95,123,80,31,109,79,67,76,123,80,31,109,79,67,76,87,78,85,77,12,87,79,90,123,85,74,85,75,99,85,72,84,76,67,73,85,70,12,87,79,90,123,85,74,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,69,99,85,72,84,76,88,88,88,84,79,80,576,100,87,76,67,65,87,78,85,77,12,87,79,90,123,85,74,85,75,99,85,72,84,76,67,73,85,70,12,87,79,90,123,85,74,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,69,99,85,72,84,76,88,88,88,69,79,-1,97,79,109,79,87,78,123,85,94,12,83,90,123,85,95,87,79,90,123,85,74,85,92,99,123,85,68,85,93,99,123,85,66,85,90,99,123,85,64,85,91,99,123,85,88,85,89,99,123,85,86,85,87,99,123,85,78,85,84,99,123,85,85,85,82,99,123,85,83,85,80,99,123,85,81,85,69,99,123,85,110,85,89,99,123,85,111,85,93,99,123,85,108,85,90,99,85,72,84,76,99,123,85,109,87,79,90,123,85,74,85,106,99,123,85,68,85,84,99,123,85,66,85,69,99,123,85,64,85,93,99,123,85,88,85,107,99,123,85,86,85,104,99,123,85,78,85,93,99,123,85,85,85,80,99,123,85,83,85,105,99,123,85,81,85,102,99,123,85,110,85,105,99,123,85,111,85,103,99,123,85,108,85,100,99,123,85,101,85,93,99,123,85,98,85,90,99,123,85,99,85,91,99,123,85,96,85,89,99,123,85,97,85,87,99,123,85,126,85,84,99,123,85,127,85,82,99,123,85,124,85,80,99,123,85,125,85,69,99,123,85,122,85,89,99,123,85,123,85,93,99,123,85,92,85,90,99,123,85,120,85,103,99,123,85,106,85,91,99,123,85,121,85,93,99,123,85,118,85,82,99,123,85,119,85,103,99,123,85,116,85,69,99,123,85,117,85,114,99,123,85,115,85,102,99,123,85,67,85,103,99,123,85,112,85,87,99,123,85,113,85,80,99,123,85,14,85,15,99,123,85,12,85,102,99,123,85,13,85,103,99,85,72,84,76,67,73,85,70,12,87,79,90,123,85,74,85,71,99,85,72,84,76,88,88,99,123,85,10,85,88,99,84,76,109,79,116,576,127,78},P={},U={{0,0},{0,1},{0,2}},nParams=0}},U={{1,9},{1,1},{1,25}},nParams=1},{K={{162,165,241,17},1,31,2,54,3,62,4,59,5,40,6,90,{186,190,199,231,48,86,79,142,213,245,12,51},{169,179,220,231,25,93,100,132,211,245},{179,186,207,230,11,65,110,142,210,230,6},{181,186,216,246,51,113,98,133,222,248,9,32},{180,187,217,247,50,97,98,130,218,249,8,12,126,154,163},56,34,41,7,63,8,46,9,51,10,11,96,12,117,13,14,98,15,16,105,17,110,18,109,19,20,21,107,22,106,23,{84,155,185,215,18,1,72,125,169},52,61,122,116,{97,150,189,217,231,25,83,102,142,216,243,9,41},{112,147,188,220,202,56,92,101},{109,159,187,194},99,104,24,25,26,27,28,{101,106,168,198,227,45,95,123,130},108,111,{105,104,179,211,234,21},{99,105,150,221,211,14,39},225,{66,105,131,214,254},57,53,55,{117,97,138,209,228,93},{81,125,136,210,197,40,5},255,{106,120,147,164},{111,86,131,175,168},{85,118,156},0,50,30,44,{21,81,188,161,211,12,28,73,121,183,197,252},{6,124,133,153,211,22,33,76,115,173,200,202,9,88,127,142,164,253,34,32,70,151,176,197},47,32,0.5,{21,114,134,164,209,20,58,67},{4,127,149,165,193,12,57,91,104,186,226,252,7,80,101,158,167,236,19,32,69,135},150,49,{8,79,154,185,198,243,9,94,96,143,205},{28,71,153,166,197,240,104},42,45,29,119,33,35,36,37,38,39,43,48,101,103,{12,66,108,147,240,245},124,60,{26,91,98,144},{24,91,120,136},{25,89,122,142,223,251,44,41,114,146},{28,91,102,151,204,211,10,52,124,146,161,195,30,57,91,116},{52,93,104,156,131,247,28,39,82,203},70,{52,83,97,131,160,246,23},{36,84,103,131,162,246,49,39,66,152,184},{48,89,108,152,151,245,14,41},{53,92,103,136,171,233},307,172,615,344,144,{63,44,107,177,170,209},{46,37,127,159,171,214,19,33,66,96,159,219,224,11,78,39},{57,45,120,152,168,214},{61,35,114,147,173,210,27,50,122,110,187,219,235},{34,38,118,153},0.7,{60,38,84,138,180,235,244,45,69,102,143,136,196,25},{59,36,82,143,166,232,231,61,83,100},{50,40,87,146,165,202,247,62,87},{57,45,79,153,128,205,230}},C={118,71,76,124,71,77,124,71,74,124,71,75,79,79,123,72,80,91,109,79,90,71,79,79,79,85,78,79,79,85,78,12,123,72,80,31,109,79,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,77,99,85,66,84,76,99,79,79,85,67,79,79,85,67,12,123,72,80,40,109,79,79,79,85,78,12,99,79,79,85,64,79,79,85,64,12,123,72,80,57,109,79,124,99,79,79,85,65,79,79,85,65,12,123,72,80,198,109,79,124,99,85,79,85,79,107,85,77,95,123,80,211,109,79,79,79,85,94,12,86,95,80,233,79,79,85,94,118,99,116,233,79,79,85,95,79,79,85,95,12,123,72,80,265,109,79,87,78,90,123,85,79,85,68,99,123,85,77,85,92,99,123,85,75,85,93,99,123,85,73,85,70,99,123,85,71,85,90,99,123,85,69,85,90,99,123,85,91,85,88,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,85,85,72,99,123,85,82,85,83,99,123,85,80,85,81,99,123,85,110,85,81,99,123,85,111,85,108,99,123,85,109,85,108,99,123,85,106,85,107,99,123,85,104,85,105,99,123,85,102,85,103,99,123,85,100,85,105,99,123,85,101,85,108,99,123,85,98,85,99,99,123,85,96,85,97,99,123,85,126,85,107,99,85,66,84,76,99,79,79,85,127,79,79,85,127,12,123,72,80,388,109,79,87,78,90,123,85,79,85,87,99,123,85,77,85,86,99,123,85,75,85,70,99,123,85,73,85,68,99,123,85,71,85,86,99,123,85,69,85,84,99,123,85,91,85,124,99,123,85,89,85,125,99,123,85,87,85,122,99,123,85,85,85,76,99,123,85,82,85,74,99,123,85,80,85,72,99,123,85,110,85,70,99,123,85,111,85,68,99,123,85,109,85,77,99,123,85,106,85,123,99,123,85,104,85,123,99,123,85,102,85,123,99,85,66,84,76,99,79,79,85,120,79,79,85,120,12,123,72,80,402,109,79,111,79,99,79,79,85,121,79,79,85,121,12,123,72,80,419,109,79,124,99,79,79,85,118,79,79,85,118,12,123,72,80,738,109,79,87,78,90,123,85,79,85,68,99,123,85,77,85,92,99,123,85,75,85,93,99,123,85,73,85,70,99,123,85,71,85,90,99,123,85,69,85,90,99,123,85,91,85,88,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,85,85,72,99,123,85,82,85,83,99,123,85,80,85,81,99,123,85,110,85,81,99,123,85,111,85,99,99,123,85,109,85,97,99,123,85,106,85,108,99,123,85,104,85,119,99,123,85,102,85,119,99,123,85,100,85,116,99,123,85,101,85,107,99,123,85,98,85,108,99,123,85,96,85,108,99,123,85,126,85,108,99,123,85,117,85,119,99,123,85,114,85,99,99,123,85,115,85,105,99,123,85,112,85,119,99,123,85,113,85,97,99,85,66,84,76,99,79,79,85,14,79,79,85,14,12,123,72,80,797,109,79,87,78,90,123,85,79,85,68,99,123,85,77,85,92,99,123,85,75,85,93,99,123,85,73,85,70,99,123,85,71,85,90,99,123,85,69,85,90,99,123,85,91,85,88,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,85,85,72,99,123,85,82,85,83,99,123,85,80,85,81,99,123,85,110,85,81,99,123,85,111,85,99,99,123,85,109,85,107,99,123,85,106,85,99,99,123,85,104,85,15,99,123,85,102,85,97,99,123,85,100,85,97,99,123,85,101,85,99,99,123,85,98,85,12,99,123,85,96,85,97,99,123,85,126,85,15,99,123,85,117,85,116,99,85,66,84,76,99,87,79,85,13,79,79,85,67,12,99,87,79,85,10,79,79,85,64,12,99,85,109,85,109,65,85,11,95,123,80,820,109,79,79,79,85,64,12,80,968,67,8,111,76,84,79,109,79,116,968,100,87,76,87,77,87,74,87,75,87,78,90,123,85,79,85,87,99,123,85,77,85,9,99,123,85,75,85,68,99,123,85,73,85,6,99,123,85,71,85,74,99,123,85,69,85,74,99,123,85,91,85,113,99,123,85,89,85,68,99,123,85,87,85,70,99,123,85,85,85,7,99,123,85,82,85,88,99,85,66,84,76,67,4,85,5,12,85,2,85,2,85,2,84,77,85,73,84,77,90,123,85,3,67,0,85,1,12,85,79,85,30,85,79,85,31,126,84,74,99,84,76,90,123,85,79,100,87,75,87,78,90,123,85,79,85,96,99,123,85,77,85,84,99,123,85,75,85,90,99,123,85,73,85,86,99,85,66,69,76,-1,97,79,99,100,87,75,87,78,90,123,85,79,85,85,99,123,85,77,85,70,99,123,85,75,85,72,99,123,85,73,85,72,99,123,85,71,85,84,99,123,85,69,85,124,99,123,85,91,85,125,99,85,66,84,76,85,89,85,30,85,30,85,89,69,75,-1,91,76,84,76,87,78,90,123,85,79,85,28,99,123,85,77,85,84,99,123,85,75,85,29,99,123,85,73,85,84,99,123,85,71,85,72,99,123,85,69,85,88,99,123,85,91,85,68,99,85,66,69,76,-1,97,79,71,72,87,72,100,79,72,85,26,12,123,85,27,12,83,87,78,90,123,85,79,85,112,99,123,85,77,85,92,99,123,85,75,85,90,99,123,85,73,85,6,99,123,85,71,85,74,99,123,85,69,85,24,99,123,85,91,85,86,99,123,85,89,85,88,99,123,85,87,85,114,99,123,85,85,85,6,99,123,85,82,85,124,99,123,85,80,85,86,99,123,85,110,85,88,99,123,85,111,85,124,99,123,85,109,85,86,99,123,85,106,85,87,99,123,85,104,85,84,99,123,85,102,85,25,99,123,85,100,85,88,99,85,66,69,76,-1,97,79,111,77,84,76,109,79,87,77,87,74,100,87,75,87,78,90,123,85,79,85,117,99,123,85,77,85,24,99,123,85,75,85,86,99,123,85,73,85,86,99,123,85,71,85,6,99,123,85,69,85,124,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,22,85,30,85,79,85,30,84,74,99,123,85,23,67,0,85,1,12,85,22,85,30,85,30,85,30,84,74,99,123,85,20,85,79,99,84,76,90,100,100,87,76,87,74,100,87,75,87,78,90,123,85,79,85,100,99,123,85,77,85,7,99,123,85,75,85,70,99,123,85,73,85,125,99,123,85,71,85,88,99,85,66,84,76,87,78,90,123,85,79,85,68,99,123,85,77,85,92,99,123,85,75,85,93,99,123,85,73,85,70,99,123,85,71,85,90,99,123,85,69,85,90,99,123,85,91,85,88,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,85,85,72,99,123,85,82,85,83,99,123,85,80,85,81,99,123,85,110,85,81,99,123,85,111,85,103,99,123,85,109,85,97,99,123,85,106,85,103,99,123,85,104,85,116,99,123,85,102,85,103,99,123,85,100,85,116,99,123,85,101,85,12,99,123,85,98,85,107,99,123,85,96,85,105,99,123,85,126,85,116,99,85,66,69,76,-1,97,79,90,123,85,23,67,0,85,1,12,85,30,85,87,85,30,85,69,84,74,99,123,85,3,67,0,85,1,12,85,30,85,102,85,30,85,102,84,74,99,84,76,87,78,90,123,85,79,85,111,99,123,85,77,85,88,99,123,85,75,85,93,99,123,85,73,85,86,99,85,66,69,76,-1,97,-1,91,79,84,76,71,73,87,77,87,74,100,87,75,87,78,90,123,85,79,85,117,99,123,85,77,85,24,99,123,85,75,85,86,99,123,85,73,85,86,99,123,85,71,85,6,99,123,85,69,85,124,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,22,85,30,85,79,85,30,84,74,99,123,85,20,85,79,99,84,76,90,100,100,87,76,87,74,100,87,75,87,78,90,123,85,79,85,100,99,123,85,77,85,7,99,123,85,75,85,70,99,123,85,73,85,125,99,123,85,71,85,88,99,85,66,84,76,87,78,90,123,85,79,85,68,99,123,85,77,85,92,99,123,85,75,85,93,99,123,85,73,85,70,99,123,85,71,85,90,99,123,85,69,85,90,99,123,85,91,85,88,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,85,85,72,99,123,85,82,85,83,99,123,85,80,85,81,99,123,85,110,85,81,99,123,85,111,85,103,99,123,85,109,85,97,99,123,85,106,85,103,99,123,85,104,85,116,99,123,85,102,85,103,99,123,85,100,85,99,99,123,85,101,85,119,99,123,85,98,85,107,99,123,85,96,85,107,99,123,85,126,85,108,99,85,66,69,76,-1,97,79,90,123,85,23,67,0,85,1,12,85,30,85,87,85,30,85,69,84,74,99,123,85,3,67,0,85,1,12,85,30,85,102,85,30,85,102,84,74,99,123,85,78,87,78,90,123,85,79,85,100,99,123,85,77,85,9,99,123,85,75,85,6,99,85,66,84,76,99,84,76,87,78,90,123,85,79,85,111,99,123,85,77,85,88,99,123,85,75,85,93,99,123,85,73,85,86,99,85,66,69,76,-1,97,-1,91,79,84,76,71,70,87,74,100,87,75,87,78,90,123,85,79,85,111,99,123,85,77,85,113,99,123,85,75,85,68,99,123,85,73,85,70,99,123,85,71,85,7,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,79,85,30,85,30,85,31,84,74,99,84,76,71,71,100,87,76,87,77,87,74,87,75,87,78,90,123,85,79,85,89,99,123,85,77,85,6,99,123,85,75,85,24,99,123,85,73,85,124,99,123,85,71,85,72,99,123,85,69,85,113,99,123,85,91,85,68,99,123,85,89,85,70,99,123,85,87,85,7,99,123,85,85,85,88,99,85,66,84,76,67,4,85,5,12,85,2,85,2,85,2,84,77,85,30,85,85,84,74,90,123,85,3,67,0,85,1,12,85,30,85,21,85,79,85,31,126,84,74,99,123,85,23,67,0,85,1,12,85,30,85,30,85,30,85,31,84,74,99,84,76,90,123,85,79,100,87,76,87,74,100,87,75,87,78,90,123,85,79,85,113,99,123,85,77,85,68,99,123,85,75,85,70,99,123,85,73,85,7,99,123,85,71,85,88,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,79,85,30,85,30,85,85,84,74,99,123,85,23,67,0,85,1,12,85,30,85,30,85,30,85,30,84,74,99,84,76,87,78,90,123,85,79,85,87,99,123,85,77,85,88,99,123,85,75,85,9,99,123,85,73,85,6,99,123,85,71,85,124,99,123,85,69,85,72,99,85,66,69,76,-1,97,79,99,123,85,77,100,87,76,87,74,100,87,75,87,78,90,123,85,79,85,113,99,123,85,77,85,68,99,123,85,75,85,70,99,123,85,73,85,7,99,123,85,71,85,88,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,30,85,85,85,79,85,30,84,74,99,123,85,23,67,0,85,1,12,85,79,85,85,126,85,30,85,30,84,74,99,84,76,87,78,90,123,85,79,85,87,99,123,85,77,85,88,99,123,85,75,85,9,99,123,85,73,85,6,99,123,85,71,85,124,99,123,85,69,85,72,99,85,66,69,76,-1,97,79,99,123,85,75,100,87,76,87,74,100,87,75,87,78,90,123,85,79,85,113,99,123,85,77,85,68,99,123,85,75,85,70,99,123,85,73,85,7,99,123,85,71,85,88,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,30,85,79,85,79,85,30,84,74,99,123,85,23,67,0,85,1,12,85,79,85,79,126,85,30,85,30,84,74,99,84,76,87,78,90,123,85,79,85,87,99,123,85,77,85,86,99,123,85,75,85,68,99,123,85,73,85,6,99,123,85,71,85,18,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,99,123,85,73,79,72,99,100,87,77,87,74,100,87,75,87,78,90,123,85,79,85,111,99,123,85,77,85,113,99,123,85,75,85,68,99,123,85,73,85,70,99,123,85,71,85,7,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,79,85,30,85,30,85,31,84,74,99,123,85,23,67,0,85,1,12,85,30,85,30,85,79,85,31,126,84,74,99,84,76,90,123,85,79,100,87,76,87,74,100,87,75,87,78,90,123,85,79,85,113,99,123,85,77,85,68,99,123,85,75,85,70,99,123,85,73,85,7,99,123,85,71,85,88,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,79,85,30,85,30,85,79,84,74,99,84,76,87,78,90,123,85,79,85,87,99,123,85,77,85,86,99,123,85,75,85,68,99,123,85,73,85,6,99,123,85,71,85,18,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,99,123,85,77,100,87,76,87,77,87,74,100,87,75,87,78,90,123,85,79,85,113,99,123,85,77,85,68,99,123,85,75,85,70,99,123,85,73,85,7,99,123,85,71,85,88,99,85,66,69,76,-1,97,79,90,123,85,19,67,16,85,1,12,85,30,85,22,84,76,99,123,85,3,67,0,85,1,12,85,30,85,25,85,30,85,25,84,74,99,123,85,23,67,0,85,1,12,85,30,85,85,85,22,85,30,84,74,99,84,76,90,123,85,79,87,74,87,75,87,78,90,123,85,79,85,100,99,123,85,77,85,7,99,123,85,75,85,70,99,123,85,73,85,125,99,123,85,71,85,88,99,85,66,84,76,87,78,90,123,85,79,85,31,99,123,85,77,85,86,99,123,85,75,85,86,99,123,85,73,85,17,99,123,85,71,85,90,99,123,85,69,85,83,99,123,85,91,85,81,99,123,85,89,85,81,99,123,85,87,85,46,99,123,85,85,85,46,99,123,85,82,85,46,99,123,85,80,85,123,99,123,85,110,85,68,99,123,85,111,85,6,99,123,85,109,85,92,99,123,85,106,85,74,99,123,85,104,85,6,99,123,85,102,85,93,99,123,85,100,85,123,99,123,85,101,85,9,99,123,85,98,85,6,99,123,85,96,85,7,99,123,85,126,85,81,99,123,85,117,85,31,99,123,85,114,85,88,99,123,85,115,85,70,99,123,85,112,85,72,99,123,85,113,85,90,99,123,85,47,85,31,99,123,85,28,85,6,99,123,85,76,85,86,99,123,85,25,85,44,99,123,85,45,85,86,99,123,85,93,85,31,99,123,85,42,85,24,99,123,85,43,85,7,99,123,85,40,85,92,99,123,85,41,85,124,99,123,85,38,85,70,99,123,85,68,85,84,99,123,85,90,85,74,99,123,85,17,85,81,99,123,85,39,85,84,99,123,85,29,85,7,99,123,85,46,85,70,99,123,85,86,85,125,99,123,85,24,85,88,99,123,85,36,85,37,99,123,85,18,85,24,99,123,85,31,85,90,99,123,85,84,85,88,99,123,85,124,85,68,99,123,85,6,85,100,99,123,85,74,85,72,99,123,85,7,85,34,99,85,66,84,76,87,73,85,35,12,87,78,90,123,85,79,85,32,99,123,85,77,85,46,99,123,85,75,85,84,99,123,85,73,85,72,99,123,85,71,85,86,99,123,85,69,85,31,99,123,85,91,85,34,99,123,85,89,85,105,99,123,85,87,85,116,99,123,85,85,85,97,99,123,85,82,85,32,99,123,85,80,85,31,99,123,85,110,85,88,99,123,85,111,85,84,99,123,85,109,85,125,99,123,85,106,85,31,99,123,85,104,85,86,99,123,85,102,85,34,99,123,85,100,85,105,99,123,85,101,85,116,99,123,85,98,85,97,99,123,85,96,85,32,99,123,85,126,85,33,99,123,85,117,85,6,99,123,85,114,85,68,99,123,85,115,85,7,99,123,85,112,85,70,99,123,85,113,85,86,99,123,85,47,85,34,99,123,85,28,85,17,99,123,85,76,85,124,99,123,85,25,85,125,99,85,66,84,76,88,88,84,76,90,123,85,3,67,0,85,1,12,85,79,85,30,85,79,85,30,84,74,99,84,76,99,123,85,77,100,87,76,87,74,100,87,75,87,78,90,123,85,79,85,100,99,123,85,77,85,7,99,123,85,75,85,70,99,123,85,73,85,125,99,123,85,71,85,88,99,85,66,84,76,87,78,90,123,85,79,85,68,99,123,85,77,85,92,99,123,85,75,85,93,99,123,85,73,85,70,99,123,85,71,85,90,99,123,85,69,85,90,99,123,85,91,85,88,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,85,85,72,99,123,85,82,85,83,99,123,85,80,85,81,99,123,85,110,85,81,99,123,85,111,85,105,99,123,85,109,85,97,99,123,85,106,85,107,99,123,85,104,85,99,99,123,85,102,85,108,99,123,85,100,85,108,99,123,85,101,85,119,99,123,85,98,85,119,99,123,85,96,85,116,99,123,85,126,85,108,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,79,85,30,85,79,85,30,84,74,99,84,76,87,78,90,123,85,79,85,87,99,123,85,77,85,88,99,123,85,75,85,9,99,123,85,73,85,6,99,123,85,71,85,124,99,123,85,69,85,72,99,85,66,69,76,-1,97,79,99,100,87,75,87,78,90,123,85,79,85,114,99,123,85,77,85,6,99,123,85,75,85,68,99,123,85,73,85,124,99,123,85,71,85,88,99,123,85,69,85,68,99,85,66,84,76,85,79,69,76,-1,91,77,84,76,87,78,90,123,85,79,85,28,99,123,85,77,85,84,99,123,85,75,85,29,99,123,85,73,85,84,99,123,85,71,85,72,99,123,85,69,85,88,99,123,85,91,85,68,99,85,66,69,76,-1,97,79,99,123,85,75,87,77,87,74,100,87,75,87,78,90,123,85,79,85,111,99,123,85,77,85,113,99,123,85,75,85,68,99,123,85,73,85,70,99,123,85,71,85,7,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,90,123,85,19,67,16,85,1,12,85,30,85,22,84,76,99,123,85,3,67,0,85,1,12,85,30,85,25,85,30,85,25,84,74,99,123,85,23,67,0,85,1,12,85,30,85,85,85,22,85,30,84,74,99,84,76,90,123,85,79,100,87,76,100,87,75,87,78,90,123,85,79,85,87,99,123,85,77,85,86,99,123,85,75,85,68,99,123,85,73,85,6,99,123,85,71,85,18,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,87,78,90,123,85,79,85,87,99,123,85,77,85,86,99,123,85,75,85,68,99,123,85,73,85,6,99,123,85,71,85,18,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,99,100,87,75,87,78,90,123,85,79,85,114,99,123,85,77,85,6,99,123,85,75,85,68,99,123,85,73,85,124,99,123,85,71,85,88,99,123,85,69,85,68,99,85,66,84,76,85,79,69,76,-1,91,76,84,76,99,123,85,73,100,87,76,87,74,87,75,87,78,90,123,85,79,85,96,99,123,85,77,85,70,99,123,85,75,85,92,99,123,85,73,85,88,99,123,85,71,85,74,99,85,66,84,76,87,73,85,78,12,79,79,85,65,12,123,80,4439,109,79,85,111,123,72,80,4463,109,79,85,110,84,77,90,123,85,3,67,0,85,1,12,85,79,85,33,126,85,30,85,110,84,74,99,123,85,23,79,79,85,65,12,123,80,4378,109,79,67,0,85,1,12,85,30,85,31,85,30,85,100,84,74,123,72,80,4391,109,79,67,0,85,1,12,85,30,85,31,85,30,85,80,84,74,99,123,85,62,67,63,85,62,12,85,60,12,99,123,85,61,118,99,84,76,87,78,90,123,85,79,85,111,99,123,85,77,85,88,99,123,85,75,85,93,99,123,85,73,85,86,99,85,66,69,76,-1,97,79,99,100,87,74,87,75,87,78,90,123,85,79,85,96,99,123,85,77,85,70,99,123,85,75,85,92,99,123,85,73,85,88,99,123,85,71,85,74,99,85,66,84,76,87,78,90,123,85,79,85,113,99,123,85,77,85,24,99,123,85,75,85,86,99,123,85,73,85,24,99,123,85,71,85,68,99,123,85,69,85,88,99,123,85,91,85,122,99,123,85,89,85,6,99,123,85,87,85,33,99,123,85,85,85,122,99,123,85,82,85,113,99,123,85,80,85,68,99,123,85,110,85,88,99,123,85,111,85,88,99,85,66,84,76,85,80,84,77,90,123,85,3,67,0,85,1,12,85,79,85,33,126,85,30,85,80,84,74,99,123,85,23,67,0,85,1,12,85,30,85,31,85,79,85,114,126,84,74,99,123,85,58,67,4,85,5,12,85,59,85,21,85,2,84,77,99,123,85,56,79,79,85,65,12,72,99,69,76,-1,91,75,69,76,-1,91,75,84,76,87,78,90,123,85,79,85,87,99,123,85,77,85,88,99,123,85,75,85,9,99,123,85,73,85,6,99,123,85,71,85,124,99,123,85,69,85,72,99,85,66,69,76,-1,97,79,71,68,100,87,76,87,74,87,75,87,78,90,123,85,79,85,96,99,123,85,77,85,70,99,123,85,75,85,92,99,123,85,73,85,88,99,123,85,71,85,74,99,85,66,84,76,79,79,85,78,12,85,111,84,77,90,123,85,3,67,0,85,1,12,85,79,85,28,126,85,77,85,30,84,74,99,123,85,23,67,0,85,1,12,85,30,85,114,85,30,85,117,126,84,74,99,123,85,62,67,63,85,62,12,85,57,12,99,123,85,54,85,101,99,84,76,87,78,90,123,85,79,85,111,99,123,85,77,85,88,99,123,85,75,85,93,99,123,85,73,85,86,99,85,66,69,76,-1,97,79,71,69,100,87,76,87,74,100,87,75,87,78,90,123,85,79,85,113,99,123,85,77,85,68,99,123,85,75,85,70,99,123,85,73,85,7,99,123,85,71,85,88,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,79,85,30,85,30,85,79,84,74,99,123,85,23,67,0,85,1,12,85,30,85,30,85,79,85,79,126,84,74,99,84,76,87,78,90,123,85,79,85,87,99,123,85,77,85,86,99,123,85,75,85,68,99,123,85,73,85,6,99,123,85,71,85,18,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,71,66,100,87,76,87,77,87,74,87,75,87,78,90,123,85,79,85,89,99,123,85,77,85,6,99,123,85,75,85,24,99,123,85,73,85,124,99,123,85,71,85,72,99,123,85,69,85,113,99,123,85,91,85,68,99,123,85,89,85,70,99,123,85,87,85,7,99,123,85,85,85,88,99,85,66,84,76,67,4,85,5,12,85,2,85,2,85,2,84,77,85,30,85,85,84,74,90,123,85,55,87,70,99,123,85,23,67,0,85,1,12,85,22,85,52,126,85,22,85,53,126,84,74,99,123,85,3,67,0,85,1,12,85,30,85,50,85,30,85,51,84,74,99,123,85,61,118,99,84,76,90,123,85,79,87,77,87,74,100,87,75,87,78,90,123,85,79,85,111,99,123,85,77,85,113,99,123,85,75,85,68,99,123,85,73,85,70,99,123,85,71,85,7,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,79,85,30,85,30,85,31,84,74,99,123,85,78,87,78,90,123,85,79,85,111,99,123,85,77,85,6,99,123,85,75,85,17,99,123,85,73,85,117,99,123,85,71,85,70,99,123,85,69,85,68,99,85,66,84,76,99,84,76,90,123,85,79,79,69,99,123,85,77,79,66,99,100,100,87,76,87,77,87,74,87,75,87,78,90,123,85,79,85,89,99,123,85,77,85,6,99,123,85,75,85,24,99,123,85,73,85,124,99,123,85,71,85,72,99,123,85,69,85,113,99,123,85,91,85,68,99,123,85,89,85,70,99,123,85,87,85,7,99,123,85,85,85,88,99,85,66,84,76,67,4,85,5,12,85,2,85,2,85,2,84,77,85,30,85,91,84,74,90,123,85,3,67,0,85,1,12,85,30,85,59,85,30,85,28,84,74,99,123,85,23,67,0,85,1,12,85,79,85,66,126,85,30,85,85,84,74,99,84,76,90,123,85,79,100,87,76,100,87,75,87,78,90,123,85,79,85,87,99,123,85,77,85,86,99,123,85,75,85,68,99,123,85,73,85,6,99,123,85,71,85,18,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,87,78,90,123,85,79,85,87,99,123,85,77,85,86,99,123,85,75,85,68,99,123,85,73,85,6,99,123,85,71,85,18,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,99,123,85,77,100,87,76,87,74,100,87,75,87,78,90,123,85,79,85,113,99,123,85,77,85,68,99,123,85,75,85,70,99,123,85,73,85,7,99,123,85,71,85,88,99,85,66,69,76,-1,97,79,90,123,85,3,67,0,85,1,12,85,30,85,79,85,79,85,30,84,74,99,123,85,23,67,0,85,1,12,85,22,85,30,85,30,85,30,84,74,99,84,76,87,78,90,123,85,79,85,87,99,123,85,77,85,86,99,123,85,75,85,68,99,123,85,73,85,6,99,123,85,71,85,18,99,123,85,69,85,88,99,85,66,69,76,-1,97,79,99,123,85,75,79,73,99,123,85,73,79,70,99,84,76,87,78,90,123,85,79,85,87,99,123,85,77,85,88,99,123,85,75,85,9,99,123,85,73,85,6,99,123,85,71,85,124,99,123,85,69,85,72,99,85,66,69,76,-1,97,-1,91,77,84,76,99,123,85,77,79,71,99,123,85,75,79,68,99,84,76,87,78,90,123,85,79,85,126,99,123,85,77,85,70,99,123,85,75,85,84,99,123,85,73,85,124,99,85,66,69,76,-1,97,79,71,67,85,80,85,80,65,85,48,95,123,80,5796,109,79,79,79,85,121,12,80,5926,79,69,85,23,67,0,85,1,12,85,30,85,31,85,30,85,117,126,84,74,99,87,74,87,75,87,78,90,123,85,79,85,100,99,123,85,77,85,7,99,123,85,75,85,70,99,123,85,73,85,125,99,123,85,71,85,88,99,85,66,84,76,79,79,85,118,12,84,76,90,123,85,3,67,0,85,1,12,85,30,85,101,85,30,85,101,84,74,99,123,85,23,67,0,85,1,12,85,30,85,114,85,30,85,109,84,74,99,84,76,71,64,79,64,85,55,79,67,85,49,12,99,116,5926,87,71,79,71,79,67,84,76,109,79,87,77,87,74,100,87,75,87,78,90,123,85,79,85,117,99,123,85,77,85,24,99,123,85,75,85,86,99,123,85,73,85,86,99,123,85,71,85,6,99,123,85,69,85,124,99,85,66,69,76,-1,97,79,90,123,85,55,87,70,99,123,85,3,67,0,85,1,12,85,30,85,68,85,30,85,68,84,74,99,123,85,23,67,0,85,1,12,85,22,85,101,126,85,30,85,101,84,74,99,123,85,20,85,30,99,123,85,206,87,79,85,207,12,87,79,85,204,12,12,85,205,12,99,123,85,56,124,99,84,76,90,123,85,79,100,87,76,87,74,87,75,87,78,90,123,85,79,85,100,99,123,85,77,85,7,99,123,85,75,85,70,99,123,85,73,85,125,99,123,85,71,85,88,99,85,66,84,76,79,79,85,95,12,123,72,80,6524,109,79,87,78,90,123,85,79,85,31,99,123,85,77,85,86,99,123,85,75,85,86,99,123,85,73,85,17,99,123,85,71,85,83,99,123,85,69,85,81,99,123,85,91,85,81,99,123,85,89,85,46,99,123,85,87,85,46,99,123,85,85,85,46,99,123,85,82,85,123,99,123,85,80,85,68,99,123,85,110,85,6,99,123,85,111,85,92,99,123,85,109,85,74,99,123,85,106,85,6,99,123,85,104,85,93,99,123,85,102,85,123,99,123,85,100,85,9,99,123,85,101,85,6,99,123,85,98,85,7,99,123,85,96,85,81,99,123,85,126,85,70,99,123,85,117,85,90,99,123,85,114,85,90,99,123,85,115,85,88,99,123,85,112,85,86,99,123,85,113,85,81,99,123,85,47,85,37,99,123,85,28,85,84,99,123,85,76,85,72,99,123,85,25,85,34,99,123,85,45,85,108,99,123,85,93,85,108,99,123,85,42,85,107,99,123,85,43,85,105,99,123,85,40,85,103,99,123,85,41,85,105,99,123,85,38,85,108,99,123,85,68,85,99,99,123,85,90,85,97,99,123,85,17,85,107,99,85,66,84,76,84,76,90,123,85,19,67,16,85,1,12,85,22,85,22,84,76,99,123,85,23,67,0,85,1,12,85,22,85,30,85,22,85,30,84,74,99,123,85,3,67,0,85,1,12,85,202,85,30,85,202,85,30,84,74,99,84,76,87,78,90,123,85,79,85,111,99,123,85,77,85,88,99,123,85,75,85,93,99,123,85,73,85,86,99,85,66,69,76,-1,97,79,99,100,87,75,87,78,90,123,85,79,85,114,99,123,85,77,85,6,99,123,85,75,85,68,99,123,85,73,85,124,99,123,85,71,85,88,99,123,85,69,85,68,99,85,66,84,76,85,79,69,76,-1,91,76,84,76,71,65,87,72,79,73,85,203,12,111,74,84,76,109,79,87,72,87,68,85,200,12,111,75,84,76,109,79,87,72,79,65,85,201,12,111,72,84,76,109,79,87,72,79,70,85,203,12,111,73,84,76,109,79,111,70,71,94,85,109,85,109,65,85,11,95,123,80,6748,109,79,79,79,85,94,12,80,6738,79,94,84,78,109,79,116,6738,90,71,95,79,95,85,198,111,71,99,79,95,127,79},P={{K={},C={127,78},P={},U=nil,nParams=0},{K={100,7,2,{130,166,244,18,41,72,147,179,202,245},{153,187,198,23,60,76,101,170},{178,166,207,31,56,78,71,182,221,237,4,75}},C={85,78,85,79,94,85,76,95,123,80,80,109,79,67,77,123,80,80,109,79,67,74,87,78,85,75,12,84,79,72,80,99,67,77,87,78,85,75,12,84,79,109,79,116,99,127,78},P={},U={{1,1}},nParams=0},{K={{175,165,242,2,45,87,175,189,214,225},{184,129,244,24,127},{128,163,233},0,{165,129,236,17,35,92,76,185,201,231,21,76},{176,171,210,22,61,92,117,188,242,230,15,77,116,135,181,202,24,51,68},{171},16},C={87,78,85,78,67,79,85,76,12,85,77,85,77,85,77,87,78,85,74,12,85,75,12,85,72,12,85,73,107,84,74,99,127,78},P={},U={{1,6}},nParams=0},{K={{186,173,239,29,46,72,153},3,2,9,{164,167,213,27,56,109,110,185,210,228,5,92},{188,168,202,28,31,70,117,176,215,224,2,88,101,128,174,247},{188,171,207,31},1,19,52,46,4,63,5,40,6,60,7,59,8,57,10,122,11,18,12,51,13,62,14,15,16,90,{78,138,211,225,8,43,105},42,50,56,47,53,17,22,20,21,23,24,25,26,27,28,29,30,54,31,32,33,34,35,36,37,38,39,41,43,44,45,48,49,{123,110,178,210},{115,100,143,203,245,43,33,116,156,170,193,27,59}},C={87,78,85,78,124,99,85,79,85,76,14,85,77,95,123,80,86,109,79,87,79,85,74,12,80,108,87,76,85,78,118,99,116,108,118,93,77,87,74,123,85,75,12,83,90,123,85,72,87,75,90,123,85,73,85,70,99,123,85,76,85,71,99,123,85,79,85,68,99,123,85,69,85,66,99,123,85,67,85,64,99,123,85,65,85,94,99,123,85,95,85,92,99,123,85,93,85,90,99,123,85,77,85,66,99,123,85,91,85,88,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,85,85,82,99,123,85,83,85,82,99,123,85,80,85,66,99,123,85,81,85,71,99,85,110,84,76,99,123,85,111,87,79,85,74,12,123,80,446,109,79,87,75,90,123,85,73,85,83,99,123,85,76,85,92,99,123,85,79,85,108,99,123,85,69,85,88,99,123,85,67,85,68,99,123,85,65,85,109,99,123,85,95,85,66,99,123,85,93,85,88,99,123,85,77,85,106,99,123,85,91,85,107,99,123,85,89,85,68,99,123,85,87,85,68,99,123,85,85,85,104,99,123,85,83,85,71,99,123,85,80,85,88,99,123,85,81,85,104,99,123,85,105,85,64,99,123,85,86,85,88,99,123,85,70,85,102,99,123,85,103,85,66,99,123,85,100,85,94,99,123,85,102,85,68,99,123,85,101,85,88,99,123,85,98,85,99,99,123,85,99,85,104,99,123,85,96,85,71,99,123,85,97,85,68,99,123,85,126,85,64,99,123,85,127,85,104,99,123,85,124,85,125,99,123,85,122,85,88,99,123,85,123,85,68,99,123,85,120,85,104,99,123,85,121,85,88,99,123,85,118,85,64,99,123,85,119,85,66,99,123,85,116,85,104,99,123,85,117,85,108,99,123,85,114,85,66,99,123,85,64,85,71,99,123,85,115,85,88,99,123,85,108,85,68,99,123,85,112,85,109,99,123,85,113,85,66,99,123,85,14,85,88,99,123,85,68,85,84,99,123,85,107,85,71,99,123,85,15,85,68,99,123,85,12,85,66,99,123,85,109,85,64,99,123,85,84,85,94,99,123,85,71,85,92,99,123,85,104,85,90,99,123,85,125,85,66,99,85,110,84,76,123,72,80,695,109,79,87,75,90,123,85,73,85,91,99,123,85,76,85,64,99,123,85,79,85,66,99,123,85,69,85,115,99,123,85,67,85,115,99,123,85,65,85,88,99,123,85,95,85,102,99,123,85,93,85,66,99,123,85,77,85,94,99,123,85,91,85,68,99,123,85,89,85,88,99,123,85,87,85,99,99,123,85,85,85,104,99,123,85,83,85,71,99,123,85,80,85,68,99,123,85,81,85,64,99,123,85,105,85,104,99,123,85,86,85,125,99,123,85,70,85,88,99,123,85,103,85,68,99,123,85,100,85,104,99,123,85,102,85,88,99,123,85,101,85,64,99,123,85,98,85,66,99,123,85,99,85,104,99,123,85,96,85,108,99,123,85,97,85,66,99,123,85,126,85,71,99,123,85,127,85,88,99,123,85,124,85,68,99,123,85,122,85,109,99,123,85,123,85,66,99,123,85,120,85,88,99,123,85,121,85,84,99,123,85,118,85,71,99,123,85,119,85,68,99,123,85,116,85,66,99,123,85,117,85,64,99,123,85,114,85,94,99,123,85,64,85,92,99,123,85,115,85,90,99,123,85,108,85,66,99,85,110,84,76,99,123,85,13,85,67,99,84,76,109,79,87,72,85,10,12,84,78,109,79,127,78},P={},U={{1,13},{0,10},{1,15},{1,5},{0,1},{0,0},{1,1}},nParams=0},{K={7,49,{165,163,231,53,33,66,155},{170,169,234,26},{188,173,198,12,19,71,110,172,194,231,12},{167,160,210,16,51,69,100}},C={85,78,85,78,65,85,79,95,123,80,106,109,79,79,78,85,76,12,67,77,85,76,12,85,74,12,95,123,80,106,109,79,87,78,118,95,80,122,87,79,85,75,118,99,87,76,85,75,124,99,116,122,127,78},P={},U={{1,5},{1,13},{1,15}},nParams=1},{K={{186,173,239,29,46,72,153}},C={87,78,85,78,118,99,87,79,85,78,124,99,127,78},P={},U={{1,13},{1,15}},nParams=0},{K={1,2,{173,180,251,23,58,67},{187,176,250,18,33,110,145,177,192},{158,173,215},0.5,{183,164,215,23},{182,170,208,18,61,76,80,175,202,231,6},{165,185,205,18,32},{176,172,214,20,59,74,65,180,199,232,6,73,124,130,171},{185,187,210},{164,166,221,26},{173,148,193,237,106},0,615,344,{172,184,205,253},{180,182,194},{183,187,207,225,59},40,56,3,34,4,59,5,41,6,7,63,8,46,9,51,10,62,11,96,12,117,13,14,109,15,106,16,17,104,18,19,107,20,99,21,105,22,23,98,90,{80,158,190,219},0.02,{106,109,176,193,250,37,92,98,138,164,247,21,40,79,141,162},{124,107,169,219,232,14,95},{127,102,163,199,201,12,78,125,143,176},{116},140,50,0.1},C={85,78,85,78,107,85,79,95,123,80,65,109,79,87,78,80,329,87,79,123,85,76,12,83,87,76,67,77,85,74,12,85,75,67,72,85,73,12,85,70,12,67,72,85,71,12,85,68,12,84,77,90,123,85,69,67,66,85,74,12,85,67,85,64,85,67,85,65,84,74,99,84,74,123,85,94,12,83,84,79,109,79,87,77,85,95,12,85,92,87,74,90,123,85,78,85,93,99,123,85,79,85,90,99,123,85,91,85,88,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,85,85,84,99,123,85,82,85,83,99,123,85,80,85,81,99,123,85,110,85,111,99,123,85,108,85,109,99,123,85,106,85,107,99,123,85,104,85,105,99,123,85,102,85,105,99,123,85,103,85,100,99,123,85,101,85,98,99,123,85,99,85,100,99,123,85,96,85,97,99,123,85,126,85,100,99,123,85,127,85,124,99,123,85,125,85,122,99,123,85,123,85,120,99,123,85,121,85,120,99,123,85,118,85,119,99,85,116,84,76,99,67,117,85,114,84,79,109,79,87,76,85,115,124,99,87,75,85,112,118,99,87,72,85,112,118,99,116,586,87,76,85,115,118,99,87,72,85,112,124,99,87,77,85,95,12,85,92,87,74,90,123,85,78,85,93,99,123,85,79,85,90,99,123,85,91,85,88,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,85,85,84,99,123,85,82,85,83,99,123,85,80,85,81,99,123,85,110,85,111,99,123,85,108,85,109,99,123,85,106,85,107,99,123,85,104,85,105,99,123,85,102,85,105,99,123,85,103,85,100,99,123,85,101,85,98,99,123,85,99,85,100,99,123,85,96,85,97,99,123,85,126,85,100,99,123,85,127,85,97,99,123,85,125,85,98,99,123,85,123,85,119,99,123,85,121,85,100,99,123,85,118,85,98,99,85,116,84,76,99,87,79,123,85,76,12,83,87,76,67,77,85,74,12,85,75,67,72,85,73,12,85,70,12,67,72,85,71,12,85,68,12,84,77,90,123,85,69,67,66,85,74,12,85,67,87,73,85,113,12,85,14,12,85,15,107,85,67,85,12,84,74,99,84,74,123,85,94,12,83,84,79,109,79,67,117,85,13,84,79,109,79,87,75,85,112,124,99,87,78,72,93,78,127,78},P={},U={{1,3},{0,11},{1,13},{1,8},{0,0},{1,10},{1,12},{1,11}},nParams=0},{K={{186,173,239,29,46,72,153},1,19,2,55,3,59,4,61,5,63,90,{177,190,220,242,55,121,107,143,214},{169,176,219,228,55,69},{187,188,201,234,53,64,90,141,211,252,30},{173,182,200,247,52,65,57},{146,177,219},0.5,{174,185,221,239,42,95,97,136},{170,147,198,234,109},0,0.4,{81,179,200,239},28,{77,177,213,235,1,127,123,128,171,238,71},{70,178,217,226,23,14},{96,172,217,227,52,121,84},255,{65,141,217,247,13,20,106,145,166,211,8,49,90,101,182,211,241},22,56,54,{69,138,200,230,3,16,121,140,184},14,{90,131,198,226,54,7,114,159,169,200,19,51,64,114},{74,137,202,250},{83,141,174,236,21,58},{87,134,175,237},{85,133,182,242,19,39,96,149,190,206},{71,142,187,239,39,57,66,149,160,219,226,41,86,101,128,194},{87,158,161,253,0,41},{65,154,160,248,27,4,75,155,186},0.3,{82,142,180,246,25,40,116,139,174,195,226},{73,133,169,196},{92,144,186,200,23,54,109,104,171,212,234,21,80,126,135},{85,135,190},{75,159,170,218},{107,149,165,208},0.8,{74,147,182,210,60,57,91,104,186,197},{71},{100,157,163,220,242,55,73}},C={87,78,85,78,124,99,87,79,87,76,87,77,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,85,69,84,76,87,74,85,66,12,84,76,90,123,85,67,87,75,99,123,85,64,67,65,85,94,12,85,95,85,95,84,76,99,123,85,92,67,93,85,94,12,85,95,85,90,85,91,85,90,84,74,99,123,85,88,67,93,85,94,12,85,90,85,89,85,90,85,89,84,74,99,123,85,86,67,87,85,84,12,85,85,85,85,85,85,84,77,99,123,85,82,85,79,99,84,76,71,78,87,79,87,76,87,77,90,123,85,79,85,83,99,123,85,77,85,72,99,123,85,75,85,80,99,123,85,73,85,68,99,123,85,71,85,81,99,85,69,84,76,87,74,85,110,12,85,111,84,77,90,123,85,67,87,75,99,123,85,88,67,93,85,94,12,85,79,85,90,85,79,85,90,84,74,99,123,85,64,67,65,85,94,12,85,95,85,95,84,76,99,123,85,92,67,93,85,94,12,85,95,85,76,85,95,85,90,84,74,99,123,85,108,67,109,85,108,12,85,106,12,99,123,85,107,67,109,85,107,12,85,104,12,99,123,85,105,85,79,99,84,76,71,79,87,72,123,85,102,12,83,79,78,67,103,85,94,12,85,100,67,109,85,101,12,85,98,12,67,109,85,99,12,85,96,12,84,77,90,123,85,82,85,90,99,123,85,92,67,93,85,94,12,85,95,85,90,85,95,85,90,84,74,99,84,74,123,85,97,12,83,84,79,109,79,67,126,85,127,84,79,109,79,87,72,123,85,102,12,83,79,78,67,103,85,94,12,85,100,67,109,85,101,12,85,98,12,67,109,85,99,12,85,96,12,84,77,90,123,85,92,67,93,85,94,12,85,95,79,79,85,124,12,85,125,12,85,77,119,126,85,95,85,90,84,74,99,84,74,123,85,97,12,83,84,79,109,79,67,126,85,100,84,79,109,79,87,72,123,85,102,12,83,79,79,67,103,85,94,12,85,100,67,109,85,101,12,85,98,12,67,109,85,99,12,85,96,12,84,77,90,123,85,105,85,90,99,84,74,123,85,97,12,83,84,79,109,79,67,126,85,77,84,79,109,79,87,72,123,85,102,12,83,79,79,67,103,85,94,12,85,100,67,109,85,101,12,85,98,12,67,109,85,99,12,85,96,12,84,77,90,123,85,105,85,79,99,84,74,123,85,97,12,83,84,79,109,79,87,78,85,78,118,99,79,78,123,85,122,12,83,84,79,109,79,79,79,123,85,122,12,83,84,79,109,79,127,78},P={},U={{1,13},{0,4},{0,5},{0,0},{1,1},{0,8},{0,11}},nParams=0},{K={{162,165,241,17},1,14,2,59,3,56,90,{189,175,203,18},{},{166,188,195,19,63,91,107,145,216,226,31},24,47,46,4,5,53,6,52,{172,190,213,226},{85,156,217,229,82},{111,188,198},0,30,{84,189,198,233,10,72},19,55,61,63,{72,143,218,249,6,51,73,158,160,207,13},{92,135,217,230,5,48,40},0.5,18,{93,138,206,252,25,44,114,155},10,{70,138,222,240,10,19,109,150,161,212,15,54,93,98,177,212,246},0.4,57,34,22,54,35,{80,129,168,234},{82,129,178,242},{95,159,188,200,25,61,106,108,185,211,227},{77,148,177,213,45,35,72,111,170,193,232,19,92,127,138,184},51,100,7,{84,150,162},{87,155,175,193,27},9,40,28,8,11,{103,147,184,195,246,111},{67,143,186,192,215,26,119},255,150,50,{127,104,170,216,235,13,92},25,12,13,41,62,15,44,{100,64,173,208,226,29,13,120,136,166,212,13},{117,111,150,234,224,5,50,127,128,190,219,57,58,75,108,189,215,238,49,83,117,132,163,246},27,16,17,32,144,{108,121,156,172,253},{116,126,156,178,252,51,60,85,141,190,199,176,26,93,96,130,210},{84,119,146,182},225,{122,125,130,160,218,29,62,87,136,151,196,237,48,80},{121,112,158,177,239,26,52},96,117,105,108,107,106,104,20,99,21,23,122,38,110,98,111,109,84,112,{22,70,117,177,208,228,35,86,125,141},42,60,26,29,31,49,33,36,37,39,43,45,48,58,116,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,85,86,87,88,89,91,92,93,94,95,97,114,101,102,103,113,115,200,138,{220,5,64,100,191,178,249,0,56,69,156}},C={79,79,123,72,80,71,109,79,90,71,79,79,79,85,78,79,79,85,78,12,123,72,80,125,109,79,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,85,73,84,76,99,79,79,85,70,79,79,85,70,12,123,72,80,11,109,79,85,71,99,79,79,85,68,79,79,85,68,12,123,72,80,24,109,79,124,99,87,79,87,76,100,87,77,87,78,90,123,85,79,85,69,99,123,85,77,85,66,99,123,85,75,85,67,99,123,85,64,85,67,99,123,85,65,85,94,99,123,85,95,85,92,99,85,73,69,76,-1,97,79,90,123,85,93,67,90,85,91,12,85,79,85,88,85,88,85,89,84,74,99,123,85,86,87,74,99,84,76,90,123,85,79,100,87,75,87,76,87,77,87,78,90,123,85,79,85,87,99,123,85,77,85,84,99,123,85,75,85,74,99,123,85,64,85,85,99,123,85,65,85,82,99,85,73,84,76,79,79,85,70,12,84,76,90,123,85,83,67,80,85,91,12,85,88,85,81,84,76,99,123,85,93,67,90,85,91,12,85,88,85,110,85,88,85,110,84,74,99,123,85,111,67,90,85,91,12,85,88,85,108,85,81,85,88,84,74,99,123,85,109,85,106,99,123,85,78,87,78,90,123,85,79,85,87,99,123,85,77,85,107,99,123,85,75,85,94,99,85,73,84,76,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,82,99,123,85,75,85,104,99,123,85,64,85,67,99,85,73,69,76,-1,97,79,99,100,100,87,75,87,76,87,77,87,78,90,123,85,79,85,105,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,64,85,82,99,123,85,65,85,102,99,85,73,84,76,79,79,85,78,12,85,76,84,77,90,123,85,93,67,90,85,91,12,85,79,85,103,126,85,79,85,88,84,74,99,123,85,111,67,90,85,91,12,85,88,85,103,85,88,85,88,84,74,99,123,85,100,67,101,85,100,12,85,98,12,99,123,85,99,85,106,99,123,85,78,87,78,90,123,85,79,85,76,99,123,85,77,85,96,99,123,85,75,85,67,99,123,85,64,85,102,99,123,85,65,85,82,99,85,73,84,76,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,82,99,123,85,75,85,104,99,123,85,64,85,67,99,85,73,69,76,-1,97,-1,91,76,84,76,71,76,85,97,85,126,94,85,77,95,123,80,630,109,79,87,72,79,79,85,70,12,84,79,86,112,80,515,79,76,85,127,12,85,124,87,72,79,79,85,70,12,84,79,99,116,515,100,87,75,87,79,87,76,87,77,87,78,90,123,85,79,85,125,99,123,85,77,85,107,99,123,85,75,85,122,99,123,85,64,85,94,99,123,85,65,85,102,99,123,85,95,85,102,99,123,85,126,85,123,99,123,85,120,85,122,99,123,85,125,85,74,99,123,85,108,85,84,99,123,85,121,85,82,99,85,73,84,76,67,118,85,119,12,85,116,85,116,85,116,84,77,85,65,84,77,90,123,85,93,67,90,85,91,12,85,79,85,117,126,85,79,85,114,126,84,74,99,123,85,111,67,90,85,91,12,85,88,85,117,85,88,85,114,84,74,99,123,85,86,87,73,99,123,85,115,124,99,123,85,78,87,78,90,123,85,79,85,87,99,123,85,77,85,67,99,123,85,75,85,82,99,123,85,64,85,84,99,123,85,65,85,112,99,123,85,95,85,94,99,123,85,126,85,92,99,123,85,120,85,67,99,123,85,125,85,74,99,123,85,108,85,96,99,123,85,121,85,92,99,123,85,113,85,82,99,123,85,14,85,122,99,85,73,84,76,99,84,76,90,123,85,79,87,77,87,78,90,123,85,79,85,105,99,123,85,77,85,96,99,123,85,75,85,15,99,123,85,64,85,67,99,85,73,84,76,85,88,85,95,84,77,99,100,87,77,87,78,90,123,85,79,85,108,99,123,85,77,85,74,99,123,85,75,85,12,99,123,85,64,85,12,99,123,85,65,85,96,99,123,85,95,85,92,99,123,85,126,85,85,99,85,73,84,76,85,13,85,108,85,108,85,13,69,75,-1,91,76,84,76,87,78,90,123,85,79,85,89,99,123,85,77,85,96,99,123,85,75,85,10,99,123,85,64,85,96,99,123,85,65,85,12,99,123,85,95,85,82,99,123,85,126,85,122,99,85,73,69,76,-1,97,79,71,77,87,70,100,79,77,85,11,12,123,85,8,12,83,87,78,90,123,85,79,85,9,99,123,85,77,85,72,99,123,85,75,85,15,99,123,85,64,85,94,99,123,85,65,85,102,99,123,85,95,85,66,99,123,85,126,85,67,99,123,85,120,85,82,99,123,85,125,85,112,99,123,85,108,85,94,99,123,85,121,85,92,99,123,85,113,85,67,99,123,85,14,85,82,99,123,85,76,85,92,99,123,85,13,85,67,99,123,85,6,85,125,99,123,85,7,85,96,99,123,85,110,85,4,99,123,85,87,85,82,99,85,73,69,76,-1,97,79,111,79,84,76,109,79,85,113,85,113,65,85,5,95,123,80,1228,109,79,87,71,80,1277,124,93,71,79,76,85,127,12,85,109,85,88,99,79,76,85,2,12,85,99,85,88,99,79,76,85,2,12,85,100,67,101,85,100,12,85,98,12,99,79,77,85,115,118,99,116,1277,87,70,79,76,85,3,12,111,76,84,76,109,79,111,77,71,74,90,71,75,67,0,79,74,79,77,69,79,76,71,70,71,73,71,72,68,72,73,70,105,71,105,68,79,72,79,73,79,70,69,76,76,71,68,71,71,79,71,71,70,79,71,86,112,80,1200,79,75,79,71,79,68,99,116,1172,85,13,85,13,65,85,1,95,123,80,1374,109,79,79,79,85,68,12,80,3574,67,0,79,75,86,71,67,71,66,71,69,68,69,66,67,105,64,105,65,79,69,79,66,79,67,69,76,76,71,65,71,64,79,64,71,67,79,64,86,112,80,1291,79,75,79,64,111,74,99,116,1391,100,79,77,123,85,30,12,83,87,78,90,123,85,79,85,13,99,123,85,77,85,87,99,123,85,75,85,105,99,123,85,64,85,96,99,123,85,65,85,15,99,123,85,95,85,67,99,123,85,126,85,105,99,123,85,120,85,74,99,123,85,125,85,103,99,123,85,108,85,94,99,123,85,121,85,66,99,123,85,113,85,67,99,85,73,69,76,-1,97,79,123,85,31,12,83,84,79,109,79,100,79,77,123,85,30,12,83,87,78,90,123,85,79,85,13,99,123,85,77,85,87,99,123,85,75,85,108,99,123,85,64,85,74,99,123,85,65,85,12,99,123,85,95,85,12,99,123,85,126,85,96,99,123,85,120,85,92,99,123,85,125,85,85,99,85,73,69,76,-1,97,79,123,85,31,12,83,84,79,109,79,87,79,87,76,100,87,77,87,78,90,123,85,79,85,76,99,123,85,77,85,123,99,123,85,75,85,122,99,123,85,64,85,74,99,123,85,65,85,84,99,123,85,95,85,82,99,85,73,69,76,-1,97,79,90,123,85,93,67,90,85,91,12,85,79,85,88,85,79,85,88,84,74,99,123,85,86,79,77,99,84,76,90,123,85,79,100,87,75,87,76,100,87,77,87,78,90,123,85,79,85,87,99,123,85,77,85,84,99,123,85,75,85,74,99,123,85,64,85,85,99,123,85,65,85,82,99,85,73,84,76,87,78,90,123,85,79,85,122,99,123,85,77,85,72,99,123,85,75,85,104,99,123,85,64,85,74,99,123,85,65,85,15,99,123,85,95,85,15,99,123,85,126,85,82,99,123,85,120,85,67,99,123,85,125,85,96,99,123,85,108,85,12,99,123,85,121,85,28,99,123,85,113,85,29,99,123,85,14,85,29,99,123,85,76,85,26,99,123,85,13,85,27,99,123,85,6,85,24,99,123,85,7,85,25,99,123,85,110,85,22,99,123,85,87,85,26,99,123,85,23,85,20,99,123,85,21,85,20,99,123,85,105,85,27,99,123,85,18,85,25,99,85,73,69,76,-1,97,79,90,123,85,93,67,90,85,91,12,85,88,85,110,85,88,85,110,84,74,99,123,85,111,67,90,85,91,12,85,88,85,13,85,88,85,13,84,74,99,123,85,109,85,106,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,82,99,123,85,75,85,104,99,123,85,64,85,67,99,85,73,69,76,-1,97,79,99,123,85,77,100,87,75,87,76,87,77,87,78,90,123,85,79,85,105,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,64,85,82,99,123,85,65,85,102,99,85,73,84,76,87,78,90,123,85,79,85,13,99,123,85,77,85,92,99,123,85,75,85,74,99,123,85,64,85,66,99,123,85,65,85,67,99,123,85,95,85,114,99,123,85,126,85,94,99,123,85,120,85,122,99,123,85,125,85,96,99,123,85,108,85,15,99,123,85,121,85,82,99,123,85,113,85,12,99,123,85,14,85,19,99,123,85,76,85,9,99,123,85,13,85,107,99,123,85,6,85,107,99,123,85,7,85,82,99,123,85,110,85,15,99,123,85,87,85,15,99,85,73,84,76,85,76,84,77,90,123,85,93,67,90,85,91,12,85,79,85,16,126,85,88,85,76,84,74,99,123,85,111,67,90,85,91,12,85,88,85,16,85,88,85,110,84,74,99,123,85,99,85,106,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,82,99,123,85,75,85,104,99,123,85,64,85,67,99,85,73,69,76,-1,97,79,99,123,85,75,100,87,75,87,76,100,87,77,87,78,90,123,85,79,85,87,99,123,85,77,85,84,99,123,85,75,85,74,99,123,85,64,85,85,99,123,85,65,85,82,99,85,73,84,76,87,78,90,123,85,79,85,122,99,123,85,77,85,72,99,123,85,75,85,104,99,123,85,64,85,74,99,123,85,65,85,15,99,123,85,95,85,15,99,123,85,126,85,82,99,123,85,120,85,67,99,123,85,125,85,96,99,123,85,108,85,12,99,123,85,121,85,28,99,123,85,113,85,29,99,123,85,14,85,29,99,123,85,76,85,17,99,123,85,13,85,17,99,123,85,6,85,46,99,123,85,7,85,26,99,123,85,110,85,26,99,123,85,87,85,17,99,123,85,23,85,47,99,123,85,21,85,46,99,123,85,105,85,44,99,123,85,18,85,47,99,85,73,69,76,-1,97,79,90,123,85,93,67,90,85,91,12,85,88,85,72,85,88,85,72,84,74,99,123,85,111,67,90,85,91,12,85,88,85,45,85,88,85,17,84,74,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,82,99,123,85,75,85,104,99,123,85,64,85,67,99,85,73,69,76,-1,97,79,99,123,85,64,100,87,75,87,76,87,77,87,78,90,123,85,79,85,105,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,64,85,82,99,123,85,65,85,102,99,85,73,84,76,87,78,90,123,85,79,85,108,99,123,85,77,85,122,99,123,85,75,85,82,99,123,85,64,85,84,99,123,85,65,85,96,99,123,85,95,85,66,99,123,85,126,85,84,99,123,85,120,85,19,99,123,85,125,85,123,99,123,85,108,85,82,99,123,85,121,85,74,99,123,85,113,85,67,99,123,85,14,85,66,99,123,85,76,85,122,99,123,85,13,85,82,99,123,85,6,85,15,99,85,73,84,76,85,76,84,77,90,123,85,93,67,90,85,91,12,85,79,85,117,126,85,88,85,76,84,74,99,123,85,111,67,90,85,91,12,85,88,85,117,85,88,85,42,84,74,99,123,85,100,67,101,85,100,12,85,43,12,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,82,99,123,85,75,85,104,99,123,85,64,85,67,99,85,73,69,76,-1,97,79,99,100,100,87,75,87,76,87,77,87,78,90,123,85,79,85,105,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,64,85,82,99,123,85,65,85,102,99,85,73,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,114,99,123,85,75,85,96,99,123,85,64,85,15,99,123,85,65,85,19,99,123,85,95,85,40,99,123,85,126,85,74,99,123,85,120,85,122,99,123,85,125,85,67,99,123,85,108,85,19,99,123,85,121,85,94,99,123,85,113,85,41,99,123,85,14,85,19,99,123,85,76,85,67,99,123,85,13,85,114,99,123,85,6,85,82,99,123,85,7,85,19,99,123,85,110,85,15,99,123,85,87,85,107,99,123,85,23,85,122,99,123,85,21,85,96,99,123,85,105,85,40,99,123,85,18,85,67,99,123,85,69,85,19,99,123,85,112,85,96,99,123,85,38,85,15,99,123,85,9,85,19,99,123,85,123,85,102,99,123,85,39,85,94,99,123,85,89,85,107,99,123,85,36,85,37,99,123,85,4,85,82,99,123,85,34,85,12,99,123,85,104,85,19,99,123,85,103,85,67,99,123,85,35,85,94,99,123,85,32,85,19,99,123,85,16,85,125,99,123,85,33,85,96,99,123,85,122,85,122,99,123,85,15,85,96,99,123,85,40,85,66,99,123,85,62,85,15,99,123,85,10,85,19,99,123,85,63,85,108,99,123,85,67,85,122,99,123,85,66,85,82,99,123,85,60,85,84,99,123,85,37,85,96,99,123,85,114,85,66,99,123,85,96,85,84,99,123,85,92,85,19,99,123,85,94,85,66,99,123,85,102,85,15,99,123,85,84,85,82,99,123,85,72,85,122,99,123,85,107,85,15,99,123,85,61,85,58,99,123,85,74,85,19,99,123,85,41,85,108,99,123,85,85,85,66,99,123,85,12,85,122,99,123,85,82,85,107,99,123,85,59,85,114,99,123,85,56,85,74,99,123,85,57,85,15,99,123,85,54,85,82,99,123,85,55,85,19,99,123,85,52,85,108,99,123,85,53,85,122,99,123,85,50,85,82,99,123,85,51,85,84,99,123,85,48,85,96,99,123,85,49,85,66,99,123,85,206,85,84,99,123,85,207,85,19,99,123,85,204,85,96,99,123,85,205,85,92,99,123,85,202,85,19,99,123,85,203,85,67,99,123,85,200,85,114,99,123,85,201,85,82,99,123,85,198,85,19,99,123,85,45,85,89,99,123,85,199,85,96,99,123,85,196,85,15,99,123,85,197,85,107,99,123,85,194,85,94,99,123,85,195,85,122,99,123,85,73,85,12,99,123,85,192,85,19,99,123,85,193,85,15,99,123,85,222,85,82,99,123,85,223,85,122,99,123,85,220,85,10,99,123,85,28,85,82,99,123,85,221,85,122,99,123,85,46,85,19,99,123,85,20,85,218,99,123,85,97,85,12,99,123,85,219,85,96,99,123,85,216,85,15,99,123,85,217,85,107,99,123,85,22,85,94,99,123,85,26,85,122,99,123,85,25,85,12,99,123,85,24,85,58,99,123,85,27,85,85,99,123,85,44,85,85,99,123,85,17,85,29,99,123,85,47,85,15,99,123,85,42,85,96,99,123,85,214,85,122,99,123,85,218,85,96,99,123,85,215,85,66,99,123,85,58,85,15,99,123,85,29,85,215,99,85,73,84,76,85,113,84,77,90,123,85,93,67,90,85,91,12,85,79,85,212,126,85,88,85,76,84,74,99,123,85,111,67,90,85,91,12,85,88,85,117,85,88,85,213,84,74,99,123,85,210,118,99,123,85,99,85,106,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,82,99,123,85,75,85,104,99,123,85,64,85,67,99,85,73,69,76,-1,97,-1,91,75,84,76,109,79,116,3574,79,75,127,79},P={{K={{175,165,242,2,45,87,175,189,214,225},{184,129,244,24,127},{128,163,233},0,{165,129,236,17,35,92,76,185,201,231,21,76},{176,171,210,22,61,92,117,188,242,230,15,77,116,135,181,202,24,51,68},{171},30},C={87,78,85,78,67,79,85,76,12,85,77,85,77,85,77,87,78,85,74,12,85,75,12,85,72,12,85,73,107,84,74,99,127,78},P={},U={{1,3}},nParams=0},{K={{130,161,228,0},{170,160,233,54,37,76,145,177,223,224,51},3,2,9,{184,186,224},1,14,63,34,4,46,5,24,6,47,7,8,53,10,52,90,{86,179,198,230,7},{69,180,221,255},{65,178,193,225},{66,178,193,229,4,80,87,129,164,254,30},{69,172,211,239,18,91},{78,188,216},{92,151,221,245,6,9,118,150,167},{103,132,206},0.25,{78,130,200,250,5,36,72,135,178,207,30},{93,145,213,250,24},{72,132,206,252,3,34,89,156,191,192,30,33,68,106,179},{65,147,202},{70,138,222,240,10,19,109,150,161,212,15,54,93,98,177,212,246},0.4,{88,132,160,254,20,10,78,149,190,219,178},{81,133,174,245,0,121},{117,153,172,246,33,12,97},240,{69,129,164,228},{66,139,190,234,34,60,71,144,165,222,231,44,83,96,133,199},{67,138,191,235,52,32,75,144,165,156},49,{87,144,164,196},19,55,25,59,51,11,12,13,40,{117,146,160,194,225,55,86},0,70,150,255},C={67,78,87,78,123,85,79,12,83,69,79,76,71,76,71,79,71,78,68,78,79,76,105,77,105,74,79,78,79,79,79,76,69,76,76,71,74,71,77,79,77,71,76,79,77,86,112,80,380,85,76,85,77,14,85,74,95,123,80,194,109,79,100,79,74,123,85,75,12,83,87,79,90,123,85,72,85,73,99,123,85,77,85,70,99,123,85,76,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,65,99,123,85,94,85,69,99,123,85,95,85,69,99,123,85,74,85,92,99,123,85,93,85,90,99,85,91,69,76,-1,97,79,80,382,79,74,85,88,12,85,89,67,86,85,89,12,85,87,12,99,87,76,123,85,84,12,83,79,74,85,85,12,67,82,85,83,12,85,80,67,86,85,81,12,85,110,12,67,86,85,111,12,85,108,12,84,77,90,123,85,109,85,106,99,123,85,107,67,104,85,105,12,85,102,85,102,85,102,84,77,99,84,74,123,85,103,12,83,84,79,109,79,87,76,123,85,84,12,83,79,74,85,88,12,67,82,85,83,12,85,80,67,86,85,81,12,85,110,12,67,86,85,111,12,85,108,12,84,77,90,123,85,100,85,106,99,123,85,101,67,104,85,105,12,85,102,85,102,85,102,84,77,99,84,74,123,85,103,12,83,84,79,109,79,116,382,116,88,67,78,87,77,123,85,79,12,83,69,79,76,71,73,71,72,71,75,68,75,72,73,105,70,105,71,79,75,79,72,79,73,69,76,76,71,71,71,70,79,70,71,73,79,70,86,112,80,409,85,94,85,94,65,85,98,95,123,80,389,109,79,79,71,85,99,12,87,79,90,123,85,72,85,96,99,123,85,77,85,69,99,123,85,76,85,70,99,123,85,68,85,97,99,123,85,66,85,126,99,123,85,64,85,92,99,123,85,94,85,90,99,123,85,95,85,69,99,123,85,74,85,127,99,123,85,93,85,124,99,123,85,125,85,90,99,123,85,122,85,70,99,123,85,123,85,120,99,85,91,84,76,95,80,411,79,71,85,121,124,99,116,411,116,262,87,76,123,85,84,12,83,87,74,85,85,12,67,82,85,83,12,85,80,67,86,85,81,12,85,110,12,67,86,85,111,12,85,108,12,84,77,90,123,85,109,85,118,99,123,85,107,67,104,85,105,12,85,119,85,116,85,117,84,77,99,84,74,123,85,103,12,83,84,79,109,79,87,76,123,85,84,12,83,87,74,85,88,12,67,82,85,83,12,85,80,67,86,85,81,12,85,110,12,67,86,85,111,12,85,108,12,84,77,90,123,85,100,85,118,99,123,85,101,67,104,85,105,12,85,119,85,116,85,117,84,77,99,84,74,123,85,103,12,83,84,79,109,79,87,74,85,88,12,85,89,67,86,85,89,12,85,87,12,99,87,75,85,121,118,99,127,78},P={},U={{0,4},{0,0},{0,10},{0,7},{1,2},{1,3}},nParams=0},{K={{173,160,248,56,45,70,153,184},{172,161,249,37,44,87,156,178,223,228,45,93},{175,162,250,52,59,82,138,185,192},{174,163,251,35,32,64,152,187,202},{177,172,196,43,60,65,100,189,194},{176,173,197,61,35,70,113,189,222,254,15},{179,174,198,56,59,68,102},{178,175,199,47,54,83,119,185,220,243},{181,168,192,63,59,64,107,174,196,229,7,87,113,158},{180,169,193,46,48,78,113,180,218,227}},C={90,71,79,79,79,85,78,111,79,99,79,79,85,79,111,76,99,79,79,85,76,111,77,99,79,79,85,77,111,74,99,79,79,85,74,111,75,99,79,79,85,75,111,72,99,79,79,85,72,111,73,99,79,79,85,73,111,70,99,79,79,85,70,111,71,99,79,79,85,71,111,68,99,79,79,127,79},P={{K={1,8,2,53,3,47,4,52,5,62,6,28,7,40,59,9,55,10,63,90,{67,183,220,231,18,11},{103,171,222,228,51,126,83},255,0,{87,181,206,233},{80,153,220,224,87},{104,187,193},30,{74,129,219,251,15,50,119,133,166,196,44,34,73,110,171,192,233,18,93,126,139,185},0.7,{90,131,200,247,4,54},22,56,54,15,12,{64,135,179,241,4,33,79,150},{87,134,175,237},{87,132,183,247},{84,132,183,243,18,38,97,148,191,207},{90,141,169,249},25,46,14,34,49,57,{72,150,191}},C={100,87,78,87,79,87,76,87,77,87,74,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,79,85,64,99,123,85,65,85,94,99,123,85,95,85,92,99,85,93,84,76,67,90,85,91,12,85,88,85,88,85,88,84,77,85,89,85,70,84,74,90,123,85,86,67,87,85,84,12,85,78,85,89,85,89,85,85,84,74,99,123,85,82,85,83,99,123,85,80,87,75,99,84,76,90,123,85,78,100,87,78,87,76,87,77,87,74,90,123,85,78,85,81,99,123,85,76,85,64,99,123,85,74,85,110,99,123,85,72,85,92,99,123,85,70,85,111,99,85,93,84,76,79,79,85,108,84,77,90,123,85,86,67,87,85,84,12,85,78,85,109,126,85,78,85,89,84,74,99,123,85,106,67,87,85,84,12,85,89,85,109,85,89,85,89,84,74,99,123,85,107,67,104,85,107,12,85,105,12,99,123,85,102,87,74,90,123,85,78,85,103,99,123,85,76,85,77,99,123,85,74,85,73,99,123,85,72,85,100,99,123,85,70,85,92,99,123,85,68,85,73,99,123,85,66,85,100,99,85,93,84,76,99,84,76,87,74,90,123,85,78,85,101,99,123,85,76,85,92,99,123,85,74,85,98,99,123,85,72,85,100,99,85,93,69,76,-1,97,79,99,100,100,87,78,100,87,77,87,74,90,123,85,78,85,65,99,123,85,76,85,100,99,123,85,74,85,67,99,123,85,72,85,77,99,123,85,70,85,99,99,123,85,68,85,92,99,85,93,69,76,-1,97,79,87,74,90,123,85,78,85,65,99,123,85,76,85,100,99,123,85,74,85,67,99,123,85,72,85,77,99,123,85,70,85,99,99,123,85,68,85,92,99,85,93,69,76,-1,97,-1,91,76,84,76,87,74,90,123,85,78,85,65,99,123,85,76,85,92,99,123,85,74,85,96,99,123,85,72,85,77,99,123,85,70,85,73,99,123,85,68,85,71,99,85,93,69,76,-1,97,79,71,76,90,71,77,79,77,85,97,111,79,99,79,77,127,79},P={{K={{175,171,242,0,41,74,136},{185,160,229,1}},C={87,78,85,78,12,85,79,79,79,99,127,78},P={},U={{1,2}},nParams=2}},U={{0,0},{0,1},{0,2},{0,3},{0,4},{1,0}},nParams=2},{K={1,14,2,63,3,34,4,46,90,25,53,52,5,6,7,8,47,62,28,40,59,9,55,10,{71,179,216,227,22,15},{99,175,218,224,55,122,87},255,0,{91,137,194,245},{92,165,208,252,91},{100,135,205},30,{78,133,223,255,11,54,115,129,162,192,40,38,77,106,175,196,237,22,89,122,143,189},0.7,{94,135,204,243,0,50},22,56,54,15,12,{68,131,183,245,0,37,75,146},{83,130,171,233},{83,128,179,243},{80,128,179,247,22,34,101,144,187,203},{86,145,165,197},51,{},13,24,26,{74,147,182,210,41,36,79,118,174,211,234},49,57,{98,150,191,221,228,55,69},{101,159,166,250,240,53,66,111,144,206,235,41,42,123,156,173,199,30,1,67,101,180,211,230},{119,158,171,223},{119,153,160}},C={79,79,123,72,80,105,109,79,87,78,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,85,70,84,76,71,79,79,76,123,72,80,44,109,79,87,78,90,123,85,78,85,71,99,123,85,76,85,68,99,123,85,74,85,69,99,123,85,72,85,73,99,123,85,66,85,77,99,123,85,67,85,69,99,123,85,64,85,73,99,85,70,84,76,71,76,100,87,79,87,76,87,77,87,74,87,78,90,123,85,78,85,65,99,123,85,76,85,68,99,123,85,74,85,94,99,123,85,72,85,69,99,123,85,66,85,95,99,123,85,67,85,92,99,123,85,64,85,93,99,123,85,65,85,90,99,123,85,91,85,88,99,123,85,89,85,77,99,85,70,84,76,67,86,85,87,12,85,84,85,84,85,84,84,77,85,85,85,66,84,74,90,123,85,82,67,83,85,80,12,85,78,85,85,85,85,85,81,84,74,99,123,85,110,85,111,99,123,85,108,87,75,99,84,76,90,123,85,78,100,87,79,87,77,87,74,87,78,90,123,85,78,85,109,99,123,85,76,85,90,99,123,85,74,85,106,99,123,85,72,85,77,99,123,85,66,85,107,99,85,70,84,76,79,79,85,104,84,77,90,123,85,82,67,83,85,80,12,85,78,85,105,126,85,85,85,79,84,74,99,123,85,102,67,83,85,80,12,85,85,85,105,85,85,85,89,84,74,99,123,85,103,67,100,85,103,12,85,101,12,99,123,85,98,87,78,90,123,85,78,85,79,99,123,85,76,85,99,99,123,85,74,85,73,99,123,85,72,85,107,99,123,85,66,85,77,99,85,70,84,76,99,84,76,87,78,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,85,70,69,76,-1,97,79,99,123,85,76,100,87,79,87,77,87,74,87,78,90,123,85,78,85,109,99,123,85,76,85,90,99,123,85,74,85,106,99,123,85,72,85,77,99,123,85,66,85,107,99,85,70,84,76,85,96,85,97,84,77,90,123,85,82,67,83,85,80,12,85,78,85,126,126,85,85,85,85,84,74,99,123,85,102,67,83,85,80,12,85,85,85,105,85,85,85,127,84,74,99,123,85,103,67,100,85,103,12,85,101,12,99,123,85,98,87,78,90,123,85,78,85,71,99,123,85,76,85,68,99,123,85,74,85,69,99,123,85,72,85,73,99,123,85,66,85,77,99,123,85,67,85,69,99,123,85,64,85,73,99,85,70,84,76,99,123,85,124,118,99,84,76,87,78,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,66,85,81,99,123,85,67,85,90,99,123,85,64,85,93,99,123,85,65,85,125,99,85,70,69,76,-1,97,79,99,100,100,87,79,100,87,74,87,78,90,123,85,78,85,91,99,123,85,76,85,73,99,123,85,74,85,93,99,123,85,72,85,68,99,123,85,66,85,125,99,123,85,67,85,77,99,85,70,69,76,-1,97,79,87,78,90,123,85,78,85,91,99,123,85,76,85,73,99,123,85,74,85,93,99,123,85,72,85,68,99,123,85,66,85,125,99,123,85,67,85,77,99,85,70,69,76,-1,97,-1,91,77,84,76,87,78,90,123,85,78,85,91,99,123,85,76,85,77,99,123,85,74,85,122,99,123,85,72,85,68,99,123,85,66,85,69,99,123,85,67,85,95,99,85,70,69,76,-1,97,79,71,77,87,72,100,79,77,85,123,12,123,85,120,12,83,87,78,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,85,70,69,76,-1,97,79,111,79,84,76,109,79,79,77,85,123,12,85,121,79,76,99,90,71,74,79,74,85,118,111,76,99,79,74,127,79},P={{K={{175,171,242,0,41,74,136},{190,172,231,16},{187,130,247,27,124},{129,162,232},1,24,0,{167,174,219,15,17,68,118,181,215,248},{173},35},C={87,78,85,78,12,85,79,67,76,85,77,12,85,74,85,75,126,85,72,87,78,85,78,12,85,73,12,85,70,12,84,74,99,87,78,85,79,67,76,85,77,12,85,74,85,72,85,72,87,78,85,78,12,85,73,12,85,70,12,85,71,107,84,74,99,127,78},P={},U={{1,3}},nParams=0},{K={{175,171,242,0,41,74,136},{185,160,229,1}},C={87,78,85,78,12,85,79,79,79,99,127,78},P={},U={{1,3}},nParams=2}},U={{0,4},{0,0},{0,1},{0,2},{0,3},{1,0},{0,5}},nParams=3},{K={{162,165,241,17},1,24,2,47,3,46,4,5,53,6,52,90,{186,176,197,237,59,80,106,138},{179,177,197,236},40,56,34,59,41,7,63,8,9,51,10,62,11,96,12,117,13,14,105,15,99,16,110,17,18,109,19,106,20,21,111,22,98,23,{78,156,183,192},{75,178,167,203,76},{113,146,184},0,28,55,{96,148,191,196,241,104},{66,142,187,193,214,27,118},255,33,{119,158,165,202,233,43},54,{121,110,170,216,253,8,86,127},{108,109,180,198},{110,109,174,222},{107,107,168,220,237,9,126,123,128,160},25,61,30,49,57,{127,101,151,201,247,47,44,110,151,184},{126,100,150,200,246,39,38,122,133,174},{121,99,145,207,241,46,49,104,128,163,202,77,1,92},{120,98,144,206,240,47,48,105,129,162,203,76,17,66,114,179},{101,107,146}},C={79,79,123,72,80,71,109,79,90,71,79,79,79,85,78,79,79,85,78,12,123,72,80,11,109,79,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,72,99,123,85,70,85,71,99,123,85,68,85,69,99,85,66,84,76,99,79,79,85,67,79,79,85,67,12,123,72,80,25,109,79,111,79,99,79,79,85,64,79,79,85,64,12,123,72,80,182,109,79,87,78,90,123,85,79,85,65,99,123,85,77,85,94,99,123,85,75,85,95,99,123,85,73,85,92,99,123,85,70,85,93,99,123,85,68,85,93,99,123,85,90,85,91,99,123,85,88,85,72,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,85,85,82,99,123,85,83,85,80,99,123,85,81,85,80,99,123,85,110,85,111,99,123,85,108,85,109,99,123,85,106,85,107,99,123,85,104,85,107,99,123,85,105,85,102,99,123,85,103,85,100,99,123,85,101,85,111,99,123,85,98,85,99,99,123,85,96,85,97,99,123,85,126,85,102,99,85,66,84,76,99,90,71,76,87,79,100,87,76,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,72,99,123,85,70,85,71,99,123,85,68,85,69,99,85,66,69,76,-1,97,79,90,123,85,127,67,124,85,125,12,85,79,85,122,85,79,85,122,84,74,99,84,76,71,77,100,87,77,87,74,87,79,87,76,87,78,90,123,85,79,85,88,99,123,85,77,85,71,99,123,85,75,85,74,99,123,85,73,85,69,99,123,85,70,85,84,99,123,85,68,85,123,99,123,85,90,85,65,99,123,85,88,85,92,99,123,85,89,85,120,99,123,85,87,85,91,99,85,66,84,76,67,121,85,118,12,85,119,85,119,85,119,84,77,85,122,85,70,84,74,90,123,85,127,67,124,85,125,12,85,79,85,122,85,122,85,116,84,74,99,123,85,117,87,75,99,84,76,90,123,85,79,100,87,77,87,79,87,76,87,78,90,123,85,79,85,96,99,123,85,77,85,92,99,123,85,75,85,94,99,123,85,73,85,91,99,123,85,70,85,114,99,85,66,84,76,79,79,85,78,12,85,108,84,77,90,123,85,127,67,124,85,125,12,85,79,85,83,126,85,79,85,122,84,74,99,123,85,115,67,124,85,125,12,85,122,85,83,85,122,85,122,84,74,99,123,85,112,67,113,85,112,12,85,14,12,99,123,85,78,87,78,90,123,85,79,85,15,99,123,85,77,85,71,99,123,85,75,85,69,99,123,85,73,85,72,99,123,85,70,85,91,99,123,85,68,85,69,99,123,85,90,85,72,99,85,66,84,76,99,84,76,87,78,90,123,85,79,85,110,99,123,85,77,85,91,99,123,85,75,85,95,99,123,85,73,85,72,99,85,66,69,76,-1,97,79,99,123,85,77,100,87,77,87,79,87,76,87,78,90,123,85,79,85,103,99,123,85,77,85,120,99,123,85,75,85,92,99,123,85,73,85,12,99,123,85,70,85,91,99,85,66,84,76,79,79,85,64,12,84,76,90,123,85,127,67,124,85,125,12,85,122,85,101,85,122,85,101,84,74,99,123,85,115,67,124,85,125,12,85,79,85,13,126,85,122,85,90,84,74,99,84,76,87,78,90,123,85,79,85,110,99,123,85,77,85,91,99,123,85,75,85,95,99,123,85,73,85,72,99,123,85,70,85,13,99,123,85,68,85,92,99,123,85,90,85,65,99,123,85,88,85,10,99,85,66,69,76,-1,97,79,99,123,85,75,100,87,77,100,87,76,87,78,90,123,85,79,85,89,99,123,85,77,85,72,99,123,85,75,85,65,99,123,85,73,85,71,99,123,85,70,85,10,99,123,85,68,85,91,99,85,66,69,76,-1,97,79,87,78,90,123,85,79,85,89,99,123,85,77,85,72,99,123,85,75,85,65,99,123,85,73,85,71,99,123,85,70,85,10,99,123,85,68,85,91,99,85,66,69,76,-1,97,79,99,123,85,73,79,77,99,84,76,87,78,90,123,85,79,85,89,99,123,85,77,85,91,99,123,85,75,85,11,99,123,85,73,85,71,99,123,85,70,85,69,99,123,85,68,85,84,99,85,66,69,76,-1,97,79,71,74,87,72,79,77,85,8,12,111,76,84,76,109,79,87,72,79,77,85,9,12,111,77,84,76,109,79,87,72,79,77,85,6,12,111,74,84,76,109,79,87,72,79,77,85,7,12,111,75,84,76,109,79,79,76,85,4,111,72,99,79,76,127,79},P={{K={},C={127,78},P={},U=nil,nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,3,{185},{189},{80,180,209,241}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,127,78},P={},U={{0,7},{1,4},{0,8}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{162,166,195,19,51,93},{164,170,203,26,52,91,98,187,227,231,2,82,114},{171,181,203,239,54,84},{169,189,200,248}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,87,76,85,68,12,87,76,85,69,12,12,85,66,12,99,84,74,123,85,67,12,83,84,79,109,79,127,78},P={},U={{0,7},{1,4},{0,8}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,3,{185},{189},{80,180,209,241},{114,169,208,254,15}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,67,91,111,79,84,79,109,79,127,78},P={{K={{175,165,240,24,46,69,159,191}},C={87,78,85,78,12,84,78,109,79,127,78},P={},U={{0,3}},nParams=0}},U={{0,7},{1,4},{0,8},{1,1}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,6,{185},{189},{80,180,209,241}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,127,78},P={},U={{0,7},{1,4},{0,8}},nParams=0},{K={{175,171,242,0,41,74,136},{185,160,229,1}},C={87,78,85,78,12,85,79,79,79,99,127,78},P={},U={{1,4}},nParams=2}},U={{0,4},{0,2},{0,3},{0,0},{0,1},{1,0},{0,5},{0,6},{0,7}},nParams=2},{K={{162,165,241,17},1,14,2,53,3,61,4,5,54,6,63,90,{189,180,207,224,44,93,125},{185,179,198,238,56,83,105,137},{184,188,199,236,41},{191,187,192,235,46,7},{155,167,194,232,15,114,79},9,99,195,{71,181,208,238},{81,187,196,239},{85,186,223,254,6},24,47,46,52,{91,137,194,245},{92,165,208,252,91},{100,135,205},0,8,62,28,7,40,59,55,10,{68,131,183,245,0,37,75,146},0.5,{87,128,165,246,25,60,118,145,191,192,242},{65,138,164,235,24,61,21},49,{77,131,168,207,10,33,72,115,188,223,234,24},19,56,34,41,51,11,96,12,117,13,105,15,16,110,17,18,108,98,20,106,21,22,23,111,{123,103,131,221,247,41,45,118,157,184,145},255,57,38,{102,111,148,219,248,26},{113,96,137,203},{125,126,157,173},{126,126,157,169,248,28,11,78,149,181},25,{104,118,159},{113,123,153,183,249,49,34,80,153,166},{112,122,152,182,248,57,40,68,139,176},{115,121,155,181,251,52,59,82,138,185,192,183,11,70},{114,120,154,180,250,53,58,83,139,184,193,182,27,88,120,137},{6,116,145,175,211}},C={79,79,123,72,80,71,109,79,90,71,79,79,79,85,78,79,79,85,78,12,123,72,80,11,109,79,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,72,99,123,85,70,85,71,99,123,85,68,85,69,99,85,66,84,76,99,79,79,85,67,79,79,85,67,12,123,72,80,24,109,79,124,99,79,79,85,64,79,79,85,64,12,123,72,80,38,109,79,111,79,99,79,79,85,65,79,79,85,65,12,123,72,80,203,109,79,67,94,85,95,12,85,92,85,93,85,90,84,77,99,79,79,85,91,79,79,85,91,12,123,72,80,216,109,79,86,99,79,79,85,88,79,79,85,88,12,123,72,80,233,109,79,124,99,90,123,85,89,79,79,85,67,12,99,123,85,88,79,79,85,88,12,99,71,76,87,79,100,87,76,87,78,90,123,85,79,85,86,99,123,85,77,85,87,99,123,85,75,85,84,99,123,85,73,85,84,99,123,85,70,85,74,99,123,85,68,85,85,99,85,66,69,76,-1,97,79,90,123,85,82,67,83,85,80,12,85,79,85,81,85,79,85,81,84,74,99,84,76,71,77,87,77,87,79,87,76,87,78,90,123,85,79,85,110,99,123,85,77,85,74,99,123,85,75,85,87,99,123,85,73,85,85,99,123,85,70,85,111,99,123,85,68,85,108,99,123,85,109,85,106,99,123,85,110,85,107,99,123,85,92,85,104,99,123,85,105,85,69,99,85,66,84,76,79,79,85,65,12,85,81,85,73,84,74,90,123,85,82,67,83,85,80,12,85,81,85,86,85,81,85,86,84,74,99,123,85,102,67,83,85,80,12,85,79,85,86,126,85,103,85,81,84,74,99,123,85,100,67,101,85,80,12,85,103,85,103,84,76,99,84,76,90,123,85,79,87,79,100,87,76,87,78,90,123,85,79,85,92,99,123,85,77,85,84,99,123,85,75,85,106,99,123,85,73,85,74,99,123,85,70,85,98,99,123,85,68,85,69,99,85,66,69,76,-1,97,79,90,123,85,65,79,79,85,65,12,99,123,85,78,87,78,90,123,85,79,85,92,99,123,85,77,85,84,99,123,85,75,85,106,99,123,85,73,85,74,99,123,85,70,85,98,99,123,85,68,85,69,99,85,66,84,76,99,123,85,99,85,103,99,84,76,99,100,87,79,100,87,76,87,78,90,123,85,79,85,96,99,123,85,77,85,104,99,123,85,75,85,107,99,123,85,73,85,72,99,123,85,70,85,69,99,85,66,84,76,87,78,90,123,85,79,85,106,99,123,85,77,85,97,99,123,85,75,85,126,99,123,85,73,85,107,99,123,85,70,85,127,99,123,85,68,85,127,99,123,85,109,85,69,99,123,85,110,85,84,99,123,85,92,85,124,99,123,85,105,85,111,99,123,85,125,85,122,99,123,85,123,85,120,99,123,85,121,85,120,99,123,85,76,85,118,99,123,85,119,85,93,99,123,85,116,85,117,99,123,85,114,85,117,99,123,85,115,85,112,99,123,85,96,85,113,99,123,85,14,85,15,99,123,85,12,85,15,99,123,85,13,85,93,99,123,85,10,85,11,99,85,66,69,76,-1,97,79,90,123,85,82,67,83,85,80,12,85,81,85,14,85,81,85,14,84,74,99,123,85,100,67,101,85,80,12,85,103,85,103,84,76,99,123,85,102,67,83,85,80,12,85,103,85,81,85,103,85,81,84,74,99,123,85,8,67,94,85,95,12,85,9,85,9,85,9,84,77,99,123,85,78,87,78,90,123,85,79,85,96,99,123,85,77,85,6,99,123,85,75,85,74,99,85,66,84,76,99,69,76,-1,91,76,84,76,71,74,100,87,74,87,77,87,79,87,76,87,78,90,123,85,79,85,110,99,123,85,77,85,74,99,123,85,75,85,87,99,123,85,73,85,85,99,123,85,70,85,111,99,123,85,68,85,108,99,123,85,109,85,106,99,123,85,110,85,107,99,123,85,92,85,104,99,123,85,105,85,69,99,85,66,84,76,67,94,85,95,12,85,9,85,9,85,9,84,77,85,81,85,70,84,74,90,123,85,82,67,83,85,80,12,85,79,85,81,85,81,85,7,84,74,99,123,85,4,87,75,99,84,76,90,123,85,79,100,87,74,87,79,87,76,87,78,90,123,85,79,85,13,99,123,85,77,85,107,99,123,85,75,85,97,99,123,85,73,85,69,99,123,85,70,85,71,99,85,66,84,76,79,79,85,78,12,85,119,84,77,90,123,85,82,67,83,85,80,12,85,79,85,123,126,85,79,85,81,84,74,99,123,85,102,67,83,85,80,12,85,81,85,123,85,81,85,81,84,74,99,123,85,5,67,2,85,5,12,85,3,12,99,123,85,78,87,78,90,123,85,79,85,0,99,123,85,77,85,74,99,123,85,75,85,85,99,123,85,73,85,84,99,123,85,70,85,69,99,123,85,68,85,85,99,123,85,109,85,84,99,85,66,84,76,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,69,99,123,85,75,85,126,99,123,85,73,85,84,99,85,66,69,76,-1,97,79,99,123,85,77,100,87,74,100,87,76,87,78,90,123,85,79,85,92,99,123,85,77,85,84,99,123,85,75,85,106,99,123,85,73,85,74,99,123,85,70,85,98,99,123,85,68,85,69,99,85,66,69,76,-1,97,79,87,78,90,123,85,79,85,92,99,123,85,77,85,84,99,123,85,75,85,106,99,123,85,73,85,74,99,123,85,70,85,98,99,123,85,68,85,69,99,85,66,69,76,-1,97,79,99,123,85,75,79,74,99,123,85,73,79,77,99,84,76,87,78,90,123,85,79,85,92,99,123,85,77,85,69,99,123,85,75,85,6,99,123,85,73,85,74,99,123,85,70,85,85,99,123,85,68,85,111,99,85,66,69,76,-1,97,79,71,75,79,76,85,1,111,76,99,79,76,123,85,1,12,83,79,76,85,89,12,84,76,109,79,87,70,79,77,85,30,12,111,77,84,76,109,79,87,70,79,77,85,31,12,111,74,84,76,109,79,87,70,79,77,85,28,12,111,75,84,76,109,79,87,70,79,77,85,29,12,111,72,84,76,109,79,85,79,85,79,107,85,77,95,123,80,1331,109,79,79,79,85,91,12,80,1472,87,73,85,26,12,79,79,85,91,12,79,76,99,116,1472,79,76,127,79},P={{K={},C={127,78},P={},U=nil,nParams=0},{K={{186,165,240,1,41},{174,183,248,20,57,64},{186,177,251,19,32,111,144,176,193},{129,162,232},0.3,{180,167,212,20},{183,171,209,19,60,77,81,174,203,230,7},{162,190,202,21,39},{177,173,215,21,58,75,64,181,198,233,7,72,125,131,170},{186,184,209},{180,175,197,21,49,92,105,171,216,234,37,81,122,129,180,173},{180,160,203,16,37},{172,184,205,237,61,67},{189,180,207,224,44,93,125},{190,187,220,235,62,87,120},{171,191,202,250},{175,160,222,235,55,81},{180,182,194},{183,187,207,225,59,98,124,135,208,229,30,39,108,147,160,197,7},0,1,{82,176,203,236},{87,158,219,231,80},20,8,{70,188,217,225,7,92,118,134}},C={87,78,85,78,79,79,99,87,79,123,85,79,12,83,87,76,67,76,85,77,12,85,74,67,75,85,72,12,85,73,12,67,75,85,70,12,85,71,12,84,77,90,123,85,68,87,78,85,78,12,123,80,114,109,79,87,77,85,69,12,123,72,80,3,109,79,87,74,85,66,12,85,67,12,85,64,12,99,84,74,123,85,65,12,83,84,79,109,79,87,79,123,85,79,12,83,87,76,85,94,12,67,76,85,77,12,85,74,67,75,85,72,12,85,73,12,67,75,85,70,12,85,71,12,84,77,90,123,85,69,87,78,85,78,12,123,80,223,109,79,87,77,85,69,12,123,72,80,236,109,79,87,74,85,66,12,85,67,12,85,94,12,99,84,74,123,85,65,12,83,84,79,109,79,87,79,123,85,79,12,83,87,76,85,95,12,67,76,85,77,12,85,74,67,75,85,72,12,85,73,12,67,75,85,70,12,85,71,12,84,77,90,123,85,92,87,78,85,78,12,123,80,173,109,79,85,93,123,72,80,165,109,79,85,90,99,123,85,91,87,78,85,78,12,123,80,326,109,79,67,88,85,77,12,85,93,85,89,85,93,85,89,84,74,123,72,80,339,109,79,67,88,85,77,12,85,93,85,86,85,93,85,86,84,74,99,84,74,123,85,65,12,83,84,79,109,79,87,77,85,87,12,87,78,85,78,12,84,79,109,79,127,78},P={},U={{1,2},{0,6},{1,4},{1,1},{0,7}},nParams=2},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,3,{185},{189},{80,180,209,241}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,127,78},P={},U={{0,6},{1,5},{0,7}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{162,166,195,19,51,93},{164,170,203,26,52,91,98,187,227,231,2,82,114},{171,181,203,239,54,84},{169,189,200,248}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,87,76,85,68,12,87,76,85,69,12,12,85,66,12,99,84,74,123,85,67,12,83,84,79,109,79,127,78},P={},U={{0,6},{1,5},{0,7}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,3,{185},{189},{80,180,209,241},{102,184,220,236},{69,187,223,239,43,94},{80,190,199},{82,189,216,249,1}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,87,77,67,91,85,88,12,84,79,109,79,87,74,123,85,89,12,83,87,74,85,86,12,72,84,76,109,79,127,78},P={},U={{0,6},{1,5},{0,7},{0,9},{1,2}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,6,{185},{189},{80,180,209,241}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,127,78},P={},U={{0,6},{1,5},{0,7}},nParams=0}},U={{0,4},{0,2},{0,3},{0,1},{0,0},{1,0},{0,6},{0,7},{0,5},{0,8}},nParams=2},{K={{162,165,241,17},1,9,2,54,3,51,4,62,5,63,6,40,90,{183,187,196},0,{177,181,212},100,{183,184,205,244,59,91,107,136,202},{187,178,201,230,42,91,123},50,{66,184,221,229,3,88,114,130},{84,187,222,255,7,116,115,135,167},{},{71,179,216,227,22},{70,178,217,226,23,14},{96,172,217,227,52,121,84},149,98,{79,141,216,246},{89,131,204,247},{93,130,215,230,14},8,53,47,52,28,7,59,55,10,{70,132,191,248},{67,170,175,243,68},{121,138,176},{90,145,171,203,31,34,71,117,182,212,220,18,89,126,155,176,249,2,45,78,155,169},0.3,{89,158,163,210,9,22,79,113,185,215,228,6,91,124,158,177},22,56,44,13,12,14,{113,150,162,192,245,48,94,103},{100,149,188,222},{102,149,166,198},{99,147,160,196,229,49,118,99,136,216},{113,152,173,217,209,47,84,99,150,205,244,31,32,115,150,180},34,46,24,26,30,0.9,49,0.8,255,65,{96,105,146,221,254,28},15,25,57,{125,98,148,201,224,46,33,123,149,162},{118,98,139,211,240,14,49},{127,96,150,203,226,43,40,122,147,170},{126,97,151,202,227,44,47,126,153,168,194,27},{107,117,156},{127,125,136,166,234}},C={79,79,123,72,80,71,109,79,90,71,79,79,79,85,78,79,79,85,78,12,123,72,80,11,109,79,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,66,99,85,67,84,76,99,79,79,85,64,79,79,85,64,12,123,72,80,25,109,79,85,65,99,79,79,85,94,79,79,85,94,12,123,72,80,39,109,79,85,95,99,79,79,85,92,79,79,85,92,12,123,72,80,53,109,79,85,79,99,79,79,85,93,79,79,85,93,12,123,72,80,195,109,79,85,90,99,79,79,85,91,79,79,85,91,12,123,72,80,209,109,79,111,79,99,79,79,85,88,79,79,85,88,12,123,72,80,255,109,79,85,89,99,79,79,85,86,79,79,85,86,12,123,72,80,128,109,79,67,87,85,84,12,85,76,85,85,85,82,84,77,99,79,79,85,83,79,79,85,83,12,123,72,80,145,109,79,86,99,79,79,85,80,79,79,85,80,12,123,72,80,190,109,79,124,99,90,123,85,81,79,79,85,93,12,99,123,85,80,79,79,85,80,12,99,71,76,124,71,77,87,79,87,76,87,77,87,78,90,123,85,79,85,110,99,123,85,77,85,111,99,123,85,75,85,108,99,123,85,73,85,109,99,123,85,71,85,70,99,123,85,69,85,106,99,123,85,107,85,66,99,123,85,110,85,104,99,123,85,76,85,105,99,123,85,102,85,68,99,85,67,84,76,79,79,85,86,12,85,65,85,71,84,74,90,123,85,103,67,100,85,101,12,85,65,85,65,85,79,85,65,84,74,99,123,85,98,85,99,99,123,85,96,118,99,84,76,90,100,100,87,74,87,76,87,77,87,78,90,123,85,79,85,97,99,123,85,77,85,104,99,123,85,75,85,126,99,123,85,73,85,68,99,123,85,71,85,74,99,85,67,84,76,87,78,90,123,85,79,85,127,99,123,85,77,85,104,99,123,85,75,85,74,99,123,85,73,85,108,99,123,85,71,85,68,99,85,67,84,76,85,124,84,77,90,123,85,103,67,100,85,101,12,85,79,85,125,126,85,65,85,122,84,74,99,123,85,123,67,100,85,101,12,85,65,85,125,85,65,85,69,84,74,99,123,85,120,67,121,85,120,12,85,118,12,99,123,85,78,87,78,90,123,85,79,85,125,99,123,85,77,85,104,99,123,85,75,85,74,99,123,85,73,85,108,99,123,85,71,85,68,99,85,67,84,76,99,123,85,119,85,65,99,84,76,87,78,90,123,85,79,85,122,99,123,85,77,85,68,99,123,85,75,85,116,99,123,85,73,85,117,99,85,67,69,76,-1,97,-1,91,79,84,76,71,74,87,79,87,76,87,77,87,78,90,123,85,79,85,110,99,123,85,77,85,111,99,123,85,75,85,108,99,123,85,73,85,109,99,123,85,71,85,70,99,123,85,69,85,106,99,123,85,107,85,66,99,123,85,110,85,104,99,123,85,76,85,105,99,123,85,102,85,68,99,85,67,84,76,79,79,85,86,12,85,65,85,71,84,74,90,123,85,103,67,100,85,101,12,85,79,85,114,126,85,65,85,115,84,74,99,123,85,123,67,100,85,101,12,85,65,85,125,85,65,85,112,84,74,99,123,85,98,85,113,99,84,76,90,123,85,79,87,76,100,87,77,87,78,90,123,85,79,85,76,99,123,85,77,85,117,99,123,85,75,85,66,99,123,85,73,85,111,99,123,85,71,85,14,99,123,85,69,85,68,99,85,67,69,76,-1,97,79,90,123,85,86,79,79,85,86,12,99,84,76,99,123,85,77,100,87,74,87,76,87,77,87,78,90,123,85,79,85,97,99,123,85,77,85,104,99,123,85,75,85,126,99,123,85,73,85,68,99,123,85,71,85,74,99,85,67,84,76,87,78,90,123,85,79,85,127,99,123,85,77,85,104,99,123,85,75,85,74,99,123,85,73,85,108,99,123,85,71,85,68,99,85,67,84,76,85,124,84,77,90,123,85,103,67,100,85,101,12,85,79,85,125,126,85,65,85,122,84,74,99,123,85,123,67,100,85,101,12,85,65,85,125,85,65,85,69,84,74,99,123,85,120,67,121,85,120,12,85,118,12,99,123,85,78,87,78,90,123,85,79,85,125,99,123,85,77,85,104,99,123,85,75,85,74,99,123,85,73,85,108,99,123,85,71,85,68,99,85,67,84,76,99,123,85,119,85,15,99,84,76,87,78,90,123,85,79,85,122,99,123,85,77,85,68,99,123,85,75,85,116,99,123,85,73,85,117,99,85,67,69,76,-1,97,79,99,123,85,75,79,74,99,84,76,71,75,100,87,74,87,79,87,76,87,77,87,78,90,123,85,79,85,110,99,123,85,77,85,111,99,123,85,75,85,108,99,123,85,73,85,109,99,123,85,71,85,70,99,123,85,69,85,106,99,123,85,107,85,66,99,123,85,110,85,104,99,123,85,76,85,105,99,123,85,102,85,68,99,85,67,84,76,67,87,85,84,12,85,12,85,12,85,12,84,77,85,65,85,73,84,74,90,123,85,103,67,100,85,101,12,85,79,85,65,85,65,85,13,84,74,99,123,85,10,87,75,99,84,76,90,123,85,79,100,87,74,87,76,87,77,87,78,90,123,85,79,85,97,99,123,85,77,85,104,99,123,85,75,85,126,99,123,85,73,85,68,99,123,85,71,85,74,99,85,67,84,76,79,79,85,78,12,85,11,84,77,90,123,85,103,67,100,85,101,12,85,79,85,125,126,85,65,85,122,84,74,99,123,85,123,67,100,85,101,12,85,65,85,125,85,65,85,102,84,74,99,123,85,120,67,121,85,120,12,85,118,12,99,123,85,78,87,78,90,123,85,79,85,8,99,123,85,77,85,111,99,123,85,75,85,109,99,123,85,73,85,117,99,123,85,71,85,68,99,123,85,69,85,109,99,123,85,107,85,117,99,85,67,84,76,99,84,76,87,78,90,123,85,79,85,122,99,123,85,77,85,68,99,123,85,75,85,116,99,123,85,73,85,117,99,85,67,69,76,-1,97,79,99,123,85,77,100,87,74,100,87,77,87,78,90,123,85,79,85,76,99,123,85,77,85,117,99,123,85,75,85,66,99,123,85,73,85,111,99,123,85,71,85,14,99,123,85,69,85,68,99,85,67,69,76,-1,97,79,87,78,90,123,85,79,85,76,99,123,85,77,85,117,99,123,85,75,85,66,99,123,85,73,85,111,99,123,85,71,85,14,99,123,85,69,85,68,99,85,67,69,76,-1,97,79,99,123,85,75,79,75,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,68,99,123,85,75,85,9,99,123,85,73,85,111,99,123,85,71,85,109,99,123,85,69,85,70,99,85,67,69,76,-1,97,79,71,72,79,75,85,6,12,123,85,7,12,83,111,76,84,76,109,79,79,75,85,4,12,123,85,7,12,83,111,77,84,76,109,79,87,72,85,5,12,123,85,7,12,83,111,74,84,76,109,79,79,76,85,2,111,75,99,79,76,123,85,2,12,83,79,76,85,81,12,84,76,109,79,85,75,85,77,14,85,76,95,123,80,1539,109,79,79,79,85,83,12,80,1552,87,69,85,3,12,79,79,85,83,12,79,76,99,116,1552,79,76,127,79},P={{K={},C={127,78},P={},U=nil,nParams=0},{K={15,225,{187,181,251,4,7,72,142,163,218,210,39,70,107},{170,169,234,26},{189,167,213,11,53,106,117,172,196,231,14,9},{165,166,212,26,57}},C={85,78,85,78,65,85,79,95,123,80,97,109,79,79,78,85,76,12,67,77,85,76,12,85,74,12,95,123,72,80,97,109,79,79,78,85,76,12,67,77,85,76,12,85,75,12,95,80,120,118,93,78,116,120,127,78},P={},U={{1,3}},nParams=1},{K={100,7,2,{186,180,250,5,6,73,143,162,219,211,38,71,106},{181,166,213,21},{188,166,212,10,52,107,116,173,197,230,15,8},{166,165,215,25,58}},C={85,78,85,79,94,85,76,95,123,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,75,12,95,123,72,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,72,12,95,80,120,124,93,78,116,120,127,78},P={},U={{1,3}},nParams=1},{K={12,144,{131,167,234,30},{140,171,254,26,63},{168},{176,171,210,22,61,92,117,188,225,230,18,80,101,128,174,247},{179,168,209,21,62,95,118,191,225,227,24,95},0,1,{166,168,209},{187,167,200},{186,174,223},{159,177,197,229},{190,176,196,228,16,85}},C={85,78,85,78,65,85,79,95,123,80,65,109,79,87,78,80,47,67,76,85,77,12,87,79,85,74,12,87,76,85,75,12,85,74,12,96,87,76,85,72,12,85,74,12,119,85,73,85,70,84,77,71,79,87,77,123,85,71,12,83,87,74,85,68,12,87,74,85,69,12,87,74,85,68,12,96,79,79,65,107,84,76,109,79,87,75,67,66,85,67,12,84,79,109,79,116,47,127,78},P={},U={{1,3},{0,7},{1,5},{1,2},{1,1},{0,8}},nParams=1},{K={{186,165,240,1,41},{128,164,233,29},{141,170,255,27,62},{166,169,252,5,42,74,154,185,219},{189,161,206},{188,168,217},{177,184,199,27,38,79},{167,188,198,30,61,98,109,189,220},{154,169,211},0.15,{179,160,211,19},{178,174,212,22,57,72,84,171,206,227,2},{169,165,201,228},{188,176,218,232,55,86,77,136,203,244,10,53,112,158,167},{181,167,222},{168,186,209,230},{169,144,197,233,110},{155,167,194,232,14,86,108,137,216},1,{175,187,206,254},{84,189,200,252},{117,182,194,253,19,80,127,142},122,90,{82,189,216,249,1,114,117,129,161},{70,188,217,225,7,92,118,134}},C={79,78,85,78,67,79,85,76,12,87,78,79,79,87,79,85,77,12,84,76,87,79,85,74,12,87,79,85,75,12,84,77,99,87,76,123,85,72,12,83,87,77,67,73,85,70,12,85,71,67,68,85,69,12,85,66,12,67,68,85,67,12,85,64,12,84,77,90,123,85,65,67,94,85,95,12,79,78,85,78,12,87,79,85,74,12,96,87,79,85,75,12,87,79,85,74,12,96,119,85,92,84,76,99,84,74,123,85,93,12,83,84,79,109,79,87,74,85,78,12,85,90,67,91,79,78,85,78,12,84,79,87,75,90,123,85,92,85,88,99,85,89,84,76,87,79,85,86,12,88,88,99,87,77,85,78,12,85,90,67,91,79,78,85,78,12,84,79,87,75,90,123,85,92,85,88,99,85,89,84,76,87,79,85,86,12,88,88,99,87,79,85,87,12,79,78,85,78,12,84,79,109,79,127,78},P={},U={{0,9},{1,1},{0,10},{1,4},{1,5},{0,0}},nParams=2}},U={{0,4},{0,1},{0,2},{0,3},{0,0},{1,0},{0,9},{0,10},{0,8},{0,11},{0,6},{0,7}},nParams=2},{K={{162,165,241,17},1,30,2,40,3,53,4,42,5,62,6,7,45,8,52,90,{178,165,217,236,50,91,126},{186,179,200,231,43,90,122},{},{67,185,220,228,2,89,115,131},{71,181,208,238},{81,187,196,239},{85,186,223,254,6},{70,169,192,248,11,82,103},{81,178,210,234,9,88,113},{82,167,198,235},49,{124,129,218,252,13},{111,136,215,245},116,22,51,41,46,9,57,54,28,59,10,55,11,63,{91,159,164,207,10,99},{127,131,166,204,43,22,107},{74,147,184,199,20,38},{75,156,184,202,15,58,68,109},{73,176,165,201,78},{115,144,186},0,38,{115,145,170,205},{98,149,184,217,242,29,84,122,130,220,255,13,32,119,133,186},44,24,47,255,14,56,15,12,{108,109,180,198},{110,109,174,222},{107,107,168,220,237,9,126,123,128,160},25,34,19,61,96,117,13,109,106,16,17,104,18,20,108,21,99,23,{126,121,140,175,240,5,31,72,150,185,219},{22,125,147,188,207,10,98},0.5,{11,119,147,173,199,57,61,70,109,168,129},240,{16,121,140,184,252,61,56,69,99,178,217,233,10,72},{23,116,146,165,209},{16,119,133,167,196,18,51},{0,122,131,159,213,16,39,74,117,171,206,204,15,94,121,136,162,251,36,38,64,145,182,195},27,32,{24,71,156,160,207,241,50},{24,70,143},{1,75,137,167,201,198,41,64,120,139,210,165,47,40,117,151,167},144,{8,74,159,177,221}},C={79,79,123,72,80,71,109,79,90,71,79,79,79,85,78,79,79,85,78,12,123,72,80,31,109,79,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,72,99,123,85,66,85,67,99,123,85,64,85,65,99,85,94,84,76,99,79,79,85,95,79,79,85,95,12,123,72,80,44,109,79,90,99,79,79,85,92,79,79,85,92,12,123,72,80,58,109,79,85,93,99,79,79,85,90,79,79,85,90,12,123,72,80,200,109,79,111,79,99,79,79,85,91,79,79,85,91,12,123,72,80,217,109,79,86,99,79,79,85,88,79,79,85,88,12,123,72,80,230,109,79,124,99,90,123,85,89,79,79,85,92,12,99,123,85,95,79,79,85,95,12,99,123,85,86,90,99,123,85,87,124,99,123,85,84,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,72,99,123,85,66,85,67,99,123,85,64,85,65,99,85,94,84,76,99,123,85,88,79,79,85,88,12,99,71,76,85,71,71,77,85,66,85,66,65,85,85,95,123,80,353,109,79,67,82,85,83,12,79,76,85,95,12,79,76,85,89,12,84,76,72,80,287,79,76,85,89,87,78,90,123,85,79,85,80,99,123,85,77,85,80,99,123,85,75,85,80,99,85,94,84,76,99,116,287,100,87,79,87,78,90,123,85,79,85,81,99,123,85,77,85,110,99,123,85,75,85,111,99,123,85,73,85,108,99,85,94,69,76,-1,97,79,71,74,100,87,76,87,77,87,74,87,79,87,78,90,123,85,79,85,109,99,123,85,77,85,106,99,123,85,75,85,74,99,123,85,73,85,72,99,123,85,71,85,107,99,123,85,69,85,107,99,123,85,66,85,104,99,123,85,64,85,74,99,123,85,109,85,105,99,123,85,102,85,103,99,123,85,100,85,101,99,85,94,84,76,67,98,85,99,12,85,74,85,74,85,74,84,77,85,73,84,77,90,123,85,79,79,74,99,84,76,90,123,85,96,87,75,99,123,85,97,67,126,85,127,12,85,124,85,124,85,124,85,125,84,74,99,123,85,122,67,126,85,127,12,85,79,85,124,85,79,85,125,126,84,74,99,123,85,123,118,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,110,99,123,85,75,85,120,99,123,85,73,85,110,99,123,85,71,85,68,99,123,85,69,85,101,99,123,85,66,85,74,99,85,94,69,76,-1,97,79,71,75,87,77,100,87,79,87,78,90,123,85,79,85,121,99,123,85,77,85,118,99,123,85,75,85,108,99,123,85,73,85,108,99,123,85,71,85,72,99,123,85,69,85,65,99,85,94,69,76,-1,97,79,90,123,85,122,67,126,85,127,12,85,79,85,124,85,79,85,124,84,74,99,84,76,71,72,100,87,76,87,74,87,77,87,79,87,78,90,123,85,79,85,64,99,123,85,77,85,72,99,123,85,75,85,118,99,123,85,73,85,65,99,123,85,71,85,68,99,123,85,69,85,104,99,123,85,66,85,74,99,123,85,64,85,105,99,123,85,109,85,103,99,123,85,102,85,101,99,85,94,84,76,67,98,85,99,12,85,119,85,119,85,119,84,77,85,124,85,71,84,74,90,123,85,122,67,126,85,127,12,85,79,85,124,85,124,85,125,84,74,99,123,85,96,87,75,99,123,85,123,118,99,84,76,90,123,85,79,79,75,99,123,85,77,87,77,87,74,100,87,79,87,78,90,123,85,79,85,116,99,123,85,77,85,104,99,123,85,75,85,74,99,123,85,73,85,105,99,123,85,71,85,103,99,123,85,69,85,101,99,85,94,69,76,-1,97,79,90,123,85,79,100,87,76,87,77,87,79,87,78,90,123,85,79,85,81,99,123,85,77,85,105,99,123,85,75,85,117,99,123,85,73,85,101,99,123,85,71,85,107,99,85,94,84,76,79,79,85,78,12,85,114,84,77,90,123,85,122,67,126,85,127,12,85,79,85,115,126,85,79,85,124,84,74,99,123,85,97,67,126,85,127,12,85,124,85,115,85,124,85,124,84,74,99,123,85,112,67,113,85,112,12,85,14,12,99,123,85,78,87,78,90,123,85,79,85,15,99,123,85,77,85,72,99,123,85,75,85,65,99,123,85,73,85,108,99,123,85,71,85,101,99,123,85,69,85,65,99,123,85,66,85,108,99,85,94,84,76,99,84,76,87,78,90,123,85,79,85,116,99,123,85,77,85,101,99,123,85,75,85,12,99,123,85,73,85,108,99,85,94,69,76,-1,97,79,99,123,85,77,100,87,76,87,77,100,87,79,87,78,90,123,85,79,85,13,99,123,85,77,85,103,99,123,85,75,85,105,99,123,85,73,85,10,99,123,85,71,85,101,99,85,94,84,76,87,78,90,123,85,79,85,74,99,123,85,77,85,117,99,123,85,75,85,12,99,123,85,73,85,105,99,123,85,71,85,111,99,123,85,69,85,111,99,123,85,66,85,101,99,123,85,64,85,108,99,123,85,109,85,110,99,123,85,102,85,68,99,123,85,100,85,11,99,123,85,115,85,8,99,123,85,9,85,8,99,123,85,116,85,6,99,123,85,114,85,7,99,123,85,4,85,6,99,123,85,5,85,2,99,123,85,3,85,6,99,123,85,13,85,7,99,123,85,0,85,1,99,123,85,30,85,6,99,123,85,81,85,31,99,123,85,28,85,1,99,85,94,69,76,-1,97,79,90,123,85,122,67,126,85,127,12,85,124,85,0,85,124,85,0,84,74,99,123,85,29,67,26,85,127,12,85,124,85,27,84,76,99,123,85,97,67,126,85,127,12,85,79,85,76,126,85,27,85,124,84,74,99,123,85,24,67,98,85,99,12,85,25,85,25,85,25,84,77,99,123,85,78,87,78,90,123,85,79,85,13,99,123,85,77,85,106,99,123,85,75,85,72,99,85,94,84,76,99,84,76,87,78,90,123,85,79,85,116,99,123,85,77,85,101,99,123,85,75,85,12,99,123,85,73,85,108,99,123,85,71,85,76,99,123,85,69,85,105,99,123,85,66,85,74,99,123,85,64,85,85,99,85,94,69,76,-1,97,79,99,123,85,75,100,87,76,87,77,87,79,87,78,90,123,85,79,85,81,99,123,85,77,85,105,99,123,85,75,85,117,99,123,85,73,85,101,99,123,85,71,85,107,99,85,94,84,76,87,78,90,123,85,79,85,109,99,123,85,77,85,101,99,123,85,75,85,107,99,123,85,73,85,101,99,123,85,71,85,106,99,123,85,69,85,108,99,123,85,66,85,101,99,123,85,64,85,68,99,85,94,84,76,85,9,84,77,90,123,85,122,67,126,85,127,12,85,79,85,74,126,85,79,85,124,84,74,99,123,85,112,67,113,85,112,12,85,14,12,99,123,85,78,87,78,90,123,85,79,85,109,99,123,85,77,85,101,99,123,85,75,85,107,99,123,85,73,85,101,99,123,85,71,85,106,99,123,85,69,85,108,99,123,85,66,85,101,99,123,85,64,85,68,99,85,94,84,76,99,123,85,22,67,113,85,22,12,85,23,12,99,84,76,87,78,90,123,85,79,85,116,99,123,85,77,85,101,99,123,85,75,85,12,99,123,85,73,85,108,99,123,85,71,85,76,99,123,85,69,85,105,99,123,85,66,85,74,99,123,85,64,85,85,99,85,94,69,76,-1,97,79,99,123,85,73,100,87,76,87,77,100,87,79,87,78,90,123,85,79,85,104,99,123,85,77,85,74,99,123,85,75,85,105,99,123,85,73,85,103,99,123,85,71,85,101,99,85,94,69,76,-1,97,79,90,123,85,122,67,126,85,127,12,85,79,85,124,85,124,85,79,84,74,99,123,85,97,67,126,85,127,12,85,124,85,124,85,79,85,79,126,84,74,99,123,85,78,87,78,90,123,85,79,85,81,99,123,85,77,85,110,99,123,85,75,85,65,99,123,85,73,85,101,99,85,94,84,76,99,123,85,20,124,99,84,76,87,78,90,123,85,79,85,109,99,123,85,77,85,108,99,123,85,75,85,74,99,123,85,73,85,72,99,123,85,71,85,85,99,123,85,69,85,101,99,85,94,69,76,-1,97,79,99,123,85,71,79,72,99,84,76,90,123,85,122,67,126,85,127,12,85,79,85,124,85,124,85,125,84,74,99,123,85,123,118,99,123,85,78,87,78,90,123,85,79,85,104,99,85,94,84,76,99,84,76,99,123,85,75,100,87,76,100,87,79,87,78,90,123,85,79,85,109,99,123,85,77,85,108,99,123,85,75,85,74,99,123,85,73,85,72,99,123,85,71,85,85,99,123,85,69,85,101,99,85,94,69,76,-1,97,79,87,78,90,123,85,79,85,109,99,123,85,77,85,108,99,123,85,75,85,74,99,123,85,73,85,72,99,123,85,71,85,85,99,123,85,69,85,101,99,85,94,69,76,-1,97,79,99,100,100,87,79,87,78,90,123,85,79,85,15,99,123,85,77,85,72,99,123,85,75,85,74,99,123,85,73,85,65,99,123,85,71,85,101,99,123,85,69,85,74,99,85,94,69,76,-1,97,-1,91,74,84,76,87,78,90,123,85,79,85,109,99,123,85,77,85,101,99,123,85,75,85,106,99,123,85,73,85,72,99,123,85,71,85,65,99,123,85,69,85,68,99,85,94,69,76,-1,97,79,71,73,87,72,100,79,74,123,85,21,12,83,87,78,90,123,85,79,85,18,99,123,85,77,85,117,99,123,85,75,85,111,99,123,85,73,85,72,99,123,85,71,85,107,99,123,85,69,85,118,99,123,85,66,85,108,99,123,85,64,85,101,99,123,85,109,85,15,99,123,85,102,85,72,99,123,85,100,85,65,99,123,85,115,85,108,99,123,85,9,85,101,99,123,85,116,85,65,99,123,85,114,85,108,99,123,85,4,85,109,99,123,85,5,85,110,99,123,85,3,85,19,99,123,85,13,85,101,99,85,94,69,76,-1,97,79,111,76,84,76,109,79,111,77,71,70,79,76,85,16,111,74,99,79,76,85,17,111,75,99,87,72,79,72,85,46,12,111,72,84,76,109,79,79,76,123,85,16,12,83,79,76,85,95,12,124,84,77,109,79,79,76,123,85,17,12,83,79,76,85,89,12,84,76,109,79,85,115,85,115,65,85,47,95,123,80,2406,109,79,79,79,85,91,12,80,2423,87,71,85,44,12,79,79,85,91,12,79,76,99,116,2423,79,76,127,79},P={{K={},C={127,78},P={},U=nil,nParams=0},{K={{175,165,242,2,45,87,175,189,214,225},{184,129,244,24,127},{128,163,233},0,{177,170,211,23,60,93,116,189,243,231,14,76,117,134,180,203,25,50,69},{168}},C={87,78,85,78,67,79,85,76,12,85,77,85,77,85,77,87,79,85,74,12,85,75,12,84,74,99,127,78},P={},U={{1,5},{1,4}},nParams=0},{K={{156,165,245,6,63},1,24,2,47,3,46,4,5,53,6,52,90,{186,190,197,238,43,2},{156,160,197,239,8,117,72},40,25,63,0,22,59,56,54,13,0.4,{85,178,198,228,17,84,122,131},{83,154,223,227,84},{105,186,192},8,{90,136,195,244},{68,131,215,247},14,51,34,{94,135,204,243,0,50},28,{82,137,163,243,23,58,79,141,190,204,212,42,81,102,147,200,241,26,37,118,147,177},{82,133,168,233,2,13,68,138,178,204,239,61,80,103,149,202},30,44,62,7,{91,129,179,237,19,12,83,138,162,193,232,111,117,98,143,221,253},{85,154,179,235,24,33,84}},C={67,78,79,78,69,79,77,71,77,71,76,71,79,68,79,76,77,105,74,105,75,79,79,79,76,79,77,69,76,76,71,75,71,74,79,74,71,77,79,74,86,112,80,385,100,87,78,87,79,87,76,100,87,77,87,74,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,72,99,123,85,70,85,71,99,123,85,68,85,69,99,85,66,84,76,67,67,85,64,12,85,65,85,65,85,65,69,77,-1,97,79,90,123,85,79,87,77,87,74,90,123,85,79,85,94,99,123,85,77,85,71,99,123,85,75,85,65,99,123,85,73,85,69,99,123,85,70,85,95,99,123,85,68,85,65,99,85,66,84,76,85,92,85,68,84,77,99,100,100,87,78,87,79,87,77,87,74,90,123,85,79,85,93,99,123,85,77,85,90,99,123,85,75,85,91,99,123,85,73,85,95,99,123,85,70,85,88,99,85,66,84,76,79,75,85,89,85,86,84,74,90,123,85,87,67,84,85,85,12,85,92,85,82,85,92,85,92,84,74,99,123,85,83,67,84,85,85,12,85,79,85,82,126,85,79,85,92,84,74,99,123,85,80,87,74,90,123,85,79,85,81,99,123,85,77,85,110,99,123,85,75,85,72,99,123,85,73,85,88,99,123,85,70,85,95,99,85,66,84,76,99,84,76,87,74,90,123,85,79,85,81,99,123,85,77,85,95,99,123,85,75,85,111,99,123,85,73,85,72,99,85,66,69,76,-1,97,-1,91,76,84,76,90,123,85,108,87,75,99,123,85,83,67,84,85,85,12,85,79,85,92,85,92,85,109,84,74,99,123,85,106,85,79,99,123,85,107,118,99,84,76,87,74,90,123,85,79,85,104,99,123,85,77,85,110,99,123,85,75,85,105,99,123,85,73,85,110,99,123,85,70,85,102,99,123,85,68,85,95,99,123,85,103,85,65,99,85,66,69,76,-1,97,79,71,72,87,72,79,72,85,100,12,111,79,84,76,109,79,87,73,85,101,12,79,75,79,72,99,105,72,116,95,127,78},P={{K={{191,161,232},{138,164,240,16},{169,167,243,19,7,66}},C={87,78,123,85,78,12,83,87,79,84,76,109,79,87,76,67,79,85,76,12,84,79,109,79,127,78},P={},U={{0,7},{1,5},{0,8}},nParams=0}},U={{0,2},{0,3},{0,4},{0,1},{0,0},{1,5},{0,6},{1,2},{0,7}},nParams=1},{K={1,2,{158,167,247,4,61},{173,178,235,3,32,73,140},{180,173,211,12,34,71,121},{133,168,195,21,52},{145,166,199,27,32},{188,187,215,18,60,69,112}},C={85,78,85,78,107,85,79,95,123,80,65,109,79,79,76,80,37,67,76,87,78,85,77,12,69,79,77,71,75,71,74,71,77,68,77,74,75,105,72,105,73,79,77,79,74,79,75,69,76,76,71,73,71,72,79,72,71,75,79,72,86,112,80,3,79,73,123,85,74,12,83,84,79,109,79,116,107,67,75,85,72,12,87,78,85,73,12,84,79,109,79,67,75,85,72,12,87,78,85,77,12,84,79,109,79,116,37,87,78,85,73,79,79,99,87,79,87,78,85,73,12,84,79,109,79,127,78},P={},U={{1,2},{1,8}},nParams=3},{K={15,225,{154,167,252,26,43},{137,174,241,19},{191,184,212,17,63,70,115},{167,168,205,12,52},1,116,2,3,90,{177},{171,181,196,229,59,68,109,132},{173,180,209,245},{138,179,195,240,41},{185,166,223,247,52,93,120},{191,166,201,229,40,81},{169,162,200,224,51,124,99,131,210},{144,179,217},0.15,{69,182,197,229},{68,184,194,224,15,94,66,157,184,245,20},{83,175,211,238},{70,186,192,226,13,92,87,130,177,254,16,63,74,148,189},{75,169,192},{71,188,214,230,2,79,122,152,171,249,33,63,68,147,166,221,228,47,80,99,134,196},{86,178,215,247},{83,182,195,227,2},{92,133,192,228,60,50,121,158,187,208,25,34,77,110,187,201},0.4,0,{72,130,215,255,9,34,120,152}},C={85,78,85,78,65,85,79,95,123,80,82,109,79,67,76,85,77,12,87,78,85,74,12,79,79,84,76,72,80,162,87,78,85,75,87,79,90,123,85,72,85,73,99,123,85,70,85,73,99,123,85,71,85,73,99,85,68,84,76,99,87,76,85,69,12,85,66,12,85,67,87,78,85,75,12,99,67,64,87,78,85,65,12,69,79,77,71,74,71,77,71,76,68,76,77,74,105,75,105,72,79,76,79,77,79,74,69,76,76,71,72,71,75,79,75,71,74,79,75,86,112,80,166,87,77,123,85,94,12,83,79,72,67,95,85,92,12,85,93,67,90,85,91,12,85,88,12,67,90,85,89,12,85,86,12,84,77,90,123,85,87,85,72,99,84,74,123,85,84,12,83,84,79,109,79,87,77,123,85,94,12,83,79,72,85,85,12,67,95,85,92,12,85,93,67,90,85,91,12,85,88,12,67,90,85,89,12,85,86,12,84,77,90,123,85,82,85,83,99,84,74,123,85,84,12,83,84,79,109,79,116,46,127,78,116,162,87,78,85,75,79,79,99,87,76,85,69,12,85,66,12,85,67,87,78,85,75,12,99,67,64,87,78,85,65,12,69,79,77,71,71,71,70,71,73,68,73,70,71,105,68,105,69,79,73,79,70,79,71,69,76,76,71,69,71,68,79,68,71,71,79,68,86,112,80,465,87,77,123,85,94,12,83,79,69,67,95,85,92,12,85,93,67,90,85,91,12,85,88,12,67,90,85,89,12,85,86,12,84,77,90,123,85,87,85,72,99,84,74,123,85,84,12,83,84,79,109,79,87,77,123,85,94,12,83,79,69,85,85,12,67,95,85,92,12,85,93,67,90,85,91,12,85,88,12,67,90,85,89,12,85,86,12,84,77,90,123,85,82,85,83,99,84,74,123,85,84,12,83,84,79,109,79,116,345,87,77,123,85,94,12,83,87,78,85,65,12,79,79,12,67,95,85,92,12,85,93,67,90,85,91,12,85,88,12,67,90,85,89,12,85,86,12,84,77,90,123,85,87,85,80,99,84,74,123,85,84,12,83,84,79,109,79,87,77,123,85,94,12,83,87,78,85,65,12,79,79,12,85,85,12,67,95,85,92,12,85,93,67,90,85,91,12,85,88,12,67,90,85,89,12,85,86,12,84,77,90,123,85,82,85,80,99,84,74,123,85,84,12,83,84,79,109,79,87,74,85,81,12,87,78,85,75,12,69,79,-1,127,-1},P={},U={{1,2},{0,0},{1,7},{0,8},{1,1}},nParams=2},{K={{184,171,251,19,32,65,152},{171},{162,175,240,19},{185,174,236,30,45,75,154},{179,186,197,25,36,77},{184,170,206},{166,189,199,31,60,99,108,188,221},{157,174,212},0.15,{176,163,208,16},{179,175,213,23,56,73,85,170,207,226,3},{166,186,198,27},{189,177,219,233,54,87,76,137,202,245,11,52,113,159,166},{182,164,221},{168,189,222,227,46,91,101,140},180,0,{173,185,204,252},100,7,2,{78,169,197,224,14,87,98},{81,179,200,239},{86,159,218,230,81},1,38,28,{70,189,196,224,11,74,99,138,132,240,25,59,66,145,163,252,238,37,82},{81}},C={87,78,85,78,87,78,85,78,12,72,99,87,79,85,79,12,85,76,12,85,77,87,78,85,78,12,99,87,76,123,85,74,12,83,87,79,85,79,12,85,75,12,67,72,85,73,12,85,70,67,71,85,68,12,85,69,12,67,71,85,66,12,85,67,12,84,77,90,123,85,64,87,78,85,78,12,123,80,29,109,79,85,65,123,72,80,21,109,79,85,94,99,84,74,123,85,95,12,83,84,79,109,79,85,92,85,93,94,85,90,95,123,80,51,109,79,87,78,85,91,12,121,87,77,81,80,169,87,76,123,85,74,12,83,87,79,67,72,85,73,12,85,70,67,71,85,68,12,85,69,12,67,71,85,66,12,85,67,12,84,77,90,123,85,88,87,78,85,78,12,123,80,138,109,79,67,89,85,73,12,85,86,85,94,85,94,85,87,87,77,85,84,65,107,84,74,123,72,80,151,109,79,67,89,85,73,12,85,86,85,94,85,94,85,87,84,74,99,84,74,123,85,95,12,83,84,79,109,79,116,286,87,76,123,85,74,12,83,87,79,67,72,85,73,12,85,70,67,71,85,68,12,85,69,12,67,71,85,66,12,85,67,12,84,77,90,123,85,88,87,78,85,78,12,123,80,353,109,79,67,89,85,73,12,85,86,85,94,85,94,87,74,85,85,12,85,82,12,85,87,107,84,74,123,72,80,266,109,79,67,89,85,73,12,85,86,85,94,85,94,85,87,84,74,99,84,74,123,85,95,12,83,84,79,109,79,127,78},P={},U={{1,2},{1,7},{0,8},{1,3},{1,4}},nParams=0}},U={{0,4},{0,3},{0,0},{0,2},{0,1},{1,0},{0,5},{0,8},{0,6},{0,7}},nParams=2},{K={{162,165,241,17},1,24,2,51,3,52,4,62,90,{178,171,192,31,35,66,114},{178,161,210,18},{179,181,209,195,55,84,109},{172,191,194,239,54,70,103},{178,189,198,230},{184,178,199,239,57,82,104,136},{186,184,205,227},{174,180,219,224},{168,183,194,243,59},{189,190,193,227,54,89,104},{84,161,192,237},47,46,5,53,6,{85,183,204,235},{82,155,222,226,85},{102,133,207},0,8,28,7,40,59,9,55,10,63,{80,132,175,244,1,120},{114,158,171,241,38,11,102},255,{70,129,181,247,2,39,73,144},12,0.5,{88,159,170,201,22,35,121,110,176,223,253},{76,151,169,214,21,32,24},49,22,56,54,14,{102,151,190,220},{102,150,165,193,224,52,115,102,141,221},{118,159,170,222,218,27,94,99,133,212,255,15,44,110},{96,158,189,223,230,41},34,23,38,{119,158,165,202,233,43},15,25,57,{108,102,175,227,249,12,75,118,153,183,226,48,35,66,149,180,206,231,8,90,108,141,218,255},{101,106,172,193,248,33,82,112,137,160},{100,107,173,192,249,39,88,114,140,171},{99,105,171,197,235,35,80,98,139,180},{98,104,170,196,234,43,90,118,153,162},{125,103,149,203,245,42,53,108,132,167,206,73,5,88},{124,102,148,202,244,43,52,109,133,166,207,72,21,70,118,183},{97,111,150},100,{114,96,133,219,231}},C={79,79,85,78,79,79,85,78,12,123,72,80,96,109,79,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,85,71,84,76,99,79,79,85,68,79,79,85,68,12,123,72,80,8,109,79,67,69,85,66,12,85,67,12,99,79,79,85,64,79,79,85,64,12,123,72,80,25,109,79,124,99,79,79,85,65,79,79,85,65,12,123,72,80,39,109,79,111,79,99,79,79,85,94,79,79,85,94,12,123,72,80,52,109,79,86,99,79,79,85,95,79,79,85,95,12,123,72,80,197,109,79,124,99,90,123,85,79,67,92,99,123,85,93,124,99,123,85,90,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,85,71,84,76,99,123,85,95,79,79,85,95,12,99,71,76,124,71,77,87,79,100,87,76,87,78,90,123,85,79,85,76,99,123,85,77,85,91,99,123,85,75,85,88,99,123,85,73,85,88,99,123,85,89,85,86,99,123,85,87,85,72,99,85,71,69,76,-1,97,79,90,123,85,84,67,85,85,82,12,85,79,85,83,85,79,85,83,84,74,99,84,76,71,74,100,87,77,87,74,87,79,87,76,87,78,90,123,85,79,85,80,99,123,85,77,85,86,99,123,85,75,85,91,99,123,85,73,85,72,99,123,85,89,85,70,99,123,85,87,85,81,99,123,85,110,85,111,99,123,85,80,85,108,99,123,85,109,85,106,99,123,85,107,85,104,99,85,71,84,76,67,105,85,102,12,85,103,85,103,85,103,84,77,85,83,85,73,84,74,90,123,85,84,67,85,85,82,12,85,83,85,76,85,83,85,76,84,74,99,123,85,100,67,85,85,82,12,85,79,85,101,126,85,98,85,83,84,74,99,123,85,99,67,96,85,82,12,85,79,85,98,84,76,99,84,76,90,123,85,79,100,87,77,100,87,76,87,78,90,123,85,79,85,109,99,123,85,77,85,88,99,123,85,75,85,111,99,123,85,73,85,86,99,123,85,89,85,97,99,123,85,87,85,104,99,85,71,69,76,-1,97,79,87,78,90,123,85,79,85,109,99,123,85,77,85,88,99,123,85,75,85,111,99,123,85,73,85,86,99,123,85,89,85,97,99,123,85,87,85,104,99,85,71,69,76,-1,97,79,99,100,100,87,77,87,79,87,76,87,78,90,123,85,79,85,126,99,123,85,77,85,108,99,123,85,75,85,127,99,123,85,73,85,104,99,123,85,89,85,124,99,85,71,84,76,79,79,85,78,12,85,125,84,77,90,123,85,84,67,85,85,82,12,85,79,85,83,85,79,85,83,84,74,99,123,85,122,67,69,85,122,12,85,123,12,99,123,85,120,67,69,85,120,12,85,121,12,99,123,85,78,87,78,90,123,85,79,85,101,99,123,85,77,85,108,99,123,85,75,85,124,99,123,85,73,85,91,99,123,85,89,85,104,99,85,71,84,76,99,84,76,87,78,90,123,85,79,85,125,99,123,85,77,85,104,99,123,85,75,85,118,99,123,85,73,85,88,99,85,71,69,76,-1,97,-1,91,76,84,76,87,78,90,123,85,79,85,119,99,123,85,77,85,108,99,123,85,75,85,74,99,123,85,73,85,72,99,85,71,69,76,-1,97,79,71,75,100,87,77,87,74,87,79,87,76,87,78,90,123,85,79,85,80,99,123,85,77,85,86,99,123,85,75,85,91,99,123,85,73,85,72,99,123,85,89,85,70,99,123,85,87,85,81,99,123,85,110,85,111,99,123,85,80,85,108,99,123,85,109,85,106,99,123,85,107,85,104,99,85,71,84,76,67,105,85,102,12,85,103,85,103,85,103,84,77,85,83,85,89,84,74,90,123,85,84,67,85,85,82,12,85,79,85,83,85,83,85,116,84,74,99,123,85,117,87,75,99,84,76,90,123,85,79,100,87,77,87,79,87,76,87,78,90,123,85,79,85,126,99,123,85,77,85,108,99,123,85,75,85,127,99,123,85,73,85,104,99,123,85,89,85,124,99,85,71,84,76,79,79,85,78,12,85,114,84,77,90,123,85,84,67,85,85,82,12,85,79,85,101,126,85,79,85,83,84,74,99,123,85,100,67,85,85,82,12,85,83,85,101,85,83,85,83,84,74,99,123,85,122,67,69,85,122,12,85,123,12,99,123,85,78,87,78,90,123,85,79,85,115,99,123,85,77,85,86,99,123,85,75,85,72,99,123,85,73,85,88,99,123,85,89,85,104,99,123,85,87,85,72,99,123,85,110,85,88,99,85,71,84,76,99,84,76,87,78,90,123,85,79,85,125,99,123,85,77,85,104,99,123,85,75,85,118,99,123,85,73,85,88,99,85,71,69,76,-1,97,79,99,123,85,77,100,87,77,100,87,76,87,78,90,123,85,79,85,109,99,123,85,77,85,88,99,123,85,75,85,111,99,123,85,73,85,86,99,123,85,89,85,97,99,123,85,87,85,104,99,85,71,69,76,-1,97,79,87,78,90,123,85,79,85,109,99,123,85,77,85,88,99,123,85,75,85,111,99,123,85,73,85,86,99,123,85,89,85,97,99,123,85,87,85,104,99,85,71,69,76,-1,97,79,99,123,85,75,79,75,99,123,85,73,79,74,99,84,76,87,78,90,123,85,79,85,109,99,123,85,77,85,104,99,123,85,75,85,112,99,123,85,73,85,86,99,123,85,89,85,72,99,123,85,87,85,70,99,85,71,69,76,-1,97,79,71,72,87,72,100,79,75,85,92,12,123,85,113,12,83,87,78,90,123,85,79,85,125,99,123,85,77,85,104,99,123,85,75,85,118,99,123,85,73,85,88,99,85,71,69,76,-1,97,79,111,76,84,76,109,79,87,72,79,74,85,14,12,111,77,84,76,109,79,87,72,87,70,85,15,12,111,74,84,76,109,79,87,72,87,70,85,14,12,111,75,84,76,109,79,87,72,79,74,85,12,12,111,72,84,76,109,79,87,72,79,74,85,13,12,111,73,84,76,109,79,87,72,79,74,85,10,12,111,70,84,76,109,79,87,72,79,74,85,11,12,111,71,84,76,109,79,79,76,85,8,111,68,99,79,76,123,85,8,12,83,79,79,85,68,12,84,76,109,79,85,9,85,110,94,85,77,95,123,80,1479,109,79,79,79,85,94,12,80,1492,87,67,85,6,12,79,79,85,94,12,79,76,99,116,1492,79,76,127,79},P={{K={},C={127,78},P={},U=nil,nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{166,164,223,24},{163,138,207,19,100},0,{174,177,196,245,61},{173,180,209,245,27,94,124,143,221,226},{162},16,24,{173,185,204,252}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,76,12,85,69,87,79,85,66,12,85,67,12,85,64,12,85,65,107,85,69,85,94,84,74,99,84,74,123,85,95,12,83,84,79,109,79,127,78},P={},U={{0,7},{1,5}},nParams=0},{K={3,2,9,{186,180,250,5,6,73,143,162,219,211,38,71,106},{181,166,213,21},{188,166,212,10,52,107,116,173,197,230,15,8},{166,165,215,25,58},7,49,{183,164,203,25,60,67,98},{160,175,202,11,51},{163,170,223,11},{}},C={85,78,85,79,14,85,76,95,123,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,75,12,95,123,72,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,72,12,95,80,21,85,73,85,73,65,85,70,95,123,80,13,109,79,87,78,85,71,12,80,7,127,78,116,7,87,78,85,71,118,99,87,79,85,68,12,85,69,85,66,99,116,21,127,78},P={},U={{1,2},{1,5}},nParams=1},{K={1,2,{169,163,234,48,33,69,139,165,203,226,10,83,118,146,252,249,22},15,225,{186,172,216,58,62,77,100},{188,171,207,31},{165,170,207,14,54},{161,191,193,14,29,66,116,169,192,216,29,76,113},{183,164,203,25,60,67,98},100,7,{176,191,196,228},{186,176,197,237,59,80,106,138},12,144,{140,183,205,232,48},{174,176,217},{153,183,195,227},{184,182,194,226,22,83}},C={85,78,85,78,107,85,79,95,123,80,88,109,79,87,78,123,85,76,12,83,84,79,80,82,127,78,116,82,85,77,85,77,65,85,74,95,123,80,24,109,79,79,78,85,75,12,85,72,12,87,79,85,73,12,95,123,72,80,5,109,79,79,78,85,70,12,85,72,12,87,79,85,73,12,95,123,80,24,109,79,87,79,85,71,12,72,80,201,85,68,85,69,94,85,79,95,123,80,36,109,79,87,76,85,66,12,80,50,118,93,77,87,76,85,67,12,87,77,84,79,109,79,116,203,87,76,85,67,12,84,78,109,79,116,153,85,64,85,64,65,85,65,95,123,80,215,109,79,87,79,85,71,12,80,153,86,71,79,67,94,111,79,84,79,109,79,67,94,111,76,84,79,109,79,79,79,123,72,80,245,109,79,87,79,85,73,12,71,79,87,79,123,85,95,12,83,79,79,84,76,109,79,87,73,67,92,85,93,12,84,79,109,79,116,153,127,78},P={{K={3,2,9,{164,162,230,52,32,67,154}},C={85,78,85,79,14,85,76,95,123,80,87,109,79,87,78,87,79,87,76,85,77,12,84,76,72,80,106,87,76,85,77,12,93,77,116,106,127,78},P={},U={{0,4},{0,5},{1,0},{1,1}},nParams=0},{K={7,49,{187,181,251,4,7,72,142,163,218,210,39,70,107}},C={85,78,85,78,65,85,79,95,123,80,110,109,79,87,78,87,79,87,76,85,76,12,84,76,123,80,110,109,79,87,77,72,80,101,87,76,85,76,12,93,77,116,101,127,78},P={},U={{0,4},{0,6},{1,0},{1,1}},nParams=0}},U={{0,8},{1,2},{1,1},{1,3},{0,9},{0,10},{0,11},{0,12}},nParams=1},{K={1,2,{165,163,231,53,33,66,155},{161,166,242,18},{166,169,204,13,53},{164,186,196,11,24,71,113,172,197,221,24,73,116},15,225,{188,163,200,24},{182,172,201,17,55,76,102,182}},C={85,78,85,78,107,85,79,95,123,80,97,109,79,79,78,85,76,12,85,77,12,87,78,85,74,12,95,123,72,80,97,109,79,79,78,85,75,12,85,77,12,87,78,85,74,12,95,80,16,85,72,85,72,65,85,73,95,123,80,4,109,79,87,79,85,70,12,123,80,4,109,79,87,76,80,18,124,93,76,87,79,85,71,12,87,76,84,79,109,79,116,18,116,16,127,78},P={},U={{1,2},{1,1},{1,3}},nParams=1},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,3,{185},{189},{80,180,209,241}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,127,78},P={},U={{0,7},{1,6},{0,13}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{162,166,195,19,51,93},{164,170,203,26,52,91,98,187,227,231,2,82,114},{171,181,203,239,54,84},{169,189,200,248}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,87,76,85,68,12,87,76,85,69,12,12,85,66,12,99,84,74,123,85,67,12,83,84,79,109,79,127,78},P={},U={{0,7},{1,6},{0,13}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,3,{185},{189},{80,180,209,241}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,127,78},P={},U={{0,7},{1,6},{0,13}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,6,{185},{189},{80,180,209,241}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,127,78},P={},U={{0,7},{1,6},{0,13}},nParams=0},{K={{174,173,242,16,37,74,155},{187,164,241,0,40},{160,167,243,19},{187,162,231,3}},C={87,78,85,78,124,99,87,78,85,79,79,79,123,72,80,89,109,79,87,78,85,79,12,99,87,78,85,79,87,78,85,79,12,85,76,12,123,72,80,97,109,79,87,78,85,79,12,99,87,79,85,79,12,85,77,87,78,85,79,12,99,127,78},P={},U={{1,2},{1,5}},nParams=2}},U={{0,4},{0,2},{0,3},{0,0},{0,1},{1,0},{0,5},{0,6},{0,9},{0,12},{0,13},{0,14},{0,8},{0,7}},nParams=2},{K={{162,165,241,17},1,14,2,63,3,34,4,46,5,56,6,53,7,90,{191,182,205,226,46,95,127},{},{169,176,213,241,25,92,126,132,205,229,8,36,111},{189,183,194,234,60,87,109,141},24,47,52,{81,179,200,239},{86,159,218,230,81},{106,185,195},0,{68,191,213,229,1,76,121,155,168,250,34,60,71,144,165,222,231,44,83,96,133,199},{83,186,207,251,36,80,123,128,181,172},{75,143,212,255,26,115},{111,147,214,252,59,6,91},255,{91,143,218,240,14,43,116,159,175,198,9,16,68,111,180,193,184},210,{93,137,220,246,8,45,114,153,169,192,15,1,72,125,169},19,42,{86,135,174,236},{84,135,180,244},{85,133,182,242,19,39,113,159,191,195,224,53,94,110},{71,142,187,239,43,10,79,146,180,197,238,62,93,127},{87,137,170,232,17,62},{65,136,189,233,38,36,95,152},{85,130,163,255,4,26,67,134,162,225,232,24,89,109,147,205},8,62,28,40,59,9,55,10,{79,152,188,206,11,62,64,105},12,0.5,{99,148,177,194,237,40,98,101,139,212,230},{117,158,176,223,236,41,1},49,23,51,38,{120,97,170,213,230,20},22,54,15,{107,107,168,220,237,9,126,123,128,160},25,57,{104,98,171,231,253,8,79,114,157,179,230,52,39,70,145,176,202,227,12,94,104,137,222,251},{118,103,131,205,227,36,47,107,132},{101,108,153,205},{127,101,151,201,247,47,44,110,151,184},{126,100,150,200,246,39,38,122,133,174},{121,99,145,207,241,46,49,104,128,163,202,77,1,92},{120,98,144,206,240,47,48,105,129,162,203,76,17,66,114,179}},C={79,79,123,72,80,71,109,79,90,71,79,79,79,85,78,79,79,85,78,12,123,72,80,5,109,79,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,66,99,123,85,67,85,72,99,85,64,84,76,99,79,79,85,65,79,79,85,65,12,123,72,80,19,109,79,85,94,99,79,79,85,95,79,79,85,95,12,123,72,80,32,109,79,124,99,79,79,85,92,79,79,85,92,12,123,72,80,206,109,79,111,79,99,87,79,100,87,76,87,78,90,123,85,79,85,93,99,123,85,77,85,90,99,123,85,75,85,70,99,123,85,73,85,70,99,123,85,71,85,66,99,123,85,69,85,91,99,85,64,69,76,-1,97,79,90,123,85,88,67,89,85,86,12,85,79,85,87,85,79,85,87,84,74,99,84,76,71,76,100,87,77,87,74,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,93,99,123,85,69,85,66,99,123,85,67,85,72,99,85,64,84,76,90,123,85,88,67,89,85,86,12,85,79,85,87,85,79,85,87,84,74,99,123,85,84,85,79,99,123,85,85,67,82,85,83,12,85,80,85,80,85,80,84,77,99,123,85,81,67,82,85,83,12,85,110,85,110,85,110,84,77,99,123,85,111,87,78,90,123,85,79,85,108,99,123,85,77,85,91,99,123,85,75,85,109,99,123,85,73,85,90,99,123,85,71,85,70,99,85,64,84,76,99,123,85,106,67,107,85,106,12,85,104,12,99,123,85,105,67,107,85,105,12,85,102,12,99,123,85,103,85,76,99,123,85,100,124,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,85,64,69,76,-1,97,79,71,77,100,87,77,87,75,87,79,87,76,87,78,90,123,85,79,85,101,99,123,85,77,85,66,99,123,85,75,85,90,99,123,85,73,85,91,99,123,85,71,85,98,99,123,85,69,85,99,99,123,85,67,85,96,99,123,85,101,85,97,99,123,85,126,85,127,99,123,85,124,85,74,99,85,64,84,76,67,82,85,83,12,85,80,85,80,85,80,84,77,85,87,85,73,84,74,90,123,85,88,67,89,85,86,12,85,87,85,93,85,87,85,93,84,74,99,123,85,125,67,89,85,86,12,85,79,85,122,126,85,123,85,87,84,74,99,123,85,120,67,121,85,86,12,85,79,85,123,84,76,99,84,76,90,123,85,79,100,87,77,100,87,76,87,78,90,123,85,79,85,126,99,123,85,77,85,70,99,123,85,75,85,96,99,123,85,73,85,66,99,123,85,71,85,118,99,123,85,69,85,74,99,85,64,69,76,-1,97,79,87,78,90,123,85,79,85,126,99,123,85,77,85,70,99,123,85,75,85,96,99,123,85,73,85,66,99,123,85,71,85,118,99,123,85,69,85,74,99,85,64,69,76,-1,97,79,99,123,85,77,79,77,99,84,76,87,78,90,123,85,79,85,119,99,123,85,77,85,97,99,123,85,75,85,116,99,123,85,73,85,91,99,85,64,69,76,-1,97,79,71,74,100,87,77,87,75,87,79,87,76,87,78,90,123,85,79,85,101,99,123,85,77,85,66,99,123,85,75,85,90,99,123,85,73,85,91,99,123,85,71,85,98,99,123,85,69,85,99,99,123,85,67,85,96,99,123,85,101,85,97,99,123,85,126,85,127,99,123,85,124,85,74,99,85,64,84,76,67,82,85,83,12,85,80,85,80,85,80,84,77,85,87,85,71,84,74,90,123,85,88,67,89,85,86,12,85,79,85,87,85,87,85,117,84,74,99,123,85,114,87,72,99,84,76,90,123,85,79,100,87,77,87,79,87,76,87,78,90,123,85,79,85,115,99,123,85,77,85,97,99,123,85,75,85,68,99,123,85,73,85,74,99,123,85,71,85,112,99,85,64,84,76,79,79,85,78,12,85,113,84,77,90,123,85,88,67,89,85,86,12,85,79,85,122,126,85,79,85,87,84,74,99,123,85,125,67,89,85,86,12,85,87,85,122,85,87,85,87,84,74,99,123,85,106,67,107,85,106,12,85,14,12,99,123,85,78,87,78,90,123,85,79,85,15,99,123,85,77,85,66,99,123,85,75,85,91,99,123,85,73,85,70,99,123,85,71,85,74,99,123,85,69,85,91,99,123,85,67,85,70,99,85,64,84,76,99,84,76,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,85,64,69,76,-1,97,79,99,123,85,77,100,87,77,100,87,76,87,78,90,123,85,79,85,126,99,123,85,77,85,70,99,123,85,75,85,96,99,123,85,73,85,66,99,123,85,71,85,118,99,123,85,69,85,74,99,85,64,69,76,-1,97,79,87,78,90,123,85,79,85,126,99,123,85,77,85,70,99,123,85,75,85,96,99,123,85,73,85,66,99,123,85,71,85,118,99,123,85,69,85,74,99,85,64,69,76,-1,97,79,99,123,85,75,79,74,99,123,85,73,79,76,99,84,76,87,78,90,123,85,79,85,126,99,123,85,77,85,74,99,123,85,75,85,12,99,123,85,73,85,66,99,123,85,71,85,91,99,123,85,69,85,98,99,85,64,69,76,-1,97,79,71,75,87,73,100,79,77,123,85,13,12,83,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,85,64,69,76,-1,97,79,111,76,84,76,109,79,87,73,79,77,85,10,12,111,77,84,76,109,79,79,77,85,11,79,79,85,65,12,99,87,73,79,76,85,8,12,111,74,84,76,109,79,87,73,79,76,85,9,12,111,75,84,76,109,79,87,73,79,76,85,6,12,111,72,84,76,109,79,87,73,79,76,85,7,12,111,73,84,76,109,79,127,78},P={{K={},C={127,78},P={},U=nil,nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.45,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{166,164,223,24},{163,138,207,19,100},0,{172,181,208,244,26,95,125,142,220,227},{161},16,24,{172,184,205,253}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,76,12,85,69,87,76,85,66,12,85,67,12,85,64,107,85,69,85,65,84,74,99,84,74,123,85,94,12,83,84,79,109,79,127,78},P={},U={{0,8},{1,4},{1,3}},nParams=0},{K={{175,165,240,24,46,69,159,191},{185,160,229,1},12,144,{164,173,216,12,20,65,115,185,192,248,5,89,98},{}},C={87,78,85,78,12,87,79,85,79,12,84,79,109,79,85,76,85,76,65,85,77,95,123,80,110,109,79,87,78,85,74,12,80,101,87,79,85,79,85,75,99,116,101,127,78},P={},U={{1,1},{1,3}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,3,{185},{189},{80,180,209,241}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,127,78},P={},U={{0,8},{1,5},{0,9}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{162,166,195,19,51,93},{164,170,203,26,52,91,98,187,227,231,2,82,114},{171,181,203,239,54,84},{169,189,200,248}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,87,76,85,68,12,87,76,85,69,12,12,85,66,12,99,84,74,123,85,67,12,83,84,79,109,79,127,78},P={},U={{0,8},{1,5},{0,9}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,3,{185},{189},{80,180,209,241},{66,184,193,253,20,75,116,175,174,250,4,58}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,87,77,123,85,91,12,83,84,79,109,79,127,78},P={},U={{0,8},{1,5},{0,9},{1,3}},nParams=0},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},0.25,{181,166,213,21},{180,168,210,16,63,78,82,173,200,229,4},{163,191,203,20,38},{182,170,208,18,61,76,71,178,193,238,0,79,122,132,173},{187,185,208},{183,172,198,22,50,95,106,168,219,233,38,82,121,130,183,174},{181,161,202,17,36,29},{145,189,200,18,5,104,69},{172,184,205,237,61,67},{170,180,197,228,58,69,108,133,237,249,12,44,124},{169,183,201,237,52,86},{169},255,6,{185},{189},{80,180,209,241}},C={87,78,123,85,78,12,83,87,79,67,79,85,76,12,85,77,67,74,85,75,12,85,72,12,67,74,85,73,12,85,70,12,84,77,90,123,85,71,67,68,85,69,12,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,65,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,92,12,85,94,65,85,95,107,87,76,85,66,12,87,76,85,67,12,12,85,64,12,85,93,12,85,94,65,85,95,107,84,77,99,84,74,123,85,90,12,83,84,79,109,79,127,78},P={},U={{0,8},{1,5},{0,9}},nParams=0}},U={{0,4},{0,2},{0,3},{0,0},{0,15},{0,1},{1,0},{0,5},{0,6},{0,7}},nParams=2},{K={{162,165,241,17},1,25,2,53,3,54,4,5,40,6,42,7,51,8,57,9,49,10,63,11,90,{70,191,212,235,23,86,102},{64,180,223,228,17,8},{98,174,219,225,54,123,86},255,{69,191,218,226,4,95,117,133},{65,179,214,232},{91,129,206,245},{95,128,213,228,12},{94,141,221,245,6,39,126},{95,154,203,246},19,55,59,61,22,56,{65,131,184,255},{70,175,170,246,65},{122,137,179},0,18,{71,128,180,246,3,38,72,145},{107,149,164,197,27,36},{109,158,129,242,47},{73,145,171,206,31,6,83,114,191},{94,157,190,206},{90,157,184},{92,155,174,205,18,39,125,106,180,219,249},{72,147,173,210,17,36,28},0.5,{98,153,179,195,231,42,95,125,142,220,196,26,33,118,131,184,193,10,53,70,99,161},{104,148,176,206,228},50,46,96,117,45,116,12,13,14,15,16,17,34,20,21,23,24,41,26,27,28,29,101,30,31,62,32,103,33,110,98,35,106,36,111,37,108,38,105,39,99,{29,74,136,186,201,239,62},107,104,52,{12,72,141,185,202,245,13,86,107,142,202,228},{5,108,105,181},{3,70,117,184,197,224,14,87},270,{16,68,111,180,193},{23,67,104,179,198,223,1,77,97,137,170,255,17},{22,66,105,178,199,222,0,76,96,136,171,254,16,6,64,132,165,194,236,51,65},0.2,234,0.4,0.6,0.8,0.9,251,{30,89,100,149,206,209,8,54,126,144,163,193,28,59,89,118},{14,87,106,130,215,248,9,10,123,144,186},{15,86,107,131,214,249,8,21,118,144,167,211},{48,89,116,140,169,246,23,10,79,140,164,199,237},{49,88,117,141,168,247,22,29,78,137},47,{51,90,97,142,173,239},{34,83,122,152},{34,82,97,133,164,240,55,34,73,153},{43,81,99,157,163,220,3,58,82,145,184,159,197,50,95,109,141},{10,94,99,135},{11,44,121,157,184},{40,35,106,158,165,212,13,52,121,110,170,216,253,8,86,127},{51},{42,33,104,156,167,214,15,54,120,106,161,214},{52},{36,43,109,128,185,231,24,50,76,107},{39,40,110,131,186,227,16,50,75,98},{60,34,107},{54,36,65,159,163}},C={79,79,123,72,80,71,109,79,90,71,79,79,79,85,78,79,79,85,78,12,123,72,80,45,109,79,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,74,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,65,99,123,85,94,85,95,99,123,85,92,85,93,99,123,85,90,85,71,99,85,91,84,76,99,79,79,85,88,79,79,85,88,12,123,72,80,206,109,79,67,89,85,86,12,85,87,85,87,85,87,84,77,99,79,79,85,84,79,79,85,84,12,123,72,80,220,109,79,111,79,99,79,79,85,85,79,79,85,85,12,123,72,80,237,109,79,86,99,79,79,85,82,79,79,85,82,12,123,72,80,250,109,79,124,99,85,79,85,79,85,79,71,74,71,77,71,76,90,123,85,83,79,79,85,88,12,99,123,85,80,124,99,123,85,81,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,74,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,65,99,123,85,94,85,95,99,123,85,92,85,93,99,123,85,90,85,71,99,85,91,84,76,99,123,85,82,79,79,85,82,12,99,71,75,87,79,87,78,90,123,85,79,85,110,99,123,85,77,85,111,99,123,85,75,85,108,99,123,85,73,85,109,99,123,85,70,85,93,99,123,85,68,85,106,99,123,85,66,85,108,99,123,85,64,85,107,99,123,85,94,85,93,99,123,85,92,85,72,99,85,91,84,76,90,123,85,104,67,105,85,102,12,85,103,85,100,85,103,85,100,84,74,99,123,85,101,100,67,105,85,102,12,100,67,98,85,75,67,89,85,99,12,79,75,85,83,12,69,79,-1,97,-1,97,79,99,123,85,96,67,97,85,96,12,85,126,12,99,123,85,127,67,124,85,102,12,85,125,85,125,84,76,99,123,85,122,85,79,99,123,85,123,87,78,90,123,85,79,85,120,99,123,85,77,85,121,99,123,85,75,85,121,99,123,85,73,85,69,99,123,85,70,85,118,99,123,85,68,85,119,99,123,85,66,85,119,99,123,85,64,85,116,99,123,85,94,85,116,99,123,85,92,85,116,99,123,85,90,85,117,99,123,85,114,85,71,99,123,85,115,85,74,99,123,85,112,85,107,99,123,85,113,85,72,99,123,85,14,85,74,99,123,85,15,85,12,99,123,85,100,85,117,99,123,85,110,85,65,99,123,85,13,85,74,99,123,85,10,85,111,99,123,85,106,85,119,99,123,85,11,85,108,99,123,85,8,85,9,99,123,85,76,85,9,99,123,85,6,85,93,99,123,85,7,85,121,99,123,85,4,85,119,99,123,85,5,85,2,99,123,85,3,85,67,99,123,85,0,85,1,99,123,85,30,85,31,99,123,85,28,85,29,99,123,85,12,85,26,99,123,85,27,85,24,99,123,85,25,85,22,99,123,85,23,85,20,99,123,85,21,85,18,99,123,85,19,85,16,99,123,85,71,85,24,99,123,85,9,85,24,99,123,85,69,85,24,99,85,91,84,76,99,84,76,71,72,87,79,87,78,90,123,85,79,85,110,99,123,85,77,85,111,99,123,85,75,85,108,99,123,85,73,85,109,99,123,85,70,85,93,99,123,85,68,85,106,99,123,85,66,85,108,99,123,85,64,85,107,99,123,85,94,85,93,99,123,85,92,85,72,99,85,91,84,76,90,123,85,104,67,105,85,102,12,85,103,85,100,85,103,85,100,84,74,99,123,85,101,67,105,85,102,12,85,125,85,103,85,79,100,67,98,85,79,67,89,85,99,12,79,75,85,83,12,69,79,-1,97,79,96,84,77,99,123,85,96,67,97,85,96,12,85,126,12,99,123,85,127,67,124,85,102,12,85,125,85,125,84,76,99,123,85,122,85,79,99,123,85,123,87,78,90,123,85,79,85,120,99,123,85,77,85,121,99,123,85,75,85,121,99,123,85,73,85,69,99,123,85,70,85,118,99,123,85,68,85,119,99,123,85,66,85,119,99,123,85,64,85,116,99,123,85,94,85,116,99,123,85,92,85,116,99,123,85,90,85,117,99,123,85,114,85,71,99,123,85,115,85,74,99,123,85,112,85,107,99,123,85,113,85,72,99,123,85,14,85,74,99,123,85,15,85,12,99,123,85,100,85,117,99,123,85,110,85,65,99,123,85,13,85,74,99,123,85,10,85,111,99,123,85,106,85,119,99,123,85,11,85,108,99,123,85,8,85,9,99,123,85,76,85,9,99,123,85,6,85,93,99,123,85,7,85,121,99,123,85,4,85,119,99,123,85,5,85,2,99,123,85,3,85,67,99,123,85,0,85,1,99,123,85,30,85,31,99,123,85,28,85,29,99,123,85,12,85,26,99,123,85,27,85,24,99,123,85,25,85,22,99,123,85,23,85,20,99,123,85,21,85,18,99,123,85,19,85,16,99,123,85,71,85,24,99,123,85,9,85,24,99,123,85,69,85,24,99,85,91,84,76,99,84,76,71,73,87,79,87,78,90,123,85,79,85,110,99,123,85,77,85,111,99,123,85,75,85,108,99,123,85,73,85,109,99,123,85,70,85,93,99,123,85,68,85,106,99,123,85,66,85,108,99,123,85,64,85,107,99,123,85,94,85,93,99,123,85,92,85,72,99,85,91,84,76,90,123,85,104,67,105,85,102,12,85,79,85,76,126,85,79,85,103,84,74,99,123,85,17,124,99,123,85,123,87,78,90,123,85,79,85,71,99,123,85,77,85,107,99,123,85,75,85,12,99,123,85,73,85,108,99,123,85,70,85,9,99,123,85,68,85,9,99,123,85,66,85,93,99,123,85,64,85,121,99,123,85,94,85,67,99,123,85,92,85,1,99,123,85,90,85,118,99,123,85,114,85,119,99,123,85,115,85,119,99,123,85,112,85,29,99,123,85,113,85,46,99,123,85,14,85,22,99,123,85,15,85,22,99,123,85,100,85,26,99,123,85,110,85,24,99,123,85,13,85,46,99,123,85,10,85,47,99,123,85,106,85,22,99,123,85,11,85,47,99,85,91,84,76,99,90,123,85,79,87,79,87,78,90,123,85,79,85,113,99,123,85,77,85,110,99,123,85,75,85,76,99,123,85,73,85,74,99,123,85,70,85,71,99,123,85,68,85,44,99,123,85,66,85,93,99,123,85,64,85,71,99,85,91,84,76,90,123,85,45,67,42,85,102,12,85,103,85,70,84,76,99,84,76,99,123,85,77,79,72,99,84,77,71,70,87,79,87,78,90,123,85,79,85,4,99,123,85,77,85,71,99,123,85,75,85,108,99,123,85,73,85,111,99,123,85,70,85,93,99,85,91,84,76,90,123,85,104,67,105,85,102,12,85,103,85,13,85,79,85,103,84,74,99,123,85,101,67,105,85,102,12,85,79,85,13,126,85,103,85,103,84,74,99,123,85,17,124,99,90,123,85,79,87,79,87,78,90,123,85,79,85,113,99,123,85,77,85,110,99,123,85,75,85,5,99,123,85,73,85,71,99,123,85,70,85,108,99,123,85,68,85,1,99,123,85,66,85,67,99,123,85,64,85,93,99,123,85,94,85,44,99,123,85,92,85,121,99,85,91,84,76,90,123,85,43,85,40,99,123,85,41,67,38,85,102,12,90,123,85,79,100,67,39,85,102,12,85,103,67,89,85,86,12,85,87,85,103,85,73,69,77,-1,97,79,99,123,85,77,100,67,39,85,102,12,85,36,67,89,85,86,12,85,37,85,87,85,103,69,77,-1,97,79,99,123,85,75,100,67,39,85,102,12,85,34,67,89,85,86,12,85,10,85,87,85,103,69,77,-1,97,79,99,123,85,73,100,67,39,85,102,12,85,35,67,89,85,86,12,85,103,85,87,85,87,69,77,-1,97,79,99,123,85,70,100,67,39,85,102,12,85,32,67,89,85,86,12,85,103,85,15,85,87,69,77,-1,97,79,99,123,85,68,100,67,39,85,102,12,85,33,67,89,85,86,12,85,87,85,103,85,62,69,77,-1,97,79,99,100,100,67,39,85,102,12,85,79,67,89,85,86,12,85,87,85,103,85,73,69,77,-1,97,-1,91,73,84,79,99,84,76,99,123,85,77,87,79,87,78,90,123,85,79,85,113,99,123,85,77,85,110,99,123,85,75,85,76,99,123,85,73,85,74,99,123,85,70,85,71,99,123,85,68,85,44,99,123,85,66,85,93,99,123,85,64,85,71,99,85,91,84,76,90,123,85,45,67,42,85,102,12,85,103,85,70,84,76,99,84,76,99,123,85,75,79,73,99,84,77,71,71,87,79,87,78,90,123,85,79,85,4,99,123,85,77,85,71,99,123,85,75,85,108,99,123,85,73,85,111,99,123,85,70,85,93,99,85,91,84,76,90,123,85,101,67,105,85,102,12,85,103,85,103,85,103,85,30,84,74,99,123,85,104,67,105,85,102,12,85,79,85,103,85,79,85,30,126,84,74,99,123,85,122,85,79,99,123,85,63,118,99,90,123,85,79,79,71,99,123,85,77,79,70,99,100,87,79,87,78,90,123,85,79,85,113,99,123,85,77,85,110,99,123,85,75,85,92,99,123,85,73,85,108,99,123,85,70,85,1,99,123,85,68,85,1,99,123,85,66,85,67,99,123,85,64,85,44,99,123,85,94,85,109,99,85,91,84,76,90,123,85,60,67,42,85,102,12,85,103,85,27,84,76,99,123,85,61,67,42,85,102,12,85,103,85,27,84,76,99,123,85,58,67,42,85,102,12,85,103,85,92,84,76,99,123,85,59,67,42,85,102,12,85,103,85,15,84,76,99,69,76,-1,91,77,84,77,71,68,87,76,100,87,77,87,78,90,123,85,79,85,8,99,123,85,77,85,56,99,123,85,75,85,121,99,123,85,73,85,121,99,123,85,70,85,74,99,123,85,68,85,44,99,85,91,69,76,-1,97,79,90,123,85,104,67,105,85,102,12,85,79,85,103,85,79,85,103,84,74,99,84,76,71,69,100,87,74,87,75,87,76,87,77,87,78,90,123,85,79,85,64,99,123,85,77,85,74,99,123,85,75,85,56,99,123,85,73,85,44,99,123,85,70,85,1,99,123,85,68,85,4,99,123,85,66,85,71,99,123,85,64,85,108,99,123,85,94,85,111,99,123,85,92,85,93,99,85,91,84,76,67,89,85,86,12,85,87,85,87,85,87,84,77,85,103,85,73,84,74,90,123,85,104,67,105,85,102,12,85,103,85,8,85,103,85,8,84,74,99,123,85,101,67,105,85,102,12,85,79,85,114,126,85,125,85,103,84,74,99,123,85,127,67,124,85,102,12,85,79,85,125,84,76,99,84,76,90,100,100,87,74,100,87,77,87,78,90,123,85,79,85,94,99,123,85,77,85,121,99,123,85,75,85,71,99,123,85,73,85,74,99,123,85,70,85,95,99,123,85,68,85,93,99,85,91,69,76,-1,97,79,87,78,90,123,85,79,85,94,99,123,85,77,85,121,99,123,85,75,85,71,99,123,85,73,85,74,99,123,85,70,85,95,99,123,85,68,85,93,99,85,91,69,76,-1,97,-1,91,79,84,76,87,78,90,123,85,79,85,11,99,123,85,77,85,108,99,123,85,75,85,67,99,123,85,73,85,44,99,85,91,69,76,-1,97,79,71,66,100,87,74,87,75,87,76,87,77,87,78,90,123,85,79,85,64,99,123,85,77,85,74,99,123,85,75,85,56,99,123,85,73,85,44,99,123,85,70,85,1,99,123,85,68,85,4,99,123,85,66,85,71,99,123,85,64,85,108,99,123,85,94,85,111,99,123,85,92,85,93,99,85,91,84,76,67,89,85,86,12,85,87,85,87,85,87,84,77,85,103,85,70,84,74,90,123,85,104,67,105,85,102,12,85,79,85,103,85,103,85,21,84,74,99,123,85,57,87,72,99,84,76,90,123,85,79,87,76,87,75,100,87,77,87,78,90,123,85,79,85,112,99,123,85,77,85,4,99,123,85,75,85,71,99,123,85,73,85,108,99,123,85,70,85,111,99,123,85,68,85,93,99,85,91,69,76,-1,97,79,90,123,85,79,100,87,74,87,76,87,77,87,78,90,123,85,79,85,106,99,123,85,77,85,108,99,123,85,75,85,107,99,123,85,73,85,93,99,123,85,70,85,72,99,85,91,84,76,79,79,85,78,12,85,113,84,77,90,123,85,104,67,105,85,102,12,85,79,85,114,126,85,79,85,103,84,74,99,123,85,101,67,105,85,102,12,85,103,85,114,85,103,85,103,84,74,99,123,85,54,67,97,85,54,12,85,55,12,99,123,85,78,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,44,99,123,85,73,85,121,99,123,85,70,85,93,99,123,85,68,85,44,99,123,85,66,85,121,99,85,91,84,76,99,84,76,87,78,90,123,85,79,85,112,99,123,85,77,85,93,99,123,85,75,85,12,99,123,85,73,85,121,99,85,91,69,76,-1,97,79,99,123,85,77,79,66,99,123,85,75,79,69,99,100,100,87,74,87,76,100,87,77,87,78,90,123,85,79,85,4,99,123,85,77,85,71,99,123,85,75,85,108,99,123,85,73,85,111,99,123,85,70,85,93,99,85,91,69,76,-1,97,79,90,123,85,104,67,105,85,102,12,85,79,85,103,85,103,85,79,84,74,99,123,85,101,67,105,85,102,12,85,103,85,103,85,79,85,79,126,84,74,99,123,85,78,87,78,90,123,85,79,85,106,99,123,85,77,85,67,99,123,85,75,85,44,99,123,85,73,85,93,99,85,91,84,76,99,123,85,17,124,99,84,76,87,78,90,123,85,79,85,94,99,123,85,77,85,121,99,123,85,75,85,71,99,123,85,73,85,74,99,123,85,70,85,95,99,123,85,68,85,93,99,85,91,69,76,-1,97,-1,91,74,84,76,90,123,85,104,67,105,85,102,12,85,79,85,103,85,103,85,21,84,74,99,123,85,63,118,99,123,85,78,87,78,90,123,85,79,85,4,99,85,91,84,76,99,84,76,99,123,85,77,79,68,99,100,100,87,74,100,87,77,87,78,90,123,85,79,85,94,99,123,85,77,85,121,99,123,85,75,85,71,99,123,85,73,85,74,99,123,85,70,85,95,99,123,85,68,85,93,99,85,91,69,76,-1,97,79,87,78,90,123,85,79,85,94,99,123,85,77,85,121,99,123,85,75,85,71,99,123,85,73,85,74,99,123,85,70,85,95,99,123,85,68,85,93,99,85,91,69,76,-1,97,-1,91,77,84,76,87,78,90,123,85,79,85,94,99,123,85,77,85,93,99,123,85,75,85,65,99,123,85,73,85,74,99,123,85,70,85,44,99,123,85,68,85,1,99,85,91,69,76,-1,97,79,71,67,87,73,79,69,85,52,12,111,76,84,76,109,79,111,77,71,64,85,79,67,53,85,50,12,79,73,85,51,12,85,48,12,79,71,85,51,12,85,48,12,96,85,103,79,71,85,49,12,85,48,12,84,77,79,71,85,49,12,85,48,12,119,96,71,76,67,53,85,50,12,79,72,85,51,12,85,206,12,79,70,85,51,12,85,206,12,96,85,103,79,70,85,49,12,85,206,12,84,77,79,70,85,49,12,85,206,12,119,71,77,85,79,67,53,85,50,12,79,72,85,51,12,85,48,12,79,70,85,51,12,85,48,12,96,85,103,79,70,85,49,12,85,48,12,84,77,79,70,85,49,12,85,48,12,119,96,71,74,87,73,79,70,85,207,12,111,74,84,76,109,79,87,73,79,70,85,204,12,111,75,84,76,109,79,87,73,79,71,85,207,12,111,72,84,76,109,79,87,73,79,71,85,204,12,111,73,84,76,109,79,79,75,85,205,111,70,99,79,75,123,85,205,12,83,79,75,85,83,12,84,76,109,79,85,79,85,79,107,85,77,95,123,80,3516,109,79,79,79,85,85,12,80,3661,87,66,85,202,12,79,79,85,85,12,79,75,99,116,3661,79,75,127,79},P={{K={},C={127,78},P={},U=nil,nParams=0},{K={{184,171,251,19,32,65,152},{174,183,248,20,57,64},{186,177,251,19,32,111,144,176,193},{129,162,232},0.15,{180,167,212,20},{183,171,209,19,60,77,81,174,203,230,7},{162,190,194,31},{177,173,215,21,58,75,64,181,198,233,7,72,125,131,170},{186,184,209},{165,167,220,27},{162,139,206,18,101},1,0,148,38,{172,184,205,253},{171,188,222,236,63,89,104},{184},{179,190,193,226}},C={87,78,85,78,87,78,85,78,12,72,99,87,79,123,85,79,12,83,87,76,67,76,85,77,12,85,74,67,75,85,72,12,85,73,12,67,75,85,70,12,85,71,12,84,77,90,123,85,68,87,78,85,78,12,123,80,4,109,79,67,69,85,77,12,85,66,85,67,85,67,85,64,84,74,123,72,80,17,109,79,67,69,85,77,12,85,66,85,67,85,67,85,65,84,74,99,84,74,123,85,94,12,83,84,79,109,79,87,77,85,95,87,78,85,78,12,99,87,74,85,95,87,78,85,78,12,99,87,76,85,92,12,85,93,12,85,95,87,78,85,78,12,99,127,78},P={},U={{1,5},{0,8},{1,13},{1,8},{1,9}},nParams=0},{K={{174,165,255,31,43,86,147,161,194,224,31,91,96,139,206,167},{174,170,241,26,63,22},{136,180,241,27,6,117,168},1,{163,173,212},{178,168,205,21,51,72,98,178},{149,171,207,31},{180,170,206,30,26,79}},C={87,78,85,78,67,79,85,76,12,87,79,87,76,87,77,84,77,99,87,74,85,78,67,79,85,76,12,87,79,85,77,85,77,84,77,99,87,75,123,85,74,12,83,87,78,85,78,12,84,76,109,79,87,72,85,75,12,87,78,85,78,12,84,79,109,79,87,73,67,72,85,73,12,84,79,109,79,127,78},P={},U={{1,12},{1,2},{1,3},{1,4},{1,8},{1,5},{1,1},{0,9}},nParams=0},{K={3,2,9,{186,180,250,5,6,73,143,162,219,211,38,71,106},{181,166,213,21},{188,166,212,10,52,107,116,173,197,230,15,8},{166,165,215,25,58},7,49,{182,162,201,18,39,100,107,173,192,249},{178,167,213,29,57,64,104,187,213,250},{165,170,201,27,50,93,84,171,210,255,23,90,115}},C={85,78,85,79,14,85,76,95,123,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,75,12,95,123,72,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,72,12,95,80,17,85,73,85,73,65,85,70,95,123,80,14,109,79,67,71,80,1,67,71,123,85,68,12,83,84,79,109,79,116,1,87,78,87,79,85,69,12,111,79,69,76,79,89,71,116,17,127,78},P={{K={{129,165,232,28},{142,169,252,24,61},{182},{174,165,236,24,35,82,139,178,255,232,44,94,123,142,208,249},0,{176,171,210,22,61,92,117,188,226,224,27,92},{171},{163,164,208,18,39,66,108,181},{161,136,205,17,102},{155,168,210},1},C={67,78,85,79,12,87,78,85,76,12,87,79,85,77,12,85,76,12,96,85,74,87,79,85,75,12,85,76,12,84,77,87,79,85,75,12,85,76,12,119,71,78,67,78,85,79,12,87,78,85,72,12,87,79,85,77,12,85,72,12,96,85,74,87,79,85,75,12,85,72,12,84,77,87,79,85,75,12,85,72,12,119,71,79,87,76,85,73,67,70,85,71,12,79,78,85,74,79,79,85,74,84,74,99,79,78,93,77,85,68,79,79,96,93,74,87,75,84,78,109,79,127,78},P={},U={{0,2},{0,3},{0,4},{0,5},{0,6},{0,7}},nParams=0}},U={{0,7},{0,10},{0,11},{1,8},{1,6},{1,3},{1,4},{1,14}},nParams=1},{K={1,2,{187,181,251,4,7,72,142,163,218,210,39,70,107},{170,169,234,26},{189,167,213,11,53,106,117,172,196,231,14,9},{165,166,212,26,57},15,225,{183,163,200,19,38,101,106,172,193,248},{177,164,214,30,58,67,107,184,214,249}},C={85,78,85,78,107,85,79,95,123,80,97,109,79,79,78,85,76,12,67,77,85,76,12,85,74,12,95,123,72,80,97,109,79,79,78,85,76,12,67,77,85,76,12,85,75,12,95,80,31,85,72,85,72,65,85,73,95,123,80,14,109,79,67,70,80,1,67,70,123,85,71,12,83,84,79,109,79,116,1,116,31,127,78},P={},U=nil,nParams=1},{K={100,7,2,{186,180,250,5,6,73,143,162,219,211,38,71,106},{181,166,213,21},{188,166,212,10,52,107,116,173,197,230,15,8},{166,165,215,25,58},12,144,{189,184,192,52,59,93,112,169},{178,167,213,29,57,64,104,187,213,250},{165,170,201,27,50,93,84,171,210,255,23,90,115}},C={85,78,85,79,94,85,76,95,123,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,75,12,95,123,72,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,72,12,95,80,17,85,73,85,73,65,85,70,95,123,80,14,109,79,67,71,80,1,67,71,123,85,68,12,83,84,79,109,79,116,1,87,78,87,79,85,69,12,111,79,69,76,79,89,71,116,17,127,78},P={{K={{129,165,232,28},{142,169,252,24,61},{183},{174,165,236,24,35,82,139,178,255,232,44,94,123,142,208,249},0,{176,171,210,22,61,92,117,188,226,224,27,92},{162,165,209,19,38,67,109,180},{166,143,202,22,97},{154,169,211},0.5,1},C={67,78,85,79,12,87,78,85,76,12,87,79,85,77,12,85,76,12,96,85,74,87,79,85,75,12,85,76,12,84,77,87,79,85,75,12,85,76,12,119,71,78,87,76,85,72,67,73,85,70,12,85,71,85,74,79,78,85,74,84,74,99,85,68,79,78,96,93,77,87,74,84,78,109,79,127,78},P={},U={{0,2},{0,3},{0,4},{0,5},{0,6}},nParams=0}},U={{0,7},{0,10},{0,11},{1,9},{1,7},{1,2},{1,14}},nParams=1},{K={3,2,9,{186,180,250,5,6,73,143,162,219,211,38,71,106},{181,166,213,21},{188,166,212,10,52,107,116,173,197,230,15,8},{166,165,215,25,58},7,49,{189,184,192,52,59,93,112,169},{178,167,213,29,57,64,104,187,213,250}},C={85,78,85,79,14,85,76,95,123,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,75,12,95,123,72,80,97,109,79,79,78,85,77,12,67,74,85,77,12,85,72,12,95,80,31,85,73,85,73,65,85,70,95,123,80,14,109,79,67,71,80,1,67,71,123,85,68,12,83,84,79,109,79,116,1,116,31,127,78},P={},U=nil,nParams=1},{K={{186,165,240,1,41},{175,164,254,30,42,87,146,160,195,225,30,90,97,138,207,166},{173,167,242,26,44,71,157,189}},C={87,78,85,78,79,79,99,87,79,85,79,87,78,85,78,12,99,87,76,85,76,12,87,78,85,78,12,84,79,109,79,127,78},P={},U={{1,5},{1,12},{1,1}},nParams=2}},U={{0,4},{0,15},{0,2},{0,3},{0,0},{0,1},{1,0},{0,5},{0,6},{0,8},{0,16},{0,10},{0,7}},nParams=2},{K={1,14,2,28,3,40,4,59,5,55,6,63,90,{170,184,211,228},{175,150,195,239,104},{149,182,220},0,26,{174,183,220,227,48,66},{175,184,220,238,43,94,96,137},{66,185,211,227,7,74,127,157,174,252,51,39,76,151,162,155},{66,182,221,230,19,10},{100,168,221,231,48,125,80},70,150,255,{68,177,196,234,3,76,69,135,188,251,38,39,94,155,186},{73,190,218,234},27,57,52,46,7,24,8,9,15,19,25,53,{87,131,182,242,17,62,118,157,176,197,241,47},{64,169,172,240},22,56,54,51,18,16,10,{91,154,163,209},{91,152,187,203},{88,152,187,207,30,58,109,104,179,211},34,30,49,{98,149,176,195,236,41,99,100,138,213,231},{114,153,183,216,235,46,6},23,62,41,{96,111,180,212,237,18},{124,72,149,216,250,21,117,112,144,174,236,5},{109,103,174,226,248,13,74,119,152,182,227,49,34,67,148,181,207,230,9,91,109,140,219,254},47,11,12,13,17,32,{95,108,153,205}},C={79,79,123,72,80,71,109,79,90,71,79,87,78,87,79,100,87,76,87,77,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,85,66,69,76,-1,97,79,90,123,85,67,67,64,85,65,12,85,78,85,94,85,94,85,95,84,74,99,123,85,92,87,74,99,84,76,90,123,85,78,87,75,87,77,90,123,85,78,85,77,99,123,85,76,85,75,99,123,85,74,85,73,99,123,85,72,85,71,99,123,85,70,85,69,99,85,66,84,76,90,123,85,67,67,64,85,65,12,85,94,85,68,85,94,85,79,84,74,99,123,85,93,67,64,85,65,12,85,94,85,94,85,94,85,72,84,74,99,123,85,90,67,91,85,88,12,85,89,85,86,85,87,84,77,99,123,85,84,85,94,99,123,85,85,87,77,90,123,85,78,85,82,99,123,85,76,85,83,99,123,85,74,85,83,99,123,85,72,85,69,99,123,85,70,85,80,99,123,85,68,85,81,99,123,85,110,85,111,99,123,85,108,85,73,99,123,85,109,85,75,99,85,66,84,76,99,90,100,87,75,87,77,90,123,85,78,85,106,99,123,85,76,85,107,99,123,85,74,85,104,99,123,85,72,85,105,99,123,85,70,85,75,99,123,85,68,85,80,99,123,85,110,85,69,99,123,85,108,85,75,99,85,66,84,76,90,123,85,102,67,103,85,65,12,85,78,85,94,84,76,99,69,76,-1,91,79,84,77,99,123,85,76,100,87,72,87,79,87,76,87,77,90,123,85,78,85,100,99,123,85,76,85,73,99,123,85,74,85,101,99,123,85,72,85,69,99,123,85,70,85,98,99,85,66,84,76,79,79,85,85,12,123,72,80,394,109,79,87,77,90,123,85,78,85,109,99,123,85,76,85,69,99,123,85,74,85,83,99,123,85,72,85,81,99,123,85,70,85,99,99,123,85,68,85,105,99,123,85,110,85,80,99,85,66,84,76,85,79,84,77,90,123,85,67,67,64,85,65,12,85,78,85,96,126,85,94,85,97,84,74,99,123,85,93,67,64,85,65,12,85,94,85,126,85,94,85,74,84,74,99,123,85,127,67,124,85,127,12,85,125,12,99,84,76,87,77,90,123,85,78,85,79,99,123,85,76,85,69,99,123,85,74,85,122,99,123,85,72,85,81,99,123,85,70,85,123,99,123,85,68,85,73,99,123,85,110,85,75,99,123,85,108,85,120,99,85,66,69,76,-1,97,79,99,100,87,78,87,79,100,87,76,87,77,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,85,66,69,76,-1,97,79,90,123,85,121,67,118,85,65,12,85,94,85,94,84,76,99,123,85,67,67,64,85,65,12,85,78,85,94,85,78,85,111,126,84,74,99,123,85,93,67,64,85,65,12,85,94,85,94,85,94,85,119,84,74,99,123,85,85,87,77,90,123,85,78,85,96,99,123,85,76,85,105,99,123,85,74,85,98,99,123,85,72,85,116,99,123,85,70,85,69,99,123,85,68,85,75,99,85,66,84,76,99,84,76,90,100,87,76,87,77,90,123,85,78,85,100,99,123,85,76,85,99,99,123,85,74,85,117,99,123,85,72,85,81,99,85,66,84,76,85,94,85,68,69,77,-1,91,79,69,76,-1,91,77,84,76,71,76,87,73,100,79,76,85,114,12,85,115,12,123,85,112,12,83,87,77,90,123,85,78,85,82,99,123,85,76,85,101,99,123,85,74,85,117,99,123,85,72,85,105,99,123,85,70,85,98,99,123,85,68,85,113,99,123,85,110,85,81,99,123,85,108,85,69,99,123,85,109,85,104,99,123,85,126,85,105,99,123,85,14,85,80,99,123,85,15,85,81,99,123,85,12,85,69,99,123,85,79,85,80,99,123,85,106,85,81,99,123,85,97,85,109,99,123,85,13,85,99,99,123,85,96,85,10,99,123,85,107,85,69,99,85,66,69,76,-1,97,79,111,79,84,76,109,79,90,71,77,67,11,87,70,79,76,85,114,12,69,79,76,71,72,71,75,71,74,68,74,75,72,105,73,105,70,79,74,79,75,79,72,69,76,76,71,70,71,73,79,73,71,72,79,73,86,112,80,917,79,77,79,73,79,70,99,116,1017,79,77,127,79},P={{K={{191,173,230,17},{184,129,244,24,127},{128,163,233},1,0,{185,166,205,29,52,91},{167,131,238,19,33,94,78,187,203,229,23,78},{178,169,208,20,63,94,119,190,240,228,13,79,118,133,183,200,26,49,70},{173},31},C={87,78,85,78,67,79,85,76,12,85,77,85,74,85,74,87,78,85,75,12,85,72,12,85,73,12,85,70,12,85,71,107,84,74,99,87,78,85,75,12,85,78,67,79,85,76,12,85,77,85,74,85,74,87,78,85,75,12,85,72,12,85,73,12,85,70,12,84,74,99,127,78},P={},U={{1,2}},nParams=0}},U={{0,1},{0,2},{0,3},{0,4},{1,0},{0,15},{0,0},{0,5},{0,17}},nParams=2}},U={{0,5},{0,1},{0,2},{0,3},{0,0},{0,8},{0,10},{0,11},{0,12},{0,13},{0,14},{0,15},{0,16},{0,17},{0,18},{0,19},{0,20},{1,4}},nParams=1},{K={},C={127,78},P={},U=nil,nParams=0}},U={{0,0},{0,3},{0,4},{0,5},{1,6},{0,2},{0,12},{1,13},{0,6},{1,2},{0,11},{0,1},{0,13},{0,10},{0,14},{0,15},{0,16},{0,17},{0,18},{0,19},{0,20}},nParams=2}},U={{1,1},{1,9},{1,21},{1,18},{1,17},{1,16},{1,12},{1,7},{1,11},{1,13},{1,2},{1,3},{1,10},{1,26},{1,8},{1,19},{1,29},{1,28},{1,27},{1,14},{1,4}},nParams=2},{K={{165,170,239,0,45,74,159,177},{131,160,234},100,7,2,{133,168,195,21,52},{148,165,208,31,51,73,106}},C={67,78,85,79,12,79,78,79,79,84,76,71,77,85,76,85,77,94,85,74,95,123,80,82,109,79,79,76,80,99,67,75,85,72,12,79,76,111,79,84,76,109,79,116,99,79,77,127,79},P={{K={},C={87,78,79,78,79,79,99,127,78},P={},U={{1,3}},nParams=2}},U=nil,nParams=3},{K={12,144,{154,167,252,26,43},{137,168,237,18,46,68,151}},C={85,78,85,78,65,85,79,95,123,80,88,109,79,79,78,123,80,88,109,79,79,79,80,105,67,76,85,77,12,79,79,111,79,84,76,109,79,116,105,79,78,127,79},P={{K={},C={87,78,79,78,79,79,99,127,78},P={},U={{1,0}},nParams=2}},U=nil,nParams=2},{K={1,15,2,19,3,25,4,53,5,40,6,52,7,63,8,90,{191,187,222,234,57,70,94,133,216,253,25,55},{190,186,223,235,56,71,82,183,220,241,4,48,110},9},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,71,99,85,65,84,76,79,78,84,76,71,76,79,76,85,94,87,76,85,95,12,99,85,74,85,76,14,85,92,95,123,80,22,109,79,79,79,80,40,87,77,79,76,79,79,84,76,109,79,116,40,79,76,127,79},P={},U={{1,33},{1,1},{1,31},{1,34}},nParams=2},{K={1,15,2,19,3,9,4,46,5,40,6,53,7,49,8,63,90,{190,186,193,234,47},{189,185,220,217,13,66,124,137,213,243},{190,167,223,235,38,100,123,149,208,252,10,10,112,147,170},24,62},C={87,78,87,79,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,65,99,85,94,84,76,79,78,84,76,71,76,79,76,85,95,87,76,85,92,12,99,79,76,85,93,87,79,90,123,85,78,85,90,99,123,85,76,85,69,99,123,85,74,85,71,99,123,85,72,85,91,99,123,85,70,85,65,99,123,85,68,85,71,99,85,94,84,76,99,85,66,85,66,65,85,67,95,123,80,198,109,79,79,79,80,216,87,77,79,76,79,79,84,76,109,79,116,216,79,76,127,79},P={},U={{1,33},{1,1},{1,31},{1,34}},nParams=2},{K={{175,182,249,21,56,65},{185,178,248,16,35,108,147,179,194},{128,163,233},{170,169,234,26},{181,169,211,17,62,79,83,172,201,228,5},{189,160,207,28,48,91},{162,166,195,3},1,2,{182,162,200,13,57,72,113,184,209},{161,175,207,10}},C={87,78,123,85,78,12,83,79,78,67,79,85,76,12,79,77,67,77,85,74,12,85,75,12,84,76,90,123,79,79,79,76,99,84,74,71,75,79,75,123,85,72,12,83,84,79,109,79,85,73,85,73,107,85,70,95,123,80,113,109,79,79,74,80,31,79,75,85,71,12,123,85,68,12,83,84,79,109,79,116,31,127,78},P={},U={{1,32}},nParams=5},{K={{184,173,232,24,41},1,14,2,51,3,46,4,54,5,63,6,123,90,{174,183,210,246},20,53,60,7,57,8,59,9,10,11,12,52,13,122,15,16,17,18,19,21,116,22,23,24,25,45,26,50,27,28,29,30,31,32,33,34,35,36,37,38,41,39,40,101,42,{124,105,181,213},55,{121,107,160,215},{126,71,178,222,185},{66,97,171},0,{108,103,189,221,233,20,81,99,128,162,202,4,47,72,141,166,207,244,59,88,109,159},{110,114,171,216,226,6,75,126,140,148,246,13,42},{126,105,141,221},{105},{125,108,132,201,247,30},{113,106,128,208,244,25,44,110,157,175,224,20,63,68,113,232},{119,99,150,227,220,25,38},{101,98,150,212,225,4,42,115},56,{113,96,137,203},{108,117,144,180,199,54,39,78,140},{109,116,145,181,202,24,51,68},{110,119,146,182,194,51,38,75,157,188,199,231,52,70},{111,118,147,183,216,28,39,76,137,224},{127,123,158,155,200,17,52,80},47,{125,121,130,169,236,69},{89,101,128,170,205,48,13},200,{0,119,146,161,206,11,1,70,104,183,197},{20,127,145,190,205,8,96},{26},{7,115,134,147,224,29,38,71,80,185,204,248},{17,120,141,185,252,60,57,68,98,179,216,232,11,73},{3,112,131,163},{19,122,143,187,240,13,54,95,119,186,211},{11,79,138,143,251,244,42,95,99,133},{11,78,139,181,204,243,10,88,115,132,233,248,17,36,117},{62,67,137,185},{56,83,154,164,197},{1,75,137,167,201,198,41,64,120,139,210,165,47,40,117,151,167},{14,74,147,187,200,230,41}},C={79,79,85,78,12,123,72,80,120,109,79,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,123,85,69,85,66,99,85,67,84,76,71,76,79,79,85,64,12,123,72,80,264,109,79,87,78,90,123,85,79,85,65,99,123,85,77,85,94,99,123,85,75,85,72,99,123,85,73,85,74,99,123,85,71,85,95,99,123,85,69,85,74,99,123,85,92,85,93,99,123,85,90,85,91,99,123,85,88,85,72,99,123,85,89,85,74,99,123,85,86,85,94,99,123,85,87,85,84,99,123,85,85,85,82,99,123,85,76,85,93,99,123,85,83,85,94,99,123,85,80,85,84,99,123,85,81,85,72,99,123,85,110,85,68,99,123,85,111,85,84,99,123,85,65,85,72,99,123,85,108,85,109,99,123,85,106,85,109,99,123,85,107,85,109,99,123,85,104,85,82,99,123,85,105,85,102,99,123,85,103,85,100,99,123,85,101,85,91,99,123,85,98,85,72,99,123,85,99,85,82,99,123,85,96,85,102,99,123,85,97,85,74,99,123,85,126,85,70,99,123,85,127,85,70,99,123,85,124,85,82,99,123,85,125,85,74,99,123,85,122,85,72,99,123,85,123,85,82,99,123,85,120,85,121,99,123,85,118,85,91,99,123,85,119,85,125,99,123,85,121,85,116,99,123,85,117,85,116,99,85,67,84,76,71,77,79,79,85,114,12,123,72,80,283,109,79,85,71,71,74,87,79,87,78,90,123,85,79,85,98,99,123,85,77,85,119,99,123,85,75,85,91,99,123,85,73,85,115,99,123,85,71,85,68,99,85,67,84,76,87,76,90,123,85,112,67,113,85,14,12,85,77,85,15,85,15,85,15,84,74,99,123,85,12,85,79,99,123,85,13,87,78,90,123,85,79,85,75,99,85,67,84,76,99,123,85,10,87,78,90,123,85,79,85,76,99,123,85,77,85,74,99,123,85,75,85,72,99,123,85,73,85,70,99,123,85,71,85,68,99,85,67,84,76,99,84,77,71,75,87,79,87,78,90,123,85,79,85,98,99,123,85,77,85,119,99,123,85,75,85,91,99,123,85,73,85,115,99,123,85,71,85,68,99,85,67,84,76,79,75,90,123,85,112,67,113,85,14,12,85,15,87,76,85,112,12,85,11,12,85,8,12,85,100,96,85,15,85,15,84,74,99,123,85,9,87,77,85,6,12,99,123,85,7,67,113,85,14,12,85,15,87,76,85,112,12,85,11,12,85,8,12,85,15,85,15,84,74,99,123,85,13,87,78,90,123,85,79,85,75,99,85,67,84,76,99,84,77,71,72,87,74,79,72,84,79,109,79,87,79,87,78,90,123,85,79,85,76,99,123,85,77,85,68,99,123,85,75,85,124,99,123,85,73,85,72,99,123,85,71,85,106,99,123,85,69,85,91,99,123,85,92,85,4,99,123,85,90,85,68,99,123,85,88,85,70,99,85,67,84,76,79,72,90,123,85,112,67,113,85,14,12,85,79,85,15,85,15,85,105,84,74,99,123,85,5,87,77,85,2,12,99,123,85,12,85,79,99,123,85,64,79,76,99,123,85,3,85,65,99,123,85,7,67,113,85,14,12,85,15,85,65,85,15,85,71,84,74,99,123,85,0,87,78,90,123,85,79,85,106,99,123,85,77,85,68,99,123,85,75,85,95,99,123,85,73,85,72,99,85,67,84,76,99,123,85,1,87,77,85,30,12,99,84,77,71,73,87,79,87,78,90,123,85,79,85,76,99,123,85,77,85,68,99,123,85,75,85,124,99,123,85,73,85,72,99,123,85,71,85,104,99,123,85,69,85,31,99,123,85,92,85,72,99,123,85,90,85,72,99,123,85,88,85,94,99,123,85,89,85,84,99,85,67,84,76,79,72,90,123,85,64,87,78,90,123,85,79,85,77,99,85,67,84,76,99,123,85,5,87,77,85,2,12,99,123,85,3,85,65,99,123,85,12,85,79,99,123,85,1,67,28,85,29,12,85,26,85,26,85,26,84,77,99,123,85,7,67,113,85,14,12,85,79,85,71,126,85,15,85,71,84,74,99,123,85,27,67,24,85,14,12,85,79,85,15,84,76,99,123,85,112,67,113,85,14,12,85,15,85,105,85,15,85,105,84,74,99,84,77,71,70,87,79,87,78,90,123,85,79,85,76,99,123,85,77,85,68,99,123,85,75,85,124,99,123,85,73,85,72,99,123,85,71,85,106,99,123,85,69,85,91,99,123,85,92,85,4,99,123,85,90,85,68,99,123,85,88,85,70,99,85,67,84,76,79,72,90,123,85,112,67,113,85,14,12,85,79,85,96,126,85,15,85,15,84,74,99,123,85,7,67,113,85,14,12,85,15,85,65,85,15,79,70,85,112,12,85,25,12,85,8,12,85,89,107,84,74,99,123,85,3,85,83,99,123,85,1,87,77,85,22,12,99,123,85,0,87,78,90,123,85,79,85,106,99,123,85,77,85,68,99,123,85,75,85,95,99,123,85,73,85,72,99,85,67,84,76,99,123,85,23,87,78,90,123,85,79,85,76,99,123,85,77,85,94,99,123,85,75,85,117,99,85,67,84,76,99,123,85,13,87,78,90,123,85,79,85,75,99,85,67,84,76,99,123,85,64,79,77,99,123,85,5,87,77,85,2,12,99,123,85,12,85,79,99,123,85,13,67,20,85,13,12,85,25,12,99,123,85,21,118,99,84,77,71,71,87,79,87,78,90,123,85,79,85,98,99,123,85,77,85,119,99,123,85,75,85,91,99,123,85,73,85,115,99,123,85,71,85,68,99,85,67,84,76,79,72,90,123,85,112,67,113,85,14,12,85,79,85,15,85,15,85,77,84,74,99,123,85,9,87,77,85,18,12,99,123,85,7,67,113,85,14,12,85,15,85,77,85,15,85,96,84,74,99,123,85,19,85,15,99,84,77,71,68,87,74,79,68,84,79,109,79,87,79,87,78,90,123,85,79,85,98,99,123,85,77,85,119,99,123,85,75,85,91,99,123,85,73,85,115,99,123,85,71,85,68,99,85,67,84,76,79,72,90,123,85,112,67,113,85,14,12,85,15,85,15,85,15,85,71,84,74,99,123,85,7,67,113,85,14,12,85,15,85,15,85,79,85,71,84,74,99,123,85,12,85,79,99,84,77,109,79,67,16,85,17,12,111,79,84,79,109,79,79,70,85,46,12,123,85,47,12,83,111,76,84,76,109,79,67,16,85,17,12,111,77,84,79,109,79,127,78},P={{K={1,9,2,51,3,32,4,63,90,{160,137,204,16,103},{152,171,209},0},C={87,78,87,79,87,76,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,85,70,84,76,67,71,85,68,12,85,69,85,69,85,69,85,76,84,74,87,77,118,84,75,109,79,127,78},P={},U={{0,5},{1,10},{0,0},{1,4}},nParams=0},{K={1,10,2,53,3,41,4,51,5,46,6,7,8,52,90,{174,151,194,238,105},{146,177,219},0,20,0.1,{83,177,202,237},{89},{77,188,212,249,7,78},0.5,{64,185,199,248,22,83,109}},C={87,78,87,79,87,76,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,73,99,123,85,69,85,77,99,123,85,66,85,67,99,85,64,84,76,67,65,85,94,12,85,95,85,92,126,85,95,85,95,84,74,85,93,118,84,75,109,79,87,78,87,79,87,76,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,73,99,123,85,69,85,77,99,123,85,66,85,67,99,85,64,84,76,67,65,85,94,12,85,95,87,77,85,90,12,85,91,12,85,88,12,85,95,85,95,84,74,85,89,118,84,75,109,79,87,74,123,85,86,12,83,84,79,109,79,127,78},P={},U={{0,5},{1,6},{0,0},{0,2},{1,5}},nParams=0},{K={1,10,2,53,3,41,4,51,5,46,6,7,8,52,90,{174,151,194,238,105},{146,177,219},0,20,0.5,0.1,{117,184,194,226},{117,187,219,254},15,225,{86,180,207,232},{94},{72,185,209,252,2,75},{76,133,203,228,26,47,97}},C={87,78,87,79,87,76,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,73,99,123,85,69,85,77,99,123,85,66,85,67,99,85,64,84,76,67,65,85,94,12,85,95,85,92,126,85,95,85,95,84,74,85,93,118,84,75,109,79,87,78,87,79,87,76,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,73,99,123,85,69,85,77,99,123,85,66,85,67,99,85,64,84,76,67,65,85,94,12,84,78,85,90,118,84,75,109,79,67,91,85,88,12,87,77,84,79,109,79,85,89,85,89,65,85,86,95,123,80,251,109,79,87,79,80,318,87,78,87,79,87,76,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,73,99,123,85,69,85,77,99,123,85,66,85,67,99,85,64,84,76,67,65,85,94,12,85,95,85,92,126,85,95,85,95,84,74,85,90,118,84,75,109,79,87,78,87,79,87,76,90,123,85,78,85,79,99,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,73,99,123,85,69,85,77,99,123,85,66,85,67,99,85,64,84,76,67,65,85,94,12,85,95,87,74,85,87,12,85,84,12,85,85,12,85,95,85,95,84,74,85,93,118,84,75,109,79,87,75,123,85,82,12,83,84,79,109,79,116,318,127,78},P={},U={{0,5},{1,6},{0,0},{1,4},{0,2},{1,5}},nParams=0}},U={{1,1},{1,33},{1,39},{1,31},{1,35},{1,37}},nParams=2},{K={{168,161,239,0,62,75,133}},C={87,78,123,85,78,12,83,84,79,109,79,127,78},P={},U={{1,11}},nParams=1}}
+local __0O24={{139,165,241,17},{170,160,233,38,40,87,139,188,206,224},1,15,2,41,3,63,4,40,5,19,6,52,7,42,8,47,9,46,10,11,12,13,44,14,51,57,16,90,45,54,59,35,18,{67,136,220,246,3,23,115,150,182,194,13},{87,141,180,213,31,61,83,157},{84,133,164,244,20,39,85,138},{70,130,167,247,23,5,64,144,183,201,246,41},{80,132,173,245,22,40,87,146,188,197,240},{82,128,165,251,7},{65,133,160,240,16,62},{82,139,160,255,3,34,82},{90,142,174,241},{91,159,164,207,10,99},{127,131,166,204,43,22,107},20,22,{79,145,175,203,18,48},30,32,{76,131,189,200,20,50},60,65,{102,147,164,195,230,63,64},{119,158,171,223},240,245,{114,155,174,218,194,63,68,101},160,165,{122,100,181,212,234,21,92,117,189,169,252,28,44},{108,109,182,214,239,16},{120,98,173,214,200,5,92},{106,107,178,192},{104,107,168,216},{105,105,170,222,239,11},{108,107,186,214,225,18,79,94,129,180,235,22,33,68,154},{121,102,147,204,241,6,35,125},{95,108,150},29,{125,106,142,222},{71,120,150,213,250,11},{86,101,132,207},{91,111,146,214},{69,110,137,219,248,2},{76,127,155,180,234,25,38,71},100,999,{127,122,152,179,247,18,50,108,137,183,206,241},2147483647,{109,116,159,160,243,1},25,53,{9,107,162,189,206,22,57,70,103},{53,120,130,162},{49,106,147,189,204},{22,104,150,185,234,21,35,94,119,143,202,251,6},{9,115,129,191,193,62,33,88,112,179,218,189},{8,114,128,190,192,63,32,89,113,178,219,191},{11,113,131,189,195,60,35,90,114,177,216,189},{19,112,130,172,207},{3,69,129,147,199,228,61},{28,79,146,191,198,246,55},{29},{10},{31},{9},{27,86},{3,66,153,163},{20,71,119,182},{3,64,102,177,197},{1,70,99,169,218},{7,74,97},{22,77,103,183,199,252,5,95,113},{16,94,102,188,197,232},49,62,61,28,55,24,56,{21,90,127,140,199,250,3,49,124,153,140,201,20,50,67,104,184,219,249},{29,83,96,146,219,228},{12,88,125,147,240,229,11,34,109},{44,89,105,135,181,236,63,58,68,157,162},{55,92,99,157,168,250,16,37,96,149,184,206,239,52,84,103,149},{32,85,102,158,173,247},{51,90,119,143,170,245,20},{49,120,125,129},0,{54,81,101,135,178,247,25,32},{50,123,126,130,245},{59,41,98,149},300,{43,44,121,154,165,208,42,61,67,108,174},{61,38,120,135,164,209,73},{33,37,119,145,130,203,8,61,74,109,191,213,248,13,83,122},{36,43,116,129},{35,39,117,147,153,207,16,50,65,113},{44,40,109,168,135,210,29},{51,39,82,167,159,216,244,49,95,102,147},{50,38,83,166,130,221,243,54,90,108},{49,37,80,165,134,207,250,46},{48,36,81,164,151,202,241,48,103,110,155,207},140,{54,34,87,147,176,223,218,15,84,105,140,200,230},{34,43,94,138,137,232,233,48,66},{53,46,68,148,176,221,232,42,89,107,179,205,246,1,52,111,150,189,194,17,52,86},{40,49,76,100,177,222,239,44,93,118,156},{41,48,77,101,176,223,238,53,86,97},{42,51,78,102,179,220,237,32,85,102,158,173,247},50,{49,53,71,97,146,219,248,13,90,125},{57,48,94,113,175,218,244}}
+local _11O25={90,71,78,111,79,71,79,100,67,78,123,85,79,12,83,79,79,90,123,85,76,85,77,99,123,85,74,85,75,99,123,85,72,85,73,99,123,85,70,85,71,99,123,85,68,85,69,99,123,85,66,85,67,99,123,85,64,85,65,99,123,85,94,85,95,99,123,85,92,85,93,99,123,85,90,85,92,99,123,85,91,85,73,99,123,85,88,85,71,99,123,85,89,85,86,99,123,85,87,85,84,99,123,85,77,85,85,99,123,85,82,85,73,99,85,83,69,76,-1,97,79,71,76,100,67,78,123,85,79,12,83,79,79,90,123,85,76,85,87,99,123,85,74,85,80,99,123,85,72,85,73,99,123,85,70,85,73,99,123,85,68,85,67,99,123,85,66,85,92,99,123,85,64,85,73,99,123,85,94,85,71,99,123,85,92,85,86,99,123,85,90,85,84,99,123,85,91,85,85,99,123,85,88,85,73,99,85,83,69,76,-1,97,79,71,77,100,67,78,123,85,79,12,83,79,79,90,123,85,76,85,94,99,123,85,74,85,95,99,123,85,72,85,67,99,123,85,70,85,92,99,123,85,68,85,73,99,123,85,66,85,71,99,123,85,64,85,86,99,123,85,94,85,84,99,123,85,92,85,85,99,123,85,90,85,73,99,85,83,69,76,-1,97,79,71,74,100,67,78,123,85,79,12,83,79,79,90,123,85,76,85,90,99,123,85,74,85,81,99,123,85,72,85,110,99,123,85,70,85,111,99,123,85,68,85,73,99,123,85,66,85,71,99,123,85,64,85,75,99,85,83,69,76,-1,97,79,71,75,100,67,78,123,85,79,12,83,79,79,90,123,85,76,85,108,99,123,85,74,85,93,99,123,85,72,85,93,99,123,85,70,85,65,99,123,85,68,85,92,99,123,85,66,85,73,99,123,85,64,85,71,99,123,85,94,85,86,99,123,85,92,85,84,99,123,85,90,85,85,99,123,85,91,85,73,99,85,83,69,76,-1,97,79,71,72,79,75,85,109,12,71,73,79,73,123,85,106,12,83,84,79,71,70,90,123,85,107,90,99,123,85,104,90,99,123,85,105,90,99,123,85,102,90,99,123,85,103,90,123,85,100,90,123,85,101,67,98,85,99,12,85,96,85,96,85,97,84,77,99,123,85,126,67,98,85,99,12,85,127,85,127,85,124,84,77,99,123,85,125,67,98,85,99,12,85,122,85,122,85,123,84,77,99,123,85,120,67,98,85,99,12,85,71,85,71,85,80,84,77,99,123,85,121,67,98,85,99,12,85,118,85,118,85,119,84,77,99,123,85,116,67,98,85,99,12,85,117,85,117,85,114,84,77,99,99,99,123,85,115,79,79,90,123,85,76,85,127,99,123,85,74,85,73,99,123,85,72,85,122,99,123,85,70,85,110,99,123,85,68,85,95,99,123,85,66,85,81,99,123,85,64,85,93,99,85,83,84,76,99,123,85,112,86,99,123,85,113,124,99,123,85,14,67,15,85,14,12,85,12,12,99,71,71,111,76,71,68,79,71,85,13,111,77,99,79,71,123,85,13,12,83,84,79,109,79,100,67,10,85,11,12,79,79,90,123,85,76,85,92,99,123,85,74,85,85,99,123,85,72,85,71,99,123,85,70,85,73,99,123,85,68,85,73,99,123,85,66,85,67,99,123,85,64,85,8,99,123,85,94,85,95,99,123,85,92,85,84,99,85,83,69,76,-1,97,79,71,69,79,69,85,9,100,67,6,85,7,12,67,4,85,5,12,85,123,85,83,69,76,-1,97,79,100,67,2,67,4,85,5,12,85,3,85,0,69,76,-1,97,79,88,99,79,69,85,1,85,30,99,79,69,85,31,100,67,78,123,85,79,12,83,79,79,90,123,85,76,85,28,99,123,85,74,85,29,99,123,85,72,85,71,99,123,85,70,85,73,99,123,85,68,85,8,99,123,85,66,85,95,99,123,85,64,85,84,99,85,83,69,76,-1,97,79,99,79,71,85,26,111,74,99,111,75,71,66,67,27,85,24,12,111,72,84,79,109,79,111,73,71,67,111,70,71,64,111,71,71,65,111,68,71,94,111,69,71,95,111,66,71,92,111,67,71,93,111,64,71,90,111,65,71,91,111,94,71,88,111,95,71,89,111,92,71,86,111,93,71,87,111,90,71,84,90,123,85,76,67,15,85,25,12,85,22,12,99,123,85,74,67,15,85,25,12,85,23,12,99,123,85,72,67,15,85,25,12,85,20,12,99,123,85,70,67,15,85,25,12,85,21,12,99,71,85,90,123,85,76,67,15,85,18,12,85,19,12,99,123,85,74,67,15,85,18,12,85,16,12,99,123,85,72,67,15,85,18,12,85,17,12,99,123,85,70,67,15,85,18,12,85,46,12,99,123,85,68,67,15,85,18,12,85,47,12,99,123,85,66,67,15,85,18,12,85,44,12,99,123,85,64,67,15,85,18,12,85,45,12,99,123,85,94,67,15,85,18,12,85,42,12,99,123,85,92,67,15,85,18,12,85,43,12,99,123,85,90,67,15,85,18,12,85,40,12,99,123,85,91,67,15,85,18,12,85,41,12,99,123,85,88,67,15,85,18,12,85,38,12,99,123,85,89,67,15,85,18,12,85,39,12,99,71,82,111,91,71,83,79,65,79,79,90,123,85,76,85,28,99,123,85,74,85,29,99,123,85,72,85,71,99,123,85,70,85,67,99,123,85,68,85,73,99,123,85,66,85,71,99,85,83,84,76,111,88,84,76,109,79,79,65,79,79,90,123,85,76,85,92,99,123,85,74,85,93,99,123,85,72,85,71,99,123,85,70,85,29,99,123,85,68,85,36,99,123,85,66,85,73,99,85,83,84,76,111,89,84,76,109,79,79,65,79,79,90,123,85,76,85,97,99,123,85,74,85,84,99,123,85,72,85,75,99,123,85,70,85,93,99,85,83,84,76,111,86,84,76,109,79,79,65,79,79,90,123,85,76,85,90,99,123,85,74,85,110,99,123,85,72,85,37,99,123,85,70,85,37,99,123,85,68,85,84,99,123,85,66,85,67,99,123,85,64,85,34,99,85,83,84,76,111,87,84,76,109,79,79,65,79,79,90,123,85,76,85,87,99,123,85,74,85,35,99,123,85,72,85,71,99,123,85,70,85,110,99,123,85,68,85,32,99,123,85,66,85,73,99,85,83,84,76,111,84,84,76,109,79,79,65,79,79,90,123,85,76,85,35,99,123,85,74,85,71,99,123,85,72,85,110,99,123,85,70,85,32,99,123,85,68,85,73,99,85,83,84,76,111,85,84,76,109,79,79,65,79,79,90,123,85,76,85,94,99,123,85,74,85,29,99,123,85,72,85,95,99,123,85,70,85,67,99,123,85,68,85,37,99,123,85,66,85,35,99,123,85,64,85,71,99,123,85,94,85,110,99,123,85,92,85,32,99,123,85,90,85,73,99,85,83,84,76,111,82,84,76,109,79,79,65,79,79,90,123,85,76,85,33,99,123,85,74,85,95,99,123,85,72,85,93,99,123,85,70,85,93,99,123,85,68,85,29,99,123,85,66,85,67,99,85,83,84,76,111,83,84,76,109,79,79,65,79,79,90,123,85,76,85,92,99,123,85,74,85,85,99,123,85,72,85,71,99,123,85,70,85,29,99,123,85,68,85,81,99,123,85,66,85,81,99,123,85,64,85,35,99,123,85,94,85,71,99,123,85,92,85,110,99,123,85,90,85,32,99,123,85,91,85,73,99,85,83,84,76,111,80,84,76,109,79,79,65,79,79,90,123,85,76,85,69,99,123,85,74,85,32,99,123,85,72,85,110,99,123,85,70,85,34,99,123,85,68,85,73,99,85,83,84,76,111,81,84,76,109,79,79,65,79,79,90,123,85,76,85,69,99,123,85,74,85,32,99,123,85,72,85,110,99,123,85,70,85,34,99,123,85,68,85,73,99,123,85,66,85,33,99,123,85,64,85,95,99,123,85,94,85,93,99,123,85,92,85,93,99,123,85,90,85,29,99,123,85,91,85,67,99,85,83,84,76,111,110,84,76,109,79,79,65,79,79,90,123,85,76,85,97,99,123,85,74,85,110,99,123,85,72,85,62,99,123,85,70,85,73,99,123,85,68,85,81,99,85,83,84,76,111,111,84,76,109,79,79,95,79,92,100,79,94,79,79,90,123,85,76,85,87,99,123,85,74,85,35,99,123,85,72,85,71,99,123,85,70,85,110,99,123,85,68,85,32,99,123,85,66,85,73,99,85,83,69,76,-1,97,79,90,100,79,95,100,79,94,79,79,90,123,85,76,85,97,99,123,85,74,85,84,99,123,85,72,85,75,99,123,85,70,85,93,99,85,83,69,76,-1,97,79,90,123,85,63,67,15,85,63,12,85,60,12,99,123,85,61,67,15,85,61,12,85,58,12,99,123,85,59,67,15,85,59,12,85,56,12,99,123,85,57,67,54,85,11,12,85,55,85,68,84,76,99,69,76,-1,91,79,84,76,90,123,85,52,67,53,85,11,12,85,76,85,28,126,85,76,85,28,126,84,74,99,123,85,50,67,53,85,11,12,85,55,85,51,85,76,85,28,126,84,74,99,123,85,48,67,49,85,11,12,85,76,85,76,84,76,99,123,85,31,79,69,99,84,76,71,80,79,71,85,206,111,108,99,79,71,85,207,111,109,99,79,71,85,204,111,106,99,90,123,85,205,67,98,85,99,12,85,77,85,77,85,77,84,77,99,123,85,202,67,98,85,99,12,85,77,85,77,85,77,84,77,99,123,85,203,67,98,85,99,12,85,122,85,122,85,122,84,77,99,123,85,200,67,98,85,99,12,85,118,85,118,85,118,84,77,99,123,85,201,67,98,85,99,12,85,198,85,198,85,198,84,77,99,123,85,199,67,54,85,11,12,85,55,85,70,84,76,99,123,85,196,79,71,85,14,12,99,71,81,100,67,78,123,85,79,12,83,79,79,90,123,85,76,85,87,99,123,85,74,85,80,99,123,85,72,85,73,99,123,85,70,85,73,99,123,85,68,85,67,99,123,85,66,85,92,99,123,85,64,85,73,99,123,85,94,85,71,99,123,85,92,85,86,99,123,85,90,85,84,99,123,85,91,85,85,99,123,85,88,85,73,99,85,83,69,76,-1,97,79,71,110,111,107,71,111,111,104,71,108,111,105,71,109,111,102,71,106,111,103,71,107,79,111,79,79,90,123,85,76,85,92,99,123,85,74,85,85,99,123,85,72,85,71,99,123,85,70,85,73,99,123,85,68,85,73,99,123,85,66,85,67,99,123,85,64,85,8,99,123,85,94,85,95,99,123,85,92,85,84,99,85,83,84,76,79,69,84,76,71,104,79,111,79,79,90,123,85,76,85,35,99,123,85,74,85,71,99,123,85,72,85,110,99,123,85,70,85,32,99,123,85,68,85,73,99,85,83,84,76,79,104,90,123,85,50,67,53,85,11,12,85,55,85,51,85,76,85,55,84,74,99,123,85,52,67,53,85,11,12,85,76,85,55,85,55,85,55,84,74,99,123,85,48,67,49,85,11,12,85,76,85,55,84,76,99,123,85,197,85,76,99,84,77,71,105,79,111,79,79,90,123,85,76,85,77,99,123,85,74,85,69,99,123,85,72,85,90,99,123,85,70,85,110,99,123,85,68,85,37,99,123,85,66,85,37,99,123,85,64,85,84,99,123,85,94,85,67,99,123,85,92,85,34,99,85,83,84,76,79,105,90,123,85,194,67,54,85,11,12,85,55,85,28,84,76,99,123,85,195,67,54,85,11,12,85,55,85,28,84,76,99,123,85,192,67,54,85,11,12,85,55,85,193,84,76,99,84,77,71,102,79,111,79,79,90,123,85,76,85,77,99,123,85,74,85,69,99,123,85,72,85,97,99,123,85,70,85,84,99,123,85,68,85,75,99,123,85,66,85,93,99,123,85,64,85,97,99,123,85,94,85,110,99,123,85,92,85,111,99,123,85,90,85,29,99,123,85,91,85,95,99,123,85,88,85,93,99,85,83,84,76,79,105,90,123,85,57,67,54,85,11,12,85,55,85,77,84,76,99,123,85,59,79,79,90,123,85,76,85,33,99,123,85,74,85,29,99,123,85,72,85,93,99,123,85,70,85,93,99,123,85,68,85,29,99,123,85,66,85,32,99,85,83,84,76,99,84,77,71,103,79,71,85,222,111,100,99,79,71,85,223,111,101,99,79,71,127,79}
+return _IOlI00(__0O24,_11O25,_O1111,_I_126)
